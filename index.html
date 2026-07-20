@@ -7,8 +7,8 @@
   <!-- Primary Meta Tags -->
   <title>Ajmal Rahman | Aspiring Data Analyst Portfolio</title>
   <meta name="title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta name="description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy), Power BI, and Excel. Explore projects, SQL queries, reports, and certifications.">
-  <meta name="keywords" content="Data Analyst, Ajmal Rahman, Portfolio, SQL, Python, PostgreSQL, Pandas, NumPy, Power BI, Excel, Data Analytics, Business Intelligence, FAANG Data Analyst, Kerala, India">
+  <meta name="description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy, Matplotlib), Power BI, Excel, VS Code, and pgAdmin. View projects, SQL queries, reports, and certifications.">
+  <meta name="keywords" content="Data Analyst, Ajmal Rahman, Portfolio, SQL, Python, PostgreSQL, Pandas, NumPy, Matplotlib, Power BI, Excel, VS Code, pgAdmin, Data Analytics, Business Intelligence, University of Calicut, Kerala, India">
   <meta name="author" content="Ajmal Rahman">
   <meta name="robots" content="index, follow">
 
@@ -46,9 +46,11 @@
     "jobTitle": "Aspiring Data Analyst",
     "alumniOf": {
       "@type": "EducationalOrganization",
-      "name": "Bachelor of Commerce (Finance)"
+      "name": "University of Calicut",
+      "department": "Bachelor of Commerce (Finance)"
     },
-    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Power BI", "Excel", "Data Cleaning", "Data Analysis", "Data Visualization", "Problem Solving"],
+    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "Excel", "VS Code", "pgAdmin", "Data Cleaning", "EDA", "Data Visualization", "Problem Solving"],
+    "knowsLanguage": ["English", "Malayalam"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kerala",
@@ -139,7 +141,7 @@
             SQL | Python | Pandas | NumPy | PostgreSQL | Power BI
           </div>
           <p class="hero-desc">
-            I am an aspiring Data Analyst with hands-on experience in SQL, Python, Pandas, NumPy, PostgreSQL, Excel, and Power BI. I enjoy transforming raw data into meaningful insights through data cleaning, analysis, and visualization. I am currently building real-world projects and looking for my first opportunity as a Data Analyst.
+            Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut and practical experience in SQL, PostgreSQL, Python, Pandas, NumPy, Excel, and Power BI. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development. Seeking an entry-level Data Analyst role.
           </p>
           <div class="hero-buttons">
             <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
@@ -152,7 +154,7 @@
               <i data-lucide="linkedin"></i> LinkedIn
             </a>
             <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="file-text"></i> Resume
+              <i data-lucide="file-text"></i> Resume (PDF)
             </a>
           </div>
         </div>
@@ -165,11 +167,11 @@
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="window-title">covid19_analysis.py</span>
+                <span class="window-title">covid19_eda.py</span>
               </div>
               <div class="card-body-code">
                 <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
-<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
 
 <span class="comment"># Load and clean COVID-19 dataset</span>
 df = pd.read_csv(<span class="string">'covid_data.csv'</span>)
@@ -180,7 +182,7 @@ cleaned_df[<span class="string">'death_percentage'</span>] = (
     cleaned_df[<span class="string">'total_deaths'</span>] / cleaned_df[<span class="string">'total_cases'</span>]
 ) * <span class="number">100</span>
 
-print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></pre>
+print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>)</code></pre>
               </div>
               <div class="card-footer-visual">
                 <div class="bar-chart-mini">
@@ -217,6 +219,14 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
               </div>
               <div class="profile-details-list">
                 <div class="profile-detail-item">
+                  <span class="detail-label"><i data-lucide="graduation-cap"></i> Degree</span>
+                  <span class="detail-val">B.Com Finance (2026)</span>
+                </div>
+                <div class="profile-detail-item">
+                  <span class="detail-label"><i data-lucide="building"></i> University</span>
+                  <span class="detail-val">Univ. of Calicut</span>
+                </div>
+                <div class="profile-detail-item">
                   <span class="detail-label"><i data-lucide="map-pin"></i> Location</span>
                   <span class="detail-val">Kerala, India</span>
                 </div>
@@ -235,14 +245,14 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
             <div class="glass-card about-glass-card">
               <h3 class="card-headline">Why Data Analytics?</h3>
               <p class="about-p">
-                I am an aspiring Data Analyst with hands-on experience in SQL, Python, Pandas, NumPy, PostgreSQL, Excel, and Power BI. I enjoy transforming raw data into meaningful insights through data cleaning, analysis, and visualization.
+                Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut and practical experience in SQL, PostgreSQL, Python, Pandas, NumPy, Excel, and Power BI. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development.
               </p>
               <ul class="about-bullets">
-                <li><i data-lucide="check-circle-2"></i> B.Com Finance graduate</li>
-                <li><i data-lucide="check-circle-2"></i> Currently undergoing intensive Data Analytics training</li>
-                <li><i data-lucide="check-circle-2"></i> Strong interest in SQL, Python, and Business Intelligence</li>
-                <li><i data-lucide="check-circle-2"></i> Passion for solving business problems using data</li>
-                <li><i data-lucide="check-circle-2"></i> Eager to learn, adapt, and grow in the data analytics field</li>
+                <li><i data-lucide="check-circle-2"></i> B.Com Finance graduate - University of Calicut (2026)</li>
+                <li><i data-lucide="check-circle-2"></i> Proficient in Python, Pandas, NumPy, Matplotlib, SQL & PostgreSQL</li>
+                <li><i data-lucide="check-circle-2"></i> Experienced in Data Cleaning, EDA, CTEs, Joins & Window Functions</li>
+                <li><i data-lucide="check-circle-2"></i> Hands-on with Power BI, Excel, Git, GitHub, VS Code & pgAdmin</li>
+                <li><i data-lucide="check-circle-2"></i> Fluent in English & Malayalam</li>
               </ul>
               <div class="about-quote">
                 <i data-lucide="quote" class="quote-icon"></i>
@@ -258,8 +268,8 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
     <section id="skills" class="skills-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">Categorized analytics, programming, and software toolkit</p>
+          <h2 class="section-title">Technical Skills & Tools</h2>
+          <p class="section-subtitle">Categorized analytics, programming, tools, and languages</p>
         </div>
         <div class="skills-grid fade-in-on-scroll">
           
@@ -294,11 +304,11 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
             </ul>
           </div>
 
-          <!-- Libraries -->
+          <!-- Libraries & EDA -->
           <div class="skill-category-card glass-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper green"><i data-lucide="binary"></i></div>
-              <h3>Libraries</h3>
+              <h3>Libraries & EDA</h3>
             </div>
             <ul class="skill-list">
               <li class="skill-item">
@@ -311,6 +321,13 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
               <li class="skill-item">
                 <div class="skill-name-row">
                   <span>NumPy</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 50%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-name-row">
+                  <span>Matplotlib</span>
                   <span class="skill-percentage">Intermediate</span>
                 </div>
                 <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 50%"></div></div>
@@ -332,14 +349,21 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
                 </div>
                 <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 35%"></div></div>
               </li>
+              <li class="skill-item">
+                <div class="skill-name-row">
+                  <span>Data Cleaning & EDA</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 60%"></div></div>
+              </li>
             </ul>
           </div>
 
-          <!-- Tools -->
+          <!-- Tools & Software -->
           <div class="skill-category-card glass-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper purple"><i data-lucide="settings"></i></div>
-              <h3>Tools</h3>
+              <h3>Tools & IDEs</h3>
             </div>
             <ul class="skill-list">
               <li class="skill-item">
@@ -351,23 +375,23 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
               </li>
               <li class="skill-item">
                 <div class="skill-name-row">
-                  <span>Git</span>
+                  <span>Git & GitHub</span>
                   <span class="skill-percentage">Intermediate</span>
                 </div>
                 <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 45%"></div></div>
               </li>
               <li class="skill-item">
                 <div class="skill-name-row">
-                  <span>GitHub</span>
+                  <span>VS Code & pgAdmin</span>
                   <span class="skill-percentage">Intermediate</span>
                 </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 45%"></div></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 50%"></div></div>
               </li>
             </ul>
           </div>
 
           <!-- Soft Skills -->
-          <div class="skill-category-card glass-card col-span-2-desktop">
+          <div class="skill-category-card glass-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper red"><i data-lucide="users"></i></div>
               <h3>Soft Skills</h3>
@@ -381,6 +405,18 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
             </div>
           </div>
 
+          <!-- Languages -->
+          <div class="skill-category-card glass-card">
+            <div class="skill-category-header">
+              <div class="category-icon-wrapper blue"><i data-lucide="languages"></i></div>
+              <h3>Languages</h3>
+            </div>
+            <div class="soft-skills-grid">
+              <div class="soft-skill-badge"><i data-lucide="check"></i> English (Professional)</div>
+              <div class="soft-skill-badge"><i data-lucide="check"></i> Malayalam (Native)</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -389,15 +425,15 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
     <section id="projects" class="projects-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Real-world business and health analytics case study</p>
+          <h2 class="section-title">Featured Project</h2>
+          <p class="section-subtitle">Real-world COVID-19 Data Analysis Case Study</p>
         </div>
 
         <!-- Project Controls -->
         <div class="projects-controls fade-in-on-scroll">
           <div class="search-wrapper">
             <i data-lucide="search" class="search-icon"></i>
-            <input type="text" id="project-search" placeholder="Search projects by name, tool or tag...">
+            <input type="text" id="project-search" placeholder="Search project by name, tool or tag...">
           </div>
           <div class="filter-badges">
             <button class="filter-badge active" data-filter="all">All</button>
@@ -429,8 +465,8 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
               </div>
             </div>
             <div class="project-body">
-              <h3 class="project-title">COVID-19 Data Analysis Using SQL & PostgreSQL</h3>
-              <p class="project-desc">Analyzed COVID-19 data using SQL and Python to identify infection rates, death percentages, vaccination progress, and country-wise trends. Cleaned data, wrote SQL queries, and performed exploratory data analysis.</p>
+              <h3 class="project-title">COVID-19 Data Analysis</h3>
+              <p class="project-desc">Analyzed COVID-19 data using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.</p>
               
               <div class="project-insights">
                 <h4 class="insight-title"><i data-lucide="trending-up"></i> Key Project Insights:</h4>
@@ -443,6 +479,7 @@ print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pandas</span>
                 <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Matplotlib</span>
                 <span class="tech-tag">Excel</span>
               </div>
 
@@ -576,13 +613,13 @@ ORDER BY date;</code></pre>
         <div class="timeline-container py-40">
           <div class="timeline-line"></div>
           
-          <!-- Timeline Item 1: Graduation -->
+          <!-- Timeline Item 1: Education -->
           <div class="timeline-item left fade-in-on-scroll">
             <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
             <div class="timeline-content glass-card">
               <span class="timeline-date">2026</span>
               <h3 class="timeline-title">Bachelor of Commerce (Finance)</h3>
-              <p class="timeline-org">Completed Graduation</p>
+              <p class="timeline-org">University of Calicut (Graduated 2026)</p>
               <p class="timeline-desc">
                 Obtained comprehensive knowledge in corporate financial models, accounting structures, statistics, business law, and commercial operations. Provided a solid analytical basis for business intelligence.
               </p>
@@ -598,11 +635,11 @@ ORDER BY date;</code></pre>
               <p class="timeline-org">Training & Skill Acquisition</p>
               <ul class="timeline-list-details">
                 <li>Started Data Analytics Training</li>
-                <li>Learned Python Programming</li>
-                <li>Learned SQL & Query Aggregations</li>
+                <li>Learned Python Programming & EDA</li>
+                <li>Learned SQL, CTEs, Joins & Window Functions</li>
                 <li>Learned PostgreSQL Relational Databases</li>
-                <li>Learned Pandas & Data Processing</li>
-                <li>Learned NumPy Numerical Arrays</li>
+                <li>Learned Pandas & NumPy Array Processing</li>
+                <li>Learned Data Visualization with Matplotlib</li>
                 <li>Completed COVID-19 Data Analysis Project</li>
                 <li>Currently Learning Power BI Dashboard Design</li>
               </ul>
@@ -623,7 +660,55 @@ ORDER BY date;</code></pre>
 
         <div class="certifications-grid py-40">
           
-          <!-- Cert 1: Intro to Data Analytics -->
+          <!-- Cert 1: AI for Data Analysis -->
+          <div class="cert-card glass-card fade-in-on-scroll">
+            <div class="cert-thumbnail-svg cert-orange-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Google</span>
+            </div>
+            <div class="cert-header">
+              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
+              <i data-lucide="brain-circuit" class="cert-main-icon text-orange"></i>
+            </div>
+            <h3 class="cert-title">AI for Data Analysis</h3>
+            <p class="cert-desc">Authorized course from Google verifying mastery over leveraging artificial intelligence technologies to extract, analyze, and visualize data insights.</p>
+            <div class="cert-footer">
+              <span class="cert-authority">Google (Coursera)</span>
+              <span class="cert-date">July 14, 2026</span>
+            </div>
+            <div class="cert-verification">
+              <span class="cert-code-text">ID: NHJ4U83JZLLC</span>
+              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 2: AI Fundamentals -->
+          <div class="cert-card glass-card fade-in-on-scroll">
+            <div class="cert-thumbnail-svg cert-green-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Google</span>
+            </div>
+            <div class="cert-header">
+              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
+              <i data-lucide="sparkles" class="cert-main-icon text-green"></i>
+            </div>
+            <h3 class="cert-title">AI Fundamentals</h3>
+            <p class="cert-desc">Authorized course from Google validating basic AI constructs, machine learning pipelines, neural networks, and applications of generative models.</p>
+            <div class="cert-footer">
+              <span class="cert-authority">Google (Coursera)</span>
+              <span class="cert-date">July 14, 2026</span>
+            </div>
+            <div class="cert-verification">
+              <span class="cert-code-text">ID: WA6II4MDDXKH</span>
+              <a href="https://coursera.org/verify/WA6II4MDDXKH" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: Intro to Data Analytics -->
           <div class="cert-card glass-card fade-in-on-scroll">
             <div class="cert-thumbnail-svg cert-blue-bg">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
@@ -647,7 +732,7 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 2: Data Analyst 101 -->
+          <!-- Cert 4: Data Analyst 101 -->
           <div class="cert-card glass-card fade-in-on-scroll">
             <div class="cert-thumbnail-svg cert-purple-bg">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
@@ -660,60 +745,12 @@ ORDER BY date;</code></pre>
             <h3 class="cert-title">Data Analyst 101</h3>
             <p class="cert-desc">Declaration of completion verifying foundational understanding of the data analyst role, database queries, and analytical workflows.</p>
             <div class="cert-footer">
-              <span class="cert-authority">Microsoft / Simplilearn</span>
+              <span class="cert-authority">Microsoft & Simplilearn</span>
               <span class="cert-date">July 7, 2026</span>
             </div>
             <div class="cert-verification">
               <span class="cert-code-text">Code: 10440062</span>
               <a href="https://www.simplilearn.com/verify-certificate" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <i data-lucide="external-link"></i> Verify Certificate
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 3: AI for Data Analysis -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-orange-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Google</span>
-            </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="brain-circuit" class="cert-main-icon text-orange"></i>
-            </div>
-            <h3 class="cert-title">AI for Data Analysis</h3>
-            <p class="cert-desc">Authorized course from Google verifying mastery over leveraging artificial intelligence technologies to extract, analyze, and visualize data insights.</p>
-            <div class="cert-footer">
-              <span class="cert-authority">Google / Coursera</span>
-              <span class="cert-date">July 14, 2026</span>
-            </div>
-            <div class="cert-verification">
-              <span class="cert-code-text">ID: NHJ4U83JZLLC</span>
-              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <i data-lucide="external-link"></i> Verify Certificate
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 4: AI Fundamentals -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-green-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Google</span>
-            </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="sparkles" class="cert-main-icon text-green"></i>
-            </div>
-            <h3 class="cert-title">AI Fundamentals</h3>
-            <p class="cert-desc">Authorized course from Google validating basic AI constructs, machine learning pipelines, neural networks, and applications of generative models.</p>
-            <div class="cert-footer">
-              <span class="cert-authority">Google / Coursera</span>
-              <span class="cert-date">July 14, 2026</span>
-            </div>
-            <div class="cert-verification">
-              <span class="cert-code-text">ID: WA6II4MDDXKH</span>
-              <a href="https://coursera.org/verify/WA6II4MDDXKH" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                 <i data-lucide="external-link"></i> Verify Certificate
               </a>
             </div>
@@ -730,14 +767,17 @@ ORDER BY date;</code></pre>
           <div class="category-icon-wrapper blue resume-icon-box">
             <i data-lucide="file-text"></i>
           </div>
-          <h2 class="resume-card-title">Curriculum Vitae</h2>
-          <p class="resume-card-desc">Access my structured PDF resume outlining my financial background, data analyst training, and technical stack details.</p>
+          <h2 class="resume-card-title">Curriculum Vitae (ATS Resume)</h2>
+          <p class="resume-card-desc">Access my structured ATS-friendly resume outlining my University of Calicut B.Com background, skills, project deliverables, and certifications.</p>
           <div class="resume-btn-group">
             <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="eye"></i> View Resume
+              <i data-lucide="eye"></i> View Resume (PDF)
             </a>
             <a href="Ajmal_Rahman_Resume.pdf" download class="btn btn-primary magnetic-btn">
-              <i data-lucide="download"></i> Download Resume
+              <i data-lucide="download"></i> Download Resume (PDF)
+            </a>
+            <a href="Ajmal_Rahman_Resume.txt" download class="btn btn-outline magnetic-btn">
+              <i data-lucide="file-code"></i> Download Resume (TXT)
             </a>
           </div>
         </div>
@@ -960,7 +1000,7 @@ ORDER BY date;</code></pre>
         <div class="details-section">
           <h3><i data-lucide="info"></i> Project Overview</h3>
           <p>
-            This project provides an in-depth exploratory analysis of the global COVID-19 pandemic dataset. Using PostgreSQL database schemas and exploratory Python scripts, the project maps transmission spikes, death rates, and rollout speeds across countries. It demonstrates clean coding workflows suited for real-world analytical tasks.
+            Analyzed COVID-19 data using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.
           </p>
         </div>
 
@@ -993,7 +1033,7 @@ ORDER BY date;</code></pre>
 
         <!-- Data Cleaning -->
         <div class="details-section">
-          <h3><i data-lucide="brush"></i> Data Cleaning (Python)</h3>
+          <h3><i data-lucide="brush"></i> Data Cleaning & EDA (Python)</h3>
           <p>
             Implemented pandas routines in Jupyter notebooks to inspect and preprocess the dataset prior to analysis:
           </p>
