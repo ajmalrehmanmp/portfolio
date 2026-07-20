@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ajmalrahman.github.io/sitemap.xml
+Sitemap: https://ajmalrehmanmp.github.io/portfolio/sitemap.xml

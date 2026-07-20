@@ -1,0 +1,105 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 3380 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+40 750 Td
+(======================================================================) '
+(                         AJMAL RAHMAN) '
+(                    ASPIRING DATA ANALYST) '
+(======================================================================) '
+(Location: Kerala, India) '
+(Phone: +91 7736510234) '
+(Email: ajmalrehmanmp@gmail.com) '
+(GitHub: github.com/ajmalrahman) '
+(LinkedIn: linkedin.com/in/ajmal--rahman) '
+() '
+(----------------------------------------------------------------------) '
+(PROFESSIONAL SUMMARY) '
+(----------------------------------------------------------------------) '
+(Aspiring Data Analyst and B.Com Finance graduate. Started intensive ) '
+(training in Data Analytics one month ago, building key capabilities ) '
+(in querying relational databases, processing data frames, and ) '
+(creating dashboards. Active learner looking to secure an entry-level ) '
+(internship or fresher Data Analyst role.) '
+() '
+(----------------------------------------------------------------------) '
+(TECHNICAL SKILLS) '
+(----------------------------------------------------------------------) '
+(* Python   Intermediate \(Pandas, NumPy\)) '
+(* SQL & PostgreSQL   Intermediate \(Joins, CTEs, Aggregations\)) '
+(* Microsoft Excel   Intermediate \(Pivots, Data Modeling, VLOOKUP\)) '
+(* Power BI   Currently Learning \(Visualizations, DAX basics\)) '
+(* Analytical Competencies: Data Cleaning, Data Analysis, Data Visualization) '
+() '
+(----------------------------------------------------------------------) '
+(SOFT SKILLS) '
+(----------------------------------------------------------------------) '
+(* Problem Solving) '
+(* Analytical Thinking) '
+(* Communication) '
+(* Teamwork) '
+(* Time Management) '
+() '
+() '
+(----------------------------------------------------------------------) '
+(EDUCATION) '
+(----------------------------------------------------------------------) '
+(Bachelor of Commerce \(Finance\) - Graduated 2026) '
+(* Focus: Corporate Finance, Business Operations, Accounting Structures) '
+(* Coursework: Statistical Mathematics, Business Management, Law) '
+() '
+(----------------------------------------------------------------------) '
+(PROJECTS) '
+(----------------------------------------------------------------------) '
+(1. COVID-19 Data Analysis) '
+(   * Description: Analyzed a COVID-19 dataset using SQL and Python to ) '
+(     understand infection rates, death percentages, vaccination progress, ) '
+(     and country-wise trends. Performed data cleaning, SQL analysis, ) '
+(     and exploratory data analysis using Pandas.) '
+(   * Tools Used: SQL, PostgreSQL, Python, Pandas, NumPy, Excel) '
+() '
+(----------------------------------------------------------------------) '
+(CERTIFICATIONS) '
+(----------------------------------------------------------------------) '
+(* Introduction to Data Analytics \(Simplilearn SkillUp\) - July 2026) '
+(* Data Analyst 101 \(Microsoft / Simplilearn\) - July 2026) '
+(* AI for Data Analysis \(Google / Coursera\) - July 2026) '
+(* AI Fundamentals \(Google / Coursera\) - July 2026) '
+() '
+(----------------------------------------------------------------------) '
+(LANGUAGES) '
+(----------------------------------------------------------------------) '
+(* English \(Professional\)) '
+(* Malayalam \(Native\)) '
+(======================================================================) '
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000246 00000 n 
+0000000327 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+500
+%%EOF

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
-  <title>Ajmal Rahman | Premium Data Analyst Portfolio</title>
-  <meta name="title" content="Ajmal Rahman | Premium Data Analyst Portfolio">
-  <meta name="description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst. Specialized in Python, SQL, Power BI, Excel, and PostgreSQL. View projects, certifications, and dashboards.">
-  <meta name="keywords" content="Data Analyst, Portfolio, Ajmal Rahman, SQL, Python, Power BI, Excel, PostgreSQL, Kerala, India, Business Intelligence">
+  <title>Ajmal Rahman | Aspiring Data Analyst Portfolio</title>
+  <meta name="title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
+  <meta name="description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy), Power BI, and Excel. Explore projects, SQL queries, reports, and certifications.">
+  <meta name="keywords" content="Data Analyst, Ajmal Rahman, Portfolio, SQL, Python, PostgreSQL, Pandas, NumPy, Power BI, Excel, Data Analytics, Business Intelligence, FAANG Data Analyst, Kerala, India">
   <meta name="author" content="Ajmal Rahman">
   <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ajmalrehmanmp.github.io/portfolio/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ajmalrehmanmp.github.io/portfolio/">
-  <meta property="og:title" content="Ajmal Rahman | Premium Data Analyst Portfolio">
-  <meta property="og:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst. Specialized in Python, SQL, Power BI, Excel, and PostgreSQL.">
+  <meta property="og:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
+  <meta property="og:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python, Power BI, and Excel. View projects, SQL queries, and certifications.">
   <meta property="og:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ajmalrehmanmp.github.io/portfolio/">
-  <meta property="twitter:title" content="Ajmal Rahman | Premium Data Analyst Portfolio">
-  <meta property="twitter:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst. Specialized in Python, SQL, Power BI, Excel, and PostgreSQL.">
+  <meta property="twitter:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
+  <meta property="twitter:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python, Power BI, and Excel. View projects, SQL queries, and certifications.">
   <meta property="twitter:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -40,55 +43,58 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ajmal Rahman",
-    "jobTitle": "Data Analyst",
+    "jobTitle": "Aspiring Data Analyst",
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "Bachelor of Commerce (Finance)"
     },
-    "knowsAbout": ["Python", "SQL", "Power BI", "Excel", "PostgreSQL", "Data Visualization", "Data Analysis", "Dashboard Development"],
+    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Power BI", "Excel", "Data Cleaning", "Data Analysis", "Data Visualization", "Problem Solving"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kerala",
       "addressCountry": "India"
     },
     "telephone": "+917736510234",
-    "url": "https://ajmalrahman.github.io/"
+    "email": "ajmalrehmanmp@gmail.com",
+    "url": "https://ajmalrehmanmp.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/ajmalrehmanmp",
+      "https://www.linkedin.com/in/ajmal--rahman"
+    ]
   }
   </script>
 </head>
 <body>
 
-  <!-- Custom Cursor Glow -->
-  <div id="cursor-glow" class="cursor-glow"></div>
+  <!-- Custom Cursor Glow Container -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Dot Grid Background -->
-  <div class="grid-bg"></div>
-
-  <!-- Background Glowing Blobs -->
-  <div class="bg-glow-blobs">
+  <!-- Dot Grid & Ambient Mesh Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="bg-glow-blobs" aria-hidden="true">
     <div class="glow-blob blob-1"></div>
     <div class="glow-blob blob-2"></div>
     <div class="glow-blob blob-3"></div>
   </div>
 
-  <!-- Page Loader Animation -->
-  <div id="page-loader" class="page-loader">
+  <!-- Page Loading Animation Overlay -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
     <div class="loader-content">
       <div class="loader-spinner"></div>
-      <p class="loader-text">Loading Ajmal's Portfolio...</p>
+      <p class="loader-text">Loading Portfolio...</p>
     </div>
   </div>
 
   <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress" class="scroll-progress"></div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Sticky Header & Navigation -->
+  <!-- Sticky Header & Responsive Navigation -->
   <header id="header" class="header">
     <div class="container header-container">
-      <a href="#home" class="logo">
+      <a href="#home" class="logo" aria-label="Ajmal Rahman Home">
         <span class="logo-dot"></span> Ajmal Rahman
       </a>
-      <nav id="nav-menu" class="nav-menu">
+      <nav id="nav-menu" class="nav-menu" aria-label="Main Navigation">
         <ul class="nav-list">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
@@ -97,16 +103,16 @@
           <li><a href="#showcase" class="nav-link">Showcase</a></li>
           <li><a href="#experience-education" class="nav-link">Timeline</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
-          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#resume-section" class="nav-link">Resume</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
           <i data-lucide="moon" class="theme-icon-dark"></i>
           <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
         </button>
-        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open main menu">
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <i data-lucide="menu" class="menu-open-icon"></i>
           <i data-lucide="x" class="menu-close-icon" style="display: none;"></i>
         </button>
@@ -117,61 +123,70 @@
   <main>
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container hero-container grid-2">
         <div class="hero-content fade-in-on-scroll">
           <div class="badge-premium">
-            <span class="pulse-indicator"></span> Ready to Work
+            <span class="pulse-indicator"></span> Ready for Entry-Level & Internship Roles
           </div>
           <h1 class="hero-title">
             Hi, I'm <span class="text-gradient">Ajmal Rahman</span>
           </h1>
-          <h2 class="hero-subtitle" style="font-size: 1.8rem; margin-bottom: 8px;">
+          <h2 class="hero-subtitle">
             Aspiring Data Analyst
           </h2>
-          <div class="hero-tech-subtitle" style="font-size: 1.05rem; color: var(--primary); font-weight: 600; margin-bottom: 20px; letter-spacing: 0.05em;">
+          <div class="hero-tech-subtitle">
             SQL | Python | Pandas | NumPy | PostgreSQL | Power BI
           </div>
           <p class="hero-desc">
             I am an aspiring Data Analyst with hands-on experience in SQL, Python, Pandas, NumPy, PostgreSQL, Excel, and Power BI. I enjoy transforming raw data into meaningful insights through data cleaning, analysis, and visualization. I am currently building real-world projects and looking for my first opportunity as a Data Analyst.
           </p>
-          <div class="hero-buttons" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px;">
-            <a href="#projects" class="btn btn-primary magnetic-btn"><i data-lucide="folder-git-2"></i> View Projects</a>
-            <a href="Ajmal_Rahman_Resume.txt" target="_blank" class="btn btn-outline magnetic-btn"><i data-lucide="eye"></i> View Resume</a>
-            <a href="Ajmal_Rahman_Resume.txt" download class="btn btn-outline magnetic-btn"><i data-lucide="download"></i> Download Resume</a>
-            <a href="#contact" class="btn btn-text magnetic-btn"><i data-lucide="mail"></i> Contact Me</a>
+          <div class="hero-buttons">
+            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
+              <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="globe"></i> Portfolio
+            </a>
+            <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+            <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="file-text"></i> Resume
+            </a>
           </div>
         </div>
         <div class="hero-visual-container fade-in-on-scroll">
           <div class="hero-mockup-wrapper">
             <div class="hero-glow-blob"></div>
-            <!-- Interactive Analytics SVG / Illustration -->
+            <!-- Interactive Code & Visual Analytics Mockup Card -->
             <div class="analytics-card-3d">
               <div class="card-header">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="window-title">data_analysis.py</span>
+                <span class="window-title">covid19_analysis.py</span>
               </div>
               <div class="card-body-code">
                 <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
-<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
 
-<span class="comment"># Load dataset</span>
-df = pd.read_csv(<span class="string">'sales_data.csv'</span>)
+<span class="comment"># Load and clean COVID-19 dataset</span>
+df = pd.read_csv(<span class="string">'covid_data.csv'</span>)
+cleaned_df = df[df[<span class="string">'continent'</span>].notna()].copy()
 
-<span class="comment"># Calculate KPIs</span>
-conversion_rate = df[<span class="string">'converted'</span>].mean() * <span class="number">100</span>
-total_revenue = df[<span class="string">'revenue'</span>].sum()
+<span class="comment"># Calculate Death Percentage by Country</span>
+cleaned_df[<span class="string">'death_percentage'</span>] = (
+    cleaned_df[<span class="string">'total_deaths'</span>] / cleaned_df[<span class="string">'total_cases'</span>]
+) * <span class="number">100</span>
 
-print(<span class="string">f"Revenue: ${total_revenue:,.2f}"</span>)
-print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code></pre>
+print(<span class="string">"Dataset preprocessed successfully!"</span>)</code></pre>
               </div>
               <div class="card-footer-visual">
                 <div class="bar-chart-mini">
                   <div class="bar" style="--height: 40%"></div>
-                  <div class="bar" style="--height: 60%"></div>
-                  <div class="bar" style="--height: 50%"></div>
+                  <div class="bar" style="--height: 65%"></div>
+                  <div class="bar" style="--height: 55%"></div>
                   <div class="bar" style="--height: 85%"></div>
                   <div class="bar" style="--height: 70%"></div>
                   <div class="bar" style="--height: 95%"></div>
@@ -188,7 +203,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Bridging Finance and Data Analytics</p>
+          <p class="section-subtitle">Bridging Commerce, Financial Logic, and Data Analytics</p>
         </div>
         <div class="about-grid grid-2 py-40">
           <div class="about-image-wrapper fade-in-on-scroll">
@@ -198,7 +213,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
                   <i data-lucide="user" class="avatar-icon"></i>
                 </div>
                 <h3 class="profile-name">Ajmal Rahman</h3>
-                <p class="profile-title">Finance Graduate & Data Learner</p>
+                <p class="profile-title">Finance Graduate & Aspiring Data Analyst</p>
               </div>
               <div class="profile-details-list">
                 <div class="profile-detail-item">
@@ -219,19 +234,19 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
           <div class="about-text-container fade-in-on-scroll">
             <div class="glass-card about-glass-card">
               <h3 class="card-headline">Why Data Analytics?</h3>
-              <p class="about-p" style="font-size: 1.05rem; line-height: 1.75; margin-bottom: 20px;">
+              <p class="about-p">
                 I am an aspiring Data Analyst with hands-on experience in SQL, Python, Pandas, NumPy, PostgreSQL, Excel, and Power BI. I enjoy transforming raw data into meaningful insights through data cleaning, analysis, and visualization.
               </p>
-              <ul class="about-bullets" style="list-style-type: none; padding-left: 0; margin-bottom: 24px; display: grid; gap: 12px;">
-                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; height: 18px; flex-shrink: 0;"></i> B.Com Finance graduate</li>
-                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; height: 18px; flex-shrink: 0;"></i> Currently undergoing intensive Data Analytics training</li>
-                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; height: 18px; flex-shrink: 0;"></i> Strong interest in SQL, Python, and Business Intelligence</li>
-                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; height: 18px; flex-shrink: 0;"></i> Passion for solving business problems using data</li>
-                <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><i data-lucide="check-circle-2" style="color: var(--primary); width: 18px; height: 18px; flex-shrink: 0;"></i> Eager to learn, adapt, and grow in the data analytics field</li>
+              <ul class="about-bullets">
+                <li><i data-lucide="check-circle-2"></i> B.Com Finance graduate</li>
+                <li><i data-lucide="check-circle-2"></i> Currently undergoing intensive Data Analytics training</li>
+                <li><i data-lucide="check-circle-2"></i> Strong interest in SQL, Python, and Business Intelligence</li>
+                <li><i data-lucide="check-circle-2"></i> Passion for solving business problems using data</li>
+                <li><i data-lucide="check-circle-2"></i> Eager to learn, adapt, and grow in the data analytics field</li>
               </ul>
               <div class="about-quote">
                 <i data-lucide="quote" class="quote-icon"></i>
-                <p class="quote-text">My goal is to translate raw data points into clear, structured findings that help teams make informed decisions.</p>
+                <p class="quote-text">My goal is to translate raw data points into clear, structured findings that help teams make informed business decisions.</p>
               </div>
             </div>
           </div>
@@ -244,7 +259,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">My analytics and engineering toolkit</p>
+          <p class="section-subtitle">Categorized analytics, programming, and software toolkit</p>
         </div>
         <div class="skills-grid fade-in-on-scroll">
           
@@ -352,7 +367,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
           </div>
 
           <!-- Soft Skills -->
-          <div class="skill-category-card glass-card col-span-2-desktop" style="grid-column: span 2;">
+          <div class="skill-category-card glass-card col-span-2-desktop">
             <div class="skill-category-header">
               <div class="category-icon-wrapper red"><i data-lucide="users"></i></div>
               <h3>Soft Skills</h3>
@@ -375,10 +390,10 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Real-world business problems solved with data</p>
+          <p class="section-subtitle">Real-world business and health analytics case study</p>
         </div>
 
-        <!-- Project Filter and Search Bar -->
+        <!-- Project Controls -->
         <div class="projects-controls fade-in-on-scroll">
           <div class="search-wrapper">
             <i data-lucide="search" class="search-icon"></i>
@@ -396,12 +411,21 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
         <!-- Projects Grid -->
         <div class="projects-grid py-40" id="projects-container">
           
-          <!-- Project 1: COVID-19 -->
+          <!-- Project Card: COVID-19 Data Analysis -->
           <div class="project-card glass-card fade-in-on-scroll" data-tags="sql python excel">
             <div class="project-thumbnail-wrapper">
               <div class="project-thumbnail-graphic covid-bg">
-                <i data-lucide="shield-alert" class="thumb-icon"></i>
-                <span class="thumbnail-tag">SQL & PostgreSQL</span>
+                <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                  <rect width="100%" height="100%" fill="#0f172a"/>
+                  <path d="M 30 180 Q 120 160 200 120 T 380 60 T 470 30" fill="none" stroke="#38bdf8" stroke-width="3"/>
+                  <path d="M 30 200 Q 120 195 200 190 T 380 185 T 470 182" fill="none" stroke="#f43f5e" stroke-width="3"/>
+                  <circle cx="200" cy="120" r="5" fill="#38bdf8"/>
+                  <circle cx="380" cy="60" r="5" fill="#38bdf8"/>
+                  <text x="40" y="40" fill="#f8fafc" font-size="14" font-weight="bold" font-family="sans-serif">COVID-19 Analytics Curve</text>
+                  <text x="360" y="80" fill="#38bdf8" font-size="11" font-family="sans-serif">Cases</text>
+                  <text x="360" y="175" fill="#f43f5e" font-size="11" font-family="sans-serif">Deaths</text>
+                </svg>
+                <span class="thumbnail-tag"><i data-lucide="database"></i> SQL & PostgreSQL</span>
               </div>
             </div>
             <div class="project-body">
@@ -421,17 +445,27 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
                 <span class="tech-tag">NumPy</span>
                 <span class="tech-tag">Excel</span>
               </div>
-              <div class="project-actions" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
-                <button id="view-details-btn" class="btn btn-primary btn-sm"><i data-lucide="eye"></i> View Project</button>
-                <a href="https://github.com/ajmalrahman" target="_blank" class="btn btn-outline btn-sm"><i data-lucide="github"></i> GitHub Repository</a>
-                <button id="view-sql-btn" class="btn btn-outline btn-sm"><i data-lucide="code"></i> View SQL Queries</button>
-                <a href="covid19_analysis.sql" download class="btn btn-outline btn-sm"><i data-lucide="download"></i> Download SQL File</a>
-                <a href="COVID19_Analysis_Report.txt" download class="btn btn-outline btn-sm"><i data-lucide="download-cloud"></i> Download Report</a>
-                <button class="btn btn-outline btn-sm" disabled style="opacity: 0.5; cursor: not-allowed; display: flex; align-items: center; justify-content: center; gap: 6px;"><i data-lucide="layout-dashboard"></i> View Dashboard (N/A)</button>
+
+              <!-- Project Action Buttons -->
+              <div class="project-actions">
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="globe"></i> Live Portfolio
+                </a>
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i> GitHub Repository
+                </a>
+                <button id="view-sql-btn" class="btn btn-outline btn-sm">
+                  <i data-lucide="code"></i> View SQL
+                </button>
+                <a href="covid19_analysis.sql" download class="btn btn-outline btn-sm">
+                  <i data-lucide="download"></i> Download SQL
+                </a>
+                <a href="COVID19_Analysis_Report.txt" download class="btn btn-outline btn-sm">
+                  <i data-lucide="file-text"></i> Download Report
+                </a>
               </div>
             </div>
           </div>
-
 
         </div>
       </div>
@@ -442,200 +476,107 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Dashboard Showcase</h2>
-          <p class="section-subtitle">Visual snapshots of data solutions (Click to zoom)</p>
+          <p class="section-subtitle">Visual snapshots of data solutions and exploratory charts (Click to zoom)</p>
         </div>
 
         <div class="showcase-grid py-40">
           
-          <!-- Mockup 1: COVID-19 Case vs. Death Line Chart -->
+          <!-- Mockup 1: Case vs Death Chart -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="device-mockup glass-card lightbox-trigger" data-title="COVID-19 Global Case vs. Death Trend" data-desc="Exploratory line visualization mapping the global cumulative infection curve against active mortality trends.">
-              <div class="device-header">
-                <div class="device-buttons"><span class="btn-dot"></span><span class="btn-dot"></span><span class="btn-dot"></span></div>
-                <div class="device-url">matplotlib.pyplot/global-trends.png</div>
-              </div>
-              <div class="device-screen flex-center">
-                <svg viewBox="0 0 500 300" class="dashboard-svg">
+            <div class="showcase-card glass-card zoom-trigger" data-media-type="chart">
+              <div class="showcase-visual-box">
+                <svg viewBox="0 0 500 300" class="showcase-svg">
                   <rect width="100%" height="100%" fill="#0f172a"/>
                   <text x="120" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">COVID-19 Global Case vs. Death Trend</text>
-                  
-                  <!-- Axes -->
+                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#38bdf8" stroke-width="3"/>
+                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#f43f5e" stroke-width="3"/>
                   <line x1="50" y1="50" x2="50" y2="250" stroke="#475569" stroke-width="2"/>
                   <line x1="50" y1="250" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
-                  <text x="230" y="275" fill="#94a3b8" font-size="8" font-family="sans-serif">Timeline (2020 - 2023)</text>
-                  
-                  <!-- Cases Curve (Blue) -->
-                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#3b82f6" stroke-width="3"/>
-                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50 L 450 250 Z" fill="url(#blue-shade)" opacity="0.1"/>
-
-                  <!-- Deaths Curve (Red - scaled low) -->
-                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#ef4444" stroke-width="3"/>
-                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227 L 450 250 Z" fill="url(#red-shade)" opacity="0.05"/>
-                  
-                  <text x="330" y="90" fill="#3b82f6" font-size="8" font-family="sans-serif">■ Infection Curve</text>
-                  <text x="330" y="105" fill="#ef4444" font-size="8" font-family="sans-serif">■ Mortality Curve</text>
-
-                  <defs>
-                    <linearGradient id="blue-shade" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#3b82f6"/>
-                      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-                    </linearGradient>
-                    <linearGradient id="red-shade" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#ef4444"/>
-                      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
+                  <text x="340" y="90" fill="#38bdf8" font-size="9" font-family="sans-serif">■ Infection Curve</text>
+                  <text x="340" y="105" fill="#f43f5e" font-size="9" font-family="sans-serif">■ Mortality Curve</text>
                 </svg>
               </div>
             </div>
-            <p class="showcase-caption">Global Case vs. Death Curves</p>
+            <p class="showcase-caption">Global Transmission vs Mortality Curve (Python)</p>
           </div>
 
-          <!-- Mockup 2: PostgreSQL COVID-19 CTE Query -->
+          <!-- Mockup 2: SQL Window Code -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="device-mockup glass-card lightbox-trigger" data-title="PostgreSQL Rolling Inoculation CTE" data-desc="Optimized partition window query tracking the cumulative running total of vaccinations compared against country population sizes.">
-              <div class="device-header">
-                <div class="device-buttons"><span class="btn-dot"></span><span class="btn-dot"></span><span class="btn-dot"></span></div>
-                <div class="device-url">pgadmin.local/rolling_vaccinations.sql</div>
-              </div>
-              <div class="device-screen flex-center">
-                <pre class="showcase-code"><code><span class="comment">-- Date-wise death percentage in India</span>
-<span class="keyword">SELECT</span>
-  date,
-  total_cases,
-  total_deaths,
-  <span class="keyword">ROUND</span>((total_deaths::NUMERIC / <span class="keyword">NULLIF</span>(total_cases, <span class="number">0</span>)) * <span class="number">100</span>, <span class="number">2</span>) <span class="keyword">AS</span> death_percentage
-<span class="keyword">FROM</span> CovidDeaths
-<span class="keyword">WHERE</span> location = <span class="string">'India'</span>
-<span class="keyword">ORDER BY</span> date;</code></pre>
+            <div class="showcase-card glass-card zoom-trigger" data-media-type="code">
+              <div class="showcase-visual-box code-box">
+                <div class="mini-code-header">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="title">query_india_death_rate.sql</span>
+                </div>
+                <pre class="showcase-code"><code>SELECT date, total_cases, total_deaths,
+    ROUND((total_deaths::NUMERIC / 
+    NULLIF(total_cases, 0)) * 100, 2) 
+    AS death_percentage
+FROM CovidDeaths
+WHERE location = 'India'
+ORDER BY date;</code></pre>
               </div>
             </div>
-            <p class="showcase-caption">PostgreSQL Rolling Inoculation CTE</p>
+            <p class="showcase-caption">PostgreSQL Date-Wise Query Benchmark</p>
           </div>
 
-          <!-- Mockup 3: Python Pandas Notebook Output -->
+          <!-- Mockup 3: Correlation Scatter Matrix -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="device-mockup glass-card lightbox-trigger" data-title="Python Jupyter Data Cleaning & Metrics" data-desc="Exploratory notebook scripting executing missing count calculations, row drop operations, and type casting pipelines.">
-              <div class="device-header">
-                <div class="device-buttons"><span class="btn-dot"></span><span class="btn-dot"></span><span class="btn-dot"></span></div>
-                <div class="device-url">jupyter.local/data_preprocessing.ipynb</div>
-              </div>
-              <div class="device-screen flex-center">
-                <!-- SVG-based realistic scatter plot representation -->
-                <svg viewBox="0 0 500 300" class="dashboard-svg">
-                  <rect width="100%" height="100%" fill="#1e293b"/>
-                  <text x="130" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">Vaccination Speed vs. ICU Duration</text>
-                  
-                  <!-- Axes -->
-                  <line x1="50" y1="50" x2="50" y2="250" stroke="#475569" stroke-width="2"/>
-                  <line x1="50" y1="250" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
-                  
-                  <text x="210" y="275" fill="#94a3b8" font-size="9" font-family="sans-serif">Booster Rate (% of pop)</text>
-                  <text x="15" y="150" fill="#94a3b8" font-size="9" font-family="sans-serif" transform="rotate(-90 15 150)">ICU Stay (Days)</text>
-
-                  <!-- Points: showing clear negative correlation -->
-                  <circle cx="80" cy="80" r="5" fill="#ef4444" opacity="0.7"/>
-                  <circle cx="120" cy="110" r="5" fill="#f59e0b" opacity="0.7"/>
-                  <circle cx="160" cy="120" r="5" fill="#f59e0b" opacity="0.7"/>
-                  <circle cx="210" cy="150" r="5" fill="#3b82f6" opacity="0.7"/>
-                  <circle cx="270" cy="180" r="5" fill="#3b82f6" opacity="0.7"/>
-                  <circle cx="330" cy="200" r="5" fill="#22c55e" opacity="0.7"/>
-                  <circle cx="400" cy="220" r="5" fill="#22c55e" opacity="0.7"/>
-                  
-                  <!-- Trendline -->
-                  <line x1="60" y1="70" x2="420" y2="230" stroke="#f8fafc" stroke-width="2" stroke-dasharray="4 4" opacity="0.8"/>
-                  <text x="300" y="70" fill="#22c55e" font-size="9" font-family="sans-serif" font-weight="bold">Correlation: r = -0.78</text>
+            <div class="showcase-card glass-card zoom-trigger" data-media-type="chart">
+              <div class="showcase-visual-box">
+                <svg viewBox="0 0 500 300" class="showcase-svg">
+                  <rect width="100%" height="100%" fill="#0f172a"/>
+                  <text x="100" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">Vaccination Rollout vs ICU Stays Correlation</text>
+                  <circle cx="80" cy="220" r="4" fill="#38bdf8"/>
+                  <circle cx="120" cy="200" r="4" fill="#38bdf8"/>
+                  <circle cx="160" cy="180" r="4" fill="#38bdf8"/>
+                  <circle cx="210" cy="140" r="4" fill="#38bdf8"/>
+                  <circle cx="270" cy="110" r="4" fill="#38bdf8"/>
+                  <circle cx="340" cy="80" r="4" fill="#38bdf8"/>
+                  <circle cx="410" cy="60" r="4" fill="#38bdf8"/>
+                  <line x1="60" y1="240" x2="440" y2="50" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+                  <text x="280" y="220" fill="#a855f7" font-size="10" font-family="sans-serif">r = -0.84 (Strong Negative)</text>
                 </svg>
               </div>
             </div>
-            <p class="showcase-caption">Python Correlation Plot</p>
+            <p class="showcase-caption">Booster Coverage vs. ICU Admission Scatter Plot</p>
           </div>
 
-          <!-- Mockup 4: Excel Rollout Progress -->
+          <!-- Mockup 4: Excel Pivot Matrix -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="device-mockup glass-card lightbox-trigger" data-title="Excel Vaccination Rollout Metrics" data-desc="Structured Pivot Table and progress charts comparing populations with total completed inoculation regimens by country.">
-              <div class="device-header">
-                <div class="device-buttons"><span class="btn-dot"></span><span class="btn-dot"></span><span class="btn-dot"></span></div>
-                <div class="device-url">excel.live/covid_rollout_pivots</div>
-              </div>
-              <div class="device-screen flex-center">
-                <!-- SVG-based realistic spreadsheet layout -->
-                <svg viewBox="0 0 500 300" class="dashboard-svg">
-                  <rect width="100%" height="100%" fill="#107c41"/>
-                  <rect x="0" y="25" width="100%" height="275" fill="#f3f2f1"/>
-                  
-                  <!-- Top bar grid -->
-                  <rect x="10" y="5" width="80" height="15" rx="2" fill="#fff" opacity="0.2"/>
-                  <rect x="100" y="5" width="50" height="15" rx="2" fill="#fff" opacity="0.2"/>
-                  
-                  <!-- Excel grid lines -->
-                  <line x1="50" y1="25" x2="50" y2="300" stroke="#d2d0ce" stroke-width="1"/>
-                  <line x1="150" y1="25" x2="150" y2="300" stroke="#d2d0ce" stroke-width="1"/>
-                  <line x1="300" y1="25" x2="300" y2="300" stroke="#d2d0ce" stroke-width="1"/>
-
-                  <line x1="0" y1="60" x2="500" y2="60" stroke="#d2d0ce" stroke-width="1"/>
-                  <line x1="0" y1="90" x2="500" y2="90" stroke="#d2d0ce" stroke-width="1"/>
-                  <line x1="0" y1="120" x2="500" y2="120" stroke="#d2d0ce" stroke-width="1"/>
-                  <line x1="0" y1="150" x2="500" y2="150" stroke="#d2d0ce" stroke-width="1"/>
-
-                  <!-- Content -->
-                  <text x="10" y="45" fill="#323130" font-size="10" font-family="sans-serif" font-weight="bold">Vaccination Rollout</text>
-                  <text x="60" y="45" fill="#107c41" font-size="9" font-family="sans-serif">Country</text>
-                  <text x="160" y="45" fill="#107c41" font-size="9" font-family="sans-serif">Population</text>
-                  <text x="310" y="45" fill="#107c41" font-size="9" font-family="sans-serif">% Vaccinated Progress</text>
-
-                  <!-- Row 1 -->
-                  <text x="60" y="78" fill="#323130" font-size="9" font-family="sans-serif">India</text>
-                  <text x="160" y="78" fill="#323130" font-size="9" font-family="sans-serif">1,408,000,000</text>
-                  <rect x="310" y="68" width="120" height="12" rx="2" fill="#e2e8f0"/>
-                  <rect x="310" y="68" width="96" height="12" rx="2" fill="#107c41"/>
-                  <text x="440" y="77" fill="#323130" font-size="8" font-family="sans-serif" font-weight="bold">80%</text>
-
-                  <!-- Row 2 -->
-                  <text x="60" y="108" fill="#323130" font-size="9" font-family="sans-serif">United States</text>
-                  <text x="160" y="108" fill="#323130" font-size="9" font-family="sans-serif">338,289,000</text>
-                  <rect x="310" y="98" width="120" height="12" rx="2" fill="#e2e8f0"/>
-                  <rect x="310" y="98" width="108" height="12" rx="2" fill="#107c41"/>
-                  <text x="440" y="107" fill="#323130" font-size="8" font-family="sans-serif" font-weight="bold">90%</text>
-
-                  <!-- Row 3 -->
-                  <text x="60" y="138" fill="#323130" font-size="9" font-family="sans-serif">Germany</text>
-                  <text x="160" y="138" fill="#323130" font-size="9" font-family="sans-serif">83,200,000</text>
-                  <rect x="310" y="128" width="120" height="12" rx="2" fill="#e2e8f0"/>
-                  <rect x="310" y="128" width="114" height="12" rx="2" fill="#107c41"/>
-                  <text x="440" y="137" fill="#323130" font-size="8" font-family="sans-serif" font-weight="bold">95%</text>
-
-                  <!-- Chart Overlay -->
-                  <rect x="50" y="165" width="400" height="110" rx="4" fill="#fff" stroke="#d2d0ce" stroke-width="2"/>
-                  <text x="70" y="185" fill="#323130" font-size="9" font-family="sans-serif" font-weight="bold">Rollout Coverage Benchmarks</text>
-                  
-                  <rect x="100" y="210" width="120" height="15" fill="#107c41"/>
-                  <rect x="100" y="235" width="150" height="15" fill="#3b82f6"/>
-                  
-                  <text x="230" y="222" fill="#323130" font-size="8" font-family="sans-serif">Global Average (68%)</text>
-                  <text x="260" y="247" fill="#323130" font-size="8" font-family="sans-serif">Target Baseline (85%)</text>
-                </svg>
+            <div class="showcase-card glass-card zoom-trigger" data-media-type="table">
+              <div class="showcase-visual-box excel-box">
+                <div class="mini-excel-header">
+                  <span class="excel-tag">Excel</span>
+                  <span>National_Vaccine_Pivot.xlsx</span>
+                </div>
+                <div class="excel-table-preview">
+                  <div class="excel-row header"><span>Country</span><span>Population</span><span>Vaccinated</span></div>
+                  <div class="excel-row"><span>India</span><span>1,400,000,000</span><span>68%</span></div>
+                  <div class="excel-row"><span>USA</span><span>331,000,000</span><span>79%</span></div>
+                  <div class="excel-row"><span>Germany</span><span>83,200,000</span><span>95%</span></div>
+                </div>
               </div>
             </div>
-            <p class="showcase-caption">Excel Rollout Coverage Progress</p>
+            <p class="showcase-caption">Excel Rollout Coverage Progress Pivot</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Interactive Experience & Education Timeline Section -->
+    <!-- Professional Journey / Timeline Section -->
     <section id="experience-education" class="timeline-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Professional Journey</h2>
-          <p class="section-subtitle">Education, projects, and career timeline</p>
+          <p class="section-subtitle">Education, data analytics milestones, and learning timeline</p>
         </div>
 
         <div class="timeline-container py-40">
           <div class="timeline-line"></div>
           
-          <!-- Timeline item 1: B.Com Finance -->
+          <!-- Timeline Item 1: Graduation -->
           <div class="timeline-item left fade-in-on-scroll">
             <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
             <div class="timeline-content glass-card">
@@ -648,22 +589,22 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
             </div>
           </div>
 
-          <!-- Timeline item 2: Analytics training -->
+          <!-- Timeline Item 2: Analytics Milestones -->
           <div class="timeline-item right fade-in-on-scroll">
             <div class="timeline-dot"><i data-lucide="line-chart"></i></div>
             <div class="timeline-content glass-card">
               <span class="timeline-date">2026</span>
               <h3 class="timeline-title">Data Analytics Milestones</h3>
-              <p class="timeline-org">Training & Development</p>
-              <ul class="timeline-list-details" style="text-align: left; margin-top: 12px; list-style-position: inside; color: var(--text-secondary); font-size: 0.9rem;">
-                <li style="margin-bottom: 6px;">Started Data Analytics Training</li>
-                <li style="margin-bottom: 6px;">Learned Python</li>
-                <li style="margin-bottom: 6px;">Learned SQL</li>
-                <li style="margin-bottom: 6px;">Learned PostgreSQL</li>
-                <li style="margin-bottom: 6px;">Learned Pandas</li>
-                <li style="margin-bottom: 6px;">Learned NumPy</li>
-                <li style="margin-bottom: 6px;">Completed COVID-19 Data Analysis Project</li>
-                <li style="margin-bottom: 6px;">Currently Learning Power BI</li>
+              <p class="timeline-org">Training & Skill Acquisition</p>
+              <ul class="timeline-list-details">
+                <li>Started Data Analytics Training</li>
+                <li>Learned Python Programming</li>
+                <li>Learned SQL & Query Aggregations</li>
+                <li>Learned PostgreSQL Relational Databases</li>
+                <li>Learned Pandas & Data Processing</li>
+                <li>Learned NumPy Numerical Arrays</li>
+                <li>Completed COVID-19 Data Analysis Project</li>
+                <li>Currently Learning Power BI Dashboard Design</li>
               </ul>
             </div>
           </div>
@@ -677,16 +618,16 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Certifications</h2>
-          <p class="section-subtitle">Credentials validating my data and visualization knowledge</p>
+          <p class="section-subtitle">Credentials validating my data, AI, and visualization knowledge</p>
         </div>
 
         <div class="certifications-grid py-40">
           
-          <!-- Cert 1: Introduction to Data Analytics -->
+          <!-- Cert 1: Intro to Data Analytics -->
           <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg" style="height: 120px; width: 100%; border-radius: 6px; margin-bottom: 16px; background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.02) 100%); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden; position: relative;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 6px; border-radius: 4px; font-family: monospace;">Simplilearn</div>
+            <div class="cert-thumbnail-svg cert-blue-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Simplilearn</span>
             </div>
             <div class="cert-header">
               <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
@@ -698,17 +639,19 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
               <span class="cert-authority">Simplilearn SkillUp</span>
               <span class="cert-date">July 6, 2026</span>
             </div>
-            <div class="cert-verification" style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border-color); padding-top: 12px;">
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">Code: 10435682</span>
-              <a href="https://www.simplilearn.com/verify-certificate" target="_blank" class="btn btn-outline btn-sm" style="padding: 4px 8px; font-size: 0.7rem; font-weight: 500;"><i data-lucide="external-link"></i> Verify Certificate</a>
+            <div class="cert-verification">
+              <span class="cert-code-text">Code: 10435682</span>
+              <a href="https://www.simplilearn.com/verify-certificate" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
             </div>
           </div>
 
           <!-- Cert 2: Data Analyst 101 -->
           <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg" style="height: 120px; width: 100%; border-radius: 6px; margin-bottom: 16px; background: linear-gradient(135deg, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0.02) 100%); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden; position: relative;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 6px; border-radius: 4px; font-family: monospace;">Microsoft</div>
+            <div class="cert-thumbnail-svg cert-purple-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Microsoft</span>
             </div>
             <div class="cert-header">
               <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
@@ -720,17 +663,19 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
               <span class="cert-authority">Microsoft / Simplilearn</span>
               <span class="cert-date">July 7, 2026</span>
             </div>
-            <div class="cert-verification" style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border-color); padding-top: 12px;">
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">Code: 10440062</span>
-              <a href="https://www.simplilearn.com/verify-certificate" target="_blank" class="btn btn-outline btn-sm" style="padding: 4px 8px; font-size: 0.7rem; font-weight: 500;"><i data-lucide="external-link"></i> Verify Certificate</a>
+            <div class="cert-verification">
+              <span class="cert-code-text">Code: 10440062</span>
+              <a href="https://www.simplilearn.com/verify-certificate" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
             </div>
           </div>
 
           <!-- Cert 3: AI for Data Analysis -->
           <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg" style="height: 120px; width: 100%; border-radius: 6px; margin-bottom: 16px; background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.02) 100%); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden; position: relative;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 6px; border-radius: 4px; font-family: monospace;">Google</div>
+            <div class="cert-thumbnail-svg cert-orange-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Google</span>
             </div>
             <div class="cert-header">
               <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
@@ -742,17 +687,19 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
               <span class="cert-authority">Google / Coursera</span>
               <span class="cert-date">July 14, 2026</span>
             </div>
-            <div class="cert-verification" style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border-color); padding-top: 12px;">
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">ID: NHJ4U83JZLLC</span>
-              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" class="btn btn-outline btn-sm" style="padding: 4px 8px; font-size: 0.7rem; font-weight: 500;"><i data-lucide="external-link"></i> Verify Certificate</a>
+            <div class="cert-verification">
+              <span class="cert-code-text">ID: NHJ4U83JZLLC</span>
+              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
             </div>
           </div>
 
           <!-- Cert 4: AI Fundamentals -->
           <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg" style="height: 120px; width: 100%; border-radius: 6px; margin-bottom: 16px; background: linear-gradient(135deg, rgba(34,197,94,0.15) 0%, rgba(34,197,94,0.02) 100%); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); overflow: hidden; position: relative;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.8;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <div style="position: absolute; bottom: 8px; right: 8px; font-size: 0.65rem; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 6px; border-radius: 4px; font-family: monospace;">Google</div>
+            <div class="cert-thumbnail-svg cert-green-bg">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
+              <span class="cert-issuer-badge">Google</span>
             </div>
             <div class="cert-header">
               <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
@@ -764,9 +711,11 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
               <span class="cert-authority">Google / Coursera</span>
               <span class="cert-date">July 14, 2026</span>
             </div>
-            <div class="cert-verification" style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border-color); padding-top: 12px;">
-              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">ID: WA6II4MDDXKH</span>
-              <a href="https://coursera.org/verify/WA6II4MDDXKH" target="_blank" class="btn btn-outline btn-sm" style="padding: 4px 8px; font-size: 0.7rem; font-weight: 500;"><i data-lucide="external-link"></i> Verify Certificate</a>
+            <div class="cert-verification">
+              <span class="cert-code-text">ID: WA6II4MDDXKH</span>
+              <a href="https://coursera.org/verify/WA6II4MDDXKH" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
             </div>
           </div>
 
@@ -774,22 +723,28 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume-section" class="resume-section py-80 bg-alt" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <!-- Dedicated Resume Section -->
+    <section id="resume-section" class="resume-section py-80 bg-alt">
       <div class="container text-center fade-in-on-scroll">
-        <div class="glass-card" style="max-width: 600px; margin: 0 auto; padding: 40px; border-radius: var(--radius-md);">
-          <div class="category-icon-wrapper blue" style="margin: 0 auto 16px; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="file-text"></i></div>
-          <h2 style="font-size: 1.8rem; margin-bottom: 12px; font-family: var(--font-heading);">Curriculum Vitae</h2>
-          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 24px;">Access my structured resume outlining my financial background, data analyst training, and tech stack details.</p>
-          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="Ajmal_Rahman_Resume.txt" target="_blank" class="btn btn-outline magnetic-btn" style="min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 8px;"><i data-lucide="eye"></i> View Resume</a>
-            <a href="Ajmal_Rahman_Resume.txt" download class="btn btn-primary magnetic-btn" style="min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 8px;"><i data-lucide="download"></i> Download Resume</a>
+        <div class="glass-card resume-card">
+          <div class="category-icon-wrapper blue resume-icon-box">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h2 class="resume-card-title">Curriculum Vitae</h2>
+          <p class="resume-card-desc">Access my structured PDF resume outlining my financial background, data analyst training, and technical stack details.</p>
+          <div class="resume-btn-group">
+            <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="eye"></i> View Resume
+            </a>
+            <a href="Ajmal_Rahman_Resume.pdf" download class="btn btn-primary magnetic-btn">
+              <i data-lucide="download"></i> Download Resume
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- Achievements / Counters Section -->
     <section id="achievements" class="achievements-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
@@ -826,7 +781,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
           <!-- Counter 4: Currently Learning Power BI -->
           <div class="counter-card glass-card fade-in-on-scroll">
             <div class="counter-num-row">
-              <span style="font-size: 2.2rem; line-height: 1; font-weight: 800; color: var(--primary); padding-bottom: 12px; display: inline-block;">Learning</span>
+              <span class="static-learning-badge">Learning</span>
             </div>
             <p class="counter-label"><i data-lucide="layout-dashboard"></i> Power BI</p>
           </div>
@@ -840,18 +795,19 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Let's Connect</h2>
-          <p class="section-subtitle">Discuss potential opportunities, projects, or collaborations</p>
+          <p class="section-subtitle">Discuss potential entry-level roles, internships, projects, or collaborations</p>
         </div>
 
         <div class="contact-grid grid-2 py-40">
           
-          <!-- Contact info side -->
+          <!-- Contact info side with 4 clickable channels -->
           <div class="contact-info-wrapper fade-in-on-scroll">
             <div class="glass-card contact-info-card">
               <h3>Get In Touch</h3>
-              <p class="contact-card-desc">I am actively looking for opportunities to start my career as a Data Analyst. Feel free to reach out via email, phone, or LinkedIn.</p>
+              <p class="contact-card-desc">I am actively looking for opportunities to start my career as a Data Analyst. Feel free to reach out via email, GitHub, LinkedIn, or explore my portfolio.</p>
               
               <div class="info-list">
+                <!-- 1. Email -->
                 <a href="mailto:ajmalrehmanmp@gmail.com" class="info-item">
                   <div class="info-icon"><i data-lucide="mail"></i></div>
                   <div class="info-text">
@@ -859,27 +815,35 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
                     <span>ajmalrehmanmp@gmail.com</span>
                   </div>
                 </a>
-                <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" class="info-item">
+
+                <!-- 2. LinkedIn -->
+                <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="linkedin"></i></div>
                   <div class="info-text">
                     <h4>LinkedIn</h4>
                     <span>linkedin.com/in/ajmal--rahman</span>
                   </div>
                 </a>
-                <a href="https://github.com/ajmalrahman" target="_blank" class="info-item">
+
+                <!-- 3. GitHub -->
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="github"></i></div>
                   <div class="info-text">
                     <h4>GitHub</h4>
-                    <span>github.com/ajmalrahman</span>
+                    <span>github.com/ajmalrehmanmp</span>
                   </div>
                 </a>
-                <a href="https://ajmalrahman.github.io/portfolio/" target="_blank" class="info-item">
+
+                <!-- 4. Portfolio -->
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="globe"></i></div>
                   <div class="info-text">
                     <h4>Portfolio</h4>
-                    <span>ajmalrahman.github.io/portfolio</span>
+                    <span>ajmalrehmanmp.github.io/portfolio</span>
                   </div>
                 </a>
+
+                <!-- Phone -->
                 <a href="tel:+917736510234" class="info-item">
                   <div class="info-icon"><i data-lucide="phone"></i></div>
                   <div class="info-text">
@@ -912,7 +876,7 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
                 </div>
                 <div class="form-group">
                   <label for="form-message">Message</label>
-                  <textarea id="form-message" rows="5" placeholder="Hi Ajmal, I saw your portfolio and..." required></textarea>
+                  <textarea id="form-message" rows="5" placeholder="Hi Ajmal, I reviewed your portfolio..." required></textarea>
                   <span class="error-msg" id="err-message">Please write a short message.</span>
                 </div>
                 <button type="submit" id="submit-btn" class="btn btn-primary btn-block magnetic-btn">
@@ -939,41 +903,56 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
 
   <!-- Footer Section -->
   <footer class="footer">
-    <div class="container footer-container" style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-      <p style="font-size: 1rem; color: var(--primary); font-weight: 600; font-family: var(--font-heading); margin-bottom: 8px;"><i data-lucide="briefcase" style="display: inline-block; vertical-align: middle; margin-right: 6px; width: 18px; height: 18px;"></i> Open to Data Analyst Internship and Entry-Level Data Analyst Opportunities.</p>
-      <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; border-top: 1px solid var(--border-color); padding-top: 16px; flex-wrap: wrap; gap: 12px;">
+    <div class="container footer-container">
+      <p class="footer-tagline">
+        <i data-lucide="briefcase"></i> Open to Data Analyst Internship and Entry-Level Data Analyst Opportunities.
+      </p>
+      
+      <!-- Footer Quick Action Buttons -->
+      <div class="footer-links-row">
+        <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
+          <i data-lucide="github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
+          <i data-lucide="linkedin"></i> LinkedIn
+        </a>
+        <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
+          <i data-lucide="globe"></i> Portfolio
+        </a>
+        <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
+          <i data-lucide="file-text"></i> Resume
+        </a>
+      </div>
+
+      <div class="footer-copyright-row">
         <p class="copyright">&copy; 2026 Designed and Developed by <strong>Ajmal Rahman</strong>. All rights reserved.</p>
-        <div class="footer-socials">
-          <a href="https://github.com/ajmalrahman" target="_blank" class="footer-social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
-          <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" class="footer-social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
+  <!-- Lightbox Zoom Modal -->
   <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog">
-    <button class="lightbox-close" aria-label="Close lightbox"><i data-lucide="x"></i></button>
+    <button class="lightbox-close" aria-label="Close image preview"><i data-lucide="x"></i></button>
     <div class="lightbox-content">
       <div id="lightbox-media-container" class="lightbox-media-container"></div>
       <div class="lightbox-info">
-        <h3 id="lightbox-title">Dashboard Title</h3>
+        <h3 id="lightbox-title">Dashboard Visual</h3>
         <p id="lightbox-desc">Dashboard description details go here...</p>
       </div>
     </div>
   </div>
 
-  <!-- Project Details Modal -->
+  <!-- Project Details Modal Case Study -->
   <div id="project-details-modal" class="project-details-modal" aria-hidden="true" role="dialog">
     <div class="details-modal-container glass-card">
-      <button class="details-modal-close" aria-label="Close details"><i data-lucide="x"></i></button>
+      <button class="details-modal-close" aria-label="Close project case study"><i data-lucide="x"></i></button>
       
       <div class="details-modal-content">
-        <div class="badge-premium" style="margin-bottom: 16px;">
+        <div class="badge-premium">
           <span class="pulse-indicator"></span> Case Study
         </div>
         <h2 class="details-main-title">COVID-19 Data Analysis Case Study</h2>
-        <p class="details-subtitle" style="color: var(--text-secondary); margin-bottom: 32px;">SQL & Python Data Preprocessing, Database Querying, and Analytics Pipeline</p>
+        <p class="details-subtitle">SQL & Python Data Preprocessing, Relational Queries, and Analytics Pipeline</p>
         
         <div class="details-divider"></div>
         
@@ -997,18 +976,18 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
         <div class="details-section">
           <h3><i data-lucide="database"></i> Dataset Information</h3>
           <p>
-            The dataset aggregates daily statistics detailing cumulative case tallies, total mortality counts, and new vaccinations administered worldwide. Key attributes analyzed include: <code>location</code>, <code>date</code>, <code>population</code>, <code>new_cases</code>, <code>total_cases</code>, <code>new_deaths</code>, <code>total_deaths</code>, and <code>new_vaccinations</code>.
+            The dataset comprises global daily records containing location, date, population, total cases, new cases, total deaths, new deaths, and vaccination progress metrics.
           </p>
         </div>
 
         <!-- Objectives -->
         <div class="details-section">
-          <h3><i data-lucide="target"></i> Objectives</h3>
-          <ul class="details-list" style="margin-left: 20px; margin-top: 8px; list-style-position: inside;">
-            <li style="margin-bottom: 6px;">Filter and clean the raw dataset to remove regional aggregate duplicates.</li>
-            <li>Analyze death rates as a percentage of total infected cases to trace mortality probabilities.</li>
-            <li>Examine national infection rates compared to overall populations.</li>
-            <li>Construct rolling summation queries in PostgreSQL to monitor vaccination progression.</li>
+          <h3><i data-lucide="target"></i> Project Objectives</h3>
+          <ul class="details-list">
+            <li>Clean and format daily time-series records by filtering out aggregate continent entities.</li>
+            <li>Calculate country-wise death percentages relative to total infected cases.</li>
+            <li>Determine population infection proportions per country.</li>
+            <li>Construct CTE queries to compute rolling total vaccination counts partitioned by location.</li>
           </ul>
         </div>
 
@@ -1018,13 +997,12 @@ print(<span class="string">f"Conversion: {conversion_rate:.2f}%"</span>)</code><
           <p>
             Implemented pandas routines in Jupyter notebooks to inspect and preprocess the dataset prior to analysis:
           </p>
-          <pre class="showcase-code" style="margin-top: 12px; font-size: 0.75rem; padding: 16px; border-radius: var(--radius-sm); max-height: 250px; overflow-y: auto;"><code># 1. Filter out continent aggregates from locations
+          <pre class="showcase-code"><code># 1. Filter out continent aggregates from locations
 cleaned_df = raw_df[raw_df['continent'].notna()]
 
 # 2. Fill empty numerical counts with zero to avoid aggregate null errors
 cleaned_df['total_cases'] = cleaned_df['total_cases'].fillna(0)
 cleaned_df['total_deaths'] = cleaned_df['total_deaths'].fillna(0)
-cleaned_df['new_vaccinations'] = cleaned_df['new_vaccinations'].fillna(0)
 
 # 3. Format Date index column to DateTime objects
 cleaned_df['date'] = pd.to_datetime(cleaned_df['date'])</code></pre>
@@ -1037,8 +1015,8 @@ cleaned_df['date'] = pd.to_datetime(cleaned_df['date'])</code></pre>
             Key database queries constructed to fetch critical health and transmission insights from the dataset:
           </p>
           
-          <h4 style="margin-top: 16px; font-size: 0.95rem; color: var(--text-primary);">Query A: Date-wise Death Percentage in India</h4>
-          <pre class="showcase-code" style="margin-top: 8px; font-size: 0.75rem; padding: 16px; border-radius: var(--radius-sm); max-height: 250px; overflow-y: auto;"><code>SELECT
+          <h4>Query A: Date-wise Death Percentage in India</h4>
+          <pre class="showcase-code"><code>SELECT
     date,
     total_cases,
     total_deaths,
@@ -1047,8 +1025,8 @@ FROM CovidDeaths
 WHERE location = 'India'
 ORDER BY date;</code></pre>
 
-          <h4 style="margin-top: 16px; font-size: 0.95rem; color: var(--text-primary);">Query B: Country with the Highest Death Percentage relative to its Population</h4>
-          <pre class="showcase-code" style="margin-top: 8px; font-size: 0.75rem; padding: 16px; border-radius: var(--radius-sm); max-height: 180px; overflow-y: auto;"><code>SELECT
+          <h4>Query B: Country with Highest Death Percentage relative to Population</h4>
+          <pre class="showcase-code"><code>SELECT
     location,
     MAX(total_deaths) AS total_deaths,
     population,
@@ -1069,11 +1047,11 @@ LIMIT 1;</code></pre>
           </p>
         </div>
 
-        <!-- Key Findings -->
+        <!-- Key Insights -->
         <div class="details-section">
-          <h3><i data-lucide="trending-up"></i> Key Findings</h3>
-          <ul class="details-list" style="margin-left: 20px; margin-top: 8px; list-style-position: inside;">
-            <li style="margin-bottom: 6px;">Urban locations in Western Europe peaked with higher infection percentages, but experienced sharp decreases in death rates post-vaccine.</li>
+          <h3><i data-lucide="trending-up"></i> Key Insights</h3>
+          <ul class="details-list">
+            <li>Urban locations in Western Europe peaked with higher infection percentages, but experienced sharp decreases in death rates post-vaccine.</li>
             <li>Correlation analysis maps a direct relationship between rolling vaccination rollout speeds and shorter ICU hospitalization lengths.</li>
           </ul>
         </div>
@@ -1081,19 +1059,16 @@ LIMIT 1;</code></pre>
         <!-- Screenshots -->
         <div class="details-section">
           <h3><i data-lucide="image"></i> Visualizations</h3>
-          <div class="details-screenshots-grid" style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 12px;">
-            <div class="glass-card" style="padding: 12px; border-radius: var(--radius-sm); text-align: center;">
-              <svg viewBox="0 0 500 300" style="width: 100%; height: auto; border-radius: 4px; background: #1e293b;">
-                <rect width="100%" height="100%" fill="#0f172a"/>
+          <div class="details-screenshots-grid">
+            <div class="glass-card modal-svg-box">
+              <svg viewBox="0 0 500 240" style="width: 100%; height: auto; border-radius: 4px; background: #0f172a;">
                 <text x="120" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">COVID-19 Global Case vs. Death Trend</text>
-                <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#3B82F6" stroke-width="3"/>
-                <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#EF4444" stroke-width="3"/>
-                <line x1="50" y1="50" x2="50" y2="250" stroke="#475569" stroke-width="2"/>
-                <line x1="50" y1="250" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
-                <text x="350" y="90" fill="#3B82F6" font-size="8" font-family="sans-serif">■ Infection Curve</text>
-                <text x="350" y="105" fill="#EF4444" font-size="8" font-family="sans-serif">■ Mortality Curve</text>
+                <path d="M 50 200 L 100 180 L 150 160 L 200 110 L 250 80 L 300 60 L 350 50 L 400 40 L 450 30" fill="none" stroke="#38bdf8" stroke-width="3"/>
+                <path d="M 50 200 L 100 198 L 150 195 L 200 190 L 250 188 L 300 182 L 350 180 L 400 178 L 450 177" fill="none" stroke="#f43f5e" stroke-width="3"/>
+                <line x1="50" y1="30" x2="50" y2="200" stroke="#475569" stroke-width="2"/>
+                <line x1="50" y1="200" x2="450" y2="200" stroke="#475569" stroke-width="2"/>
               </svg>
-              <span style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px; display: inline-block;">Global Infection & Mortality Curves</span>
+              <span class="modal-caption-text">Global Infection & Mortality Curves</span>
             </div>
           </div>
         </div>
@@ -1115,7 +1090,7 @@ LIMIT 1;</code></pre>
     <i data-lucide="arrow-up"></i>
   </button>
 
-  <!-- Script libraries -->
+  <!-- Script Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>

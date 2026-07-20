@@ -1,466 +1,331 @@
 /**
- * Ajmal Rahman Portfolio Script
- * Pure Vanilla JavaScript for premium animations and interactions.
+ * Ajmal Rahman Data Analyst Portfolio Script
+ * Pure Vanilla JavaScript for FAANG & Big-4 grade interactive components.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // 1. Initialize Lucide Icons
+
+  // 1. Initialize Lucide Vector Icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // 2. Page Loader
+  // 2. Page Loader Dismissal
   const pageLoader = document.getElementById('page-loader');
-  window.addEventListener('load', () => {
+  if (pageLoader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        pageLoader.classList.add('loaded');
+      }, 300);
+    });
+    // Fallback if load already fired
     setTimeout(() => {
-      pageLoader.classList.add('fade-out');
-      // Trigger animations for elements in viewport right after load
-      checkAnimations();
-    }, 400); // Small delay to guarantee visual smooth transition
-  });
-
-  // 3. Theme Manager (Light / Dark Mode)
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const darkIcon = themeToggleBtn.querySelector('.theme-icon-dark');
-  const lightIcon = themeToggleBtn.querySelector('.theme-icon-light');
-
-  // Check saved theme or system preference
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-    document.documentElement.classList.add('dark');
-    updateThemeIcons(true);
-  } else {
-    document.documentElement.classList.remove('dark');
-    updateThemeIcons(false);
+      pageLoader.classList.add('loaded');
+    }, 1200);
   }
 
-  themeToggleBtn.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateThemeIcons(isDark);
+  // 3. Scroll Progress Indicator & Header Scrolled State
+  const scrollProgress = document.getElementById('scroll-progress');
+  const header = document.getElementById('header');
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const currentScroll = window.scrollY;
+
+    // Scroll progress bar
+    if (scrollProgress && totalScroll > 0) {
+      const progressPercent = (currentScroll / totalScroll) * 100;
+      scrollProgress.style.width = `${progressPercent}%`;
+    }
+
+    // Header background blur on scroll
+    if (header) {
+      if (currentScroll > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    // Back to top button visibility
+    if (backToTopBtn) {
+      if (currentScroll > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
   });
 
-  function updateThemeIcons(isDark) {
-    if (isDark) {
+  // Back to top click handler
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // 4. Custom Cursor Ambient Glow Tracker
+  const cursorGlow = document.getElementById('cursor-glow');
+  if (cursorGlow && window.innerWidth > 992) {
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorGlow.style.opacity = '1';
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursorGlow.style.opacity = '0';
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursorGlow.style.left = `${cursorX}px`;
+      cursorGlow.style.top = `${cursorY}px`;
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover scale up on interactive elements
+    const interactiveElems = document.querySelectorAll('a, button, .glass-card');
+    interactiveElems.forEach(elem => {
+      elem.addEventListener('mouseenter', () => cursorGlow.classList.add('hovered'));
+      elem.addEventListener('mouseleave', () => cursorGlow.classList.remove('hovered'));
+    });
+  }
+
+  // 5. Theme Toggle Handler
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const darkIcon = document.querySelector('.theme-icon-dark');
+  const lightIcon = document.querySelector('.theme-icon-light');
+
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme === 'light') {
+    document.documentElement.classList.remove('dark-theme');
+    document.documentElement.classList.add('light-theme');
+    if (darkIcon && lightIcon) {
       darkIcon.style.display = 'none';
       lightIcon.style.display = 'block';
-    } else {
-      darkIcon.style.display = 'block';
-      lightIcon.style.display = 'none';
     }
   }
 
-  // 4. Mobile Menu Toggling
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isLight = document.documentElement.classList.toggle('light-theme');
+      document.documentElement.classList.toggle('dark-theme', !isLight);
+      localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+
+      if (darkIcon && lightIcon) {
+        darkIcon.style.display = isLight ? 'none' : 'block';
+        lightIcon.style.display = isLight ? 'block' : 'none';
+      }
+    });
+  }
+
+  // 6. Mobile Menu Navigation Toggler
   const mobileToggleBtn = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
-  const menuOpenIcon = mobileToggleBtn.querySelector('.menu-open-icon');
-  const menuCloseIcon = mobileToggleBtn.querySelector('.menu-close-icon');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const menuOpenIcon = document.querySelector('.menu-open-icon');
+  const menuCloseIcon = document.querySelector('.menu-close-icon');
 
-  mobileToggleBtn.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('mobile-open');
-    if (isOpen) {
-      menuOpenIcon.style.display = 'none';
-      menuCloseIcon.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Stop background scrolling
-    } else {
-      menuOpenIcon.style.display = 'block';
-      menuCloseIcon.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-  });
+  if (mobileToggleBtn && navMenu) {
+    mobileToggleBtn.addEventListener('click', () => {
+      const isActive = navMenu.classList.toggle('active');
+      mobileToggleBtn.setAttribute('aria-expanded', isActive);
 
-  // Close mobile menu on clicking any link
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('mobile-open');
-      menuOpenIcon.style.display = 'block';
-      menuCloseIcon.style.display = 'none';
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Active Link Tracking on Scroll
-  const sections = document.querySelectorAll('section');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (scrollPos >= sectionTop - 150) {
-        current = section.getAttribute('id');
+      if (menuOpenIcon && menuCloseIcon) {
+        menuOpenIcon.style.display = isActive ? 'none' : 'block';
+        menuCloseIcon.style.display = isActive ? 'block' : 'none';
       }
     });
 
+    // Auto-close menu when clicking any nav link
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-  // 5. Scroll Progress and Floating elements
-  const scrollProgressBar = document.getElementById('scroll-progress');
-  const backToTopBtn = document.getElementById('back-to-top');
-  const header = document.getElementById('header');
-
-  window.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = (scrollTop / scrollHeight) * 100;
-    
-    // Progress bar width
-    scrollProgressBar.style.width = `${progress}%`;
-
-    // Back to top visibility
-    if (scrollTop > 400) {
-      backToTopBtn.classList.add('active');
-    } else {
-      backToTopBtn.classList.remove('active');
-    }
-
-    // Header scroll background modification
-    if (scrollTop > 20) {
-      header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
-      header.style.height = '70px';
-    } else {
-      header.style.boxShadow = 'none';
-      header.style.height = '80px';
-    }
-  });
-
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  // 6. Interactive Canvas Background (Hero Section)
-  const canvas = document.getElementById('hero-canvas');
-  const ctx = canvas.getContext('2d');
-
-  let width = canvas.width = canvas.offsetWidth;
-  let height = canvas.height = canvas.offsetHeight;
-
-  const particles = [];
-  const particleCount = 45;
-  const connectionDistance = 120;
-  let mouse = { x: null, y: null, radius: 150 };
-
-  window.addEventListener('resize', () => {
-    width = canvas.width = canvas.offsetWidth;
-    height = canvas.height = canvas.offsetHeight;
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-  });
-
-  window.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.6;
-      this.vy = (Math.random() - 0.5) * 0.6;
-      this.radius = Math.random() * 3 + 1.5;
-    }
-
-    update() {
-      // Boundaries
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
-
-      // Mouse interactive push
-      if (mouse.x !== null && mouse.y !== null) {
-        const dx = this.x - mouse.x;
-        const dy = this.y - mouse.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < mouse.radius) {
-          const force = (mouse.radius - dist) / mouse.radius;
-          const angle = Math.atan2(dy, dx);
-          this.x += Math.cos(angle) * force * 2;
-          this.y += Math.sin(angle) * force * 2;
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileToggleBtn.setAttribute('aria-expanded', 'false');
+        if (menuOpenIcon && menuCloseIcon) {
+          menuOpenIcon.style.display = 'block';
+          menuCloseIcon.style.display = 'none';
         }
-      }
-
-      this.x += this.vx;
-      this.y += this.vy;
-    }
-
-    draw() {
-      // Adapt color variables for particles
-      const themeColor = document.documentElement.classList.contains('dark') ? 'rgba(59, 130, 246, ' : 'rgba(37, 99, 235, ';
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = themeColor + '0.45)';
-      ctx.fill();
-    }
-  }
-
-  // Populate particles
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-
-  function animateParticles() {
-    ctx.clearRect(0, 0, width, height);
-
-    // Update & draw particles
-    particles.forEach(p => {
-      p.update();
-      p.draw();
+      });
     });
-
-    // Draw lines between nearby particles
-    const themeColorLine = document.documentElement.classList.contains('dark') ? 'rgba(59, 130, 246, ' : 'rgba(37, 99, 235, ';
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const p1 = particles[i];
-        const p2 = particles[j];
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-
-        if (dist < connectionDistance) {
-          const opacity = (1 - (dist / connectionDistance)) * 0.15;
-          ctx.beginPath();
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = themeColorLine + opacity + ')';
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-
-    requestAnimationFrame(animateParticles);
   }
 
-  animateParticles();
-
-  // 7. Typist / Typewriter Effect
-  const typewriter = document.getElementById('typewriter');
-  const roles = [
-    'Data Analyst',
-    'SQL Developer',
-    'Power BI Developer',
-    'Python Enthusiast',
-    'Business Intelligence Learner'
-  ];
-  let currentRoleIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
-
-  function type() {
-    const currentRole = roles[currentRoleIdx];
-    
-    if (isDeleting) {
-      // Remove character
-      typewriter.textContent = currentRole.substring(0, charIdx - 1);
-      charIdx--;
-      typingSpeed = 50; // Delete faster
-    } else {
-      // Add character
-      typewriter.textContent = currentRole.substring(0, charIdx + 1);
-      charIdx++;
-      typingSpeed = 120; // Normal typing speed
-    }
-
-    // Checking states
-    if (!isDeleting && charIdx === currentRole.length) {
-      // Completed typing, pause before deleting
-      typingSpeed = 2000;
-      isDeleting = true;
-    } else if (isDeleting && charIdx === 0) {
-      // Completed deleting, move to next role
-      isDeleting = false;
-      currentRoleIdx = (currentRoleIdx + 1) % roles.length;
-      typingSpeed = 400; // Small delay before typing next
-    }
-
-    setTimeout(type, typingSpeed);
-  }
-
-  setTimeout(type, 1000); // Initial delay
-
-  // 8. Intersection Observer for Scroll Entry Animations
-  const animateElements = document.querySelectorAll('.fade-in-on-scroll');
+  // 7. Active Navigation Highlight & Scroll Spy
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.15
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        
-        // Trigger specific logic for child animations
-        if (entry.target.id === 'skills') {
-          animateSkillBars();
-        }
-        if (entry.target.id === 'achievements') {
-          triggerCounters();
-        }
-        observer.unobserve(entry.target);
+        const activeId = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${activeId}`) {
+            link.classList.add('active');
+          }
+        });
       }
     });
   }, observerOptions);
 
-  function checkAnimations() {
-    animateElements.forEach(el => {
-      observer.observe(el);
-    });
-  }
-  
-  checkAnimations();
+  sections.forEach(section => navObserver.observe(section));
 
-  // Animate skill progress bars
-  function animateSkillBars() {
-    const bars = document.querySelectorAll('.skill-bar-fill');
-    bars.forEach(bar => {
-      const progress = bar.style.getPropertyValue('--progress') || '0%';
-      bar.style.width = progress;
+  // 8. Scroll Reveal Animations
+  const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(elem => fadeObserver.observe(elem));
+
+  // 9. Animated Counter Numbers for Milestones
+  const counterNumbers = document.querySelectorAll('.counter-number');
+  let animated = false;
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animated = true;
+        counterNumbers.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'), 10);
+          let count = 0;
+          const duration = 1200; // ms
+          const step = Math.max(1, Math.floor(target / (duration / 30)));
+
+          const timer = setInterval(() => {
+            count += step;
+            if (count >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = count;
+            }
+          }, 30);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const achievementsSection = document.getElementById('achievements');
+  if (achievementsSection) {
+    counterObserver.observe(achievementsSection);
   }
 
-  // Animate counters when they come to view
-  let countersStarted = false;
-  function triggerCounters() {
-    if (countersStarted) return;
-    countersStarted = true;
-    const counters = document.querySelectorAll('.counter-number');
-    
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target'), 10);
-      const duration = 2000; // 2 seconds
-      const stepTime = Math.max(Math.floor(duration / target), 10);
-      let current = 0;
-      
-      const timer = setInterval(() => {
-        current += Math.ceil(target / (duration / stepTime));
-        if (current >= target) {
-          counter.textContent = target;
-          clearInterval(timer);
-        } else {
-          counter.textContent = current;
-        }
-      }, stepTime);
-    });
-  }
-
-  // 9. Projects Search and Filter Engine
+  // 10. Project Category Filter & Search Functionality
+  const filterBadges = document.querySelectorAll('.filter-badge');
   const searchInput = document.getElementById('project-search');
-  const filterButtons = document.querySelectorAll('.filter-badge');
   const projectCards = document.querySelectorAll('.project-card');
-  const projectsContainer = document.getElementById('projects-container');
-
-  let activeFilter = 'all';
-  let searchQuery = '';
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeFilter = btn.getAttribute('data-filter');
-      filterProjects();
-    });
-  });
-
-  searchInput.addEventListener('input', (e) => {
-    searchQuery = e.target.value.toLowerCase().trim();
-    filterProjects();
-  });
 
   function filterProjects() {
-    let visibleCount = 0;
+    const activeFilter = document.querySelector('.filter-badge.active')?.getAttribute('data-filter') || 'all';
+    const searchQuery = searchInput?.value.toLowerCase().trim() || '';
+
     projectCards.forEach(card => {
-      const tagsString = card.getAttribute('data-tags') || '';
-      const tags = tagsString.split(' ');
-      const title = card.querySelector('.project-title').textContent.toLowerCase();
-      const desc = card.querySelector('.project-desc').textContent.toLowerCase();
-      const techTags = Array.from(card.querySelectorAll('.tech-tag')).map(t => t.textContent.toLowerCase());
-      
-      const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
-      const matchesSearch = searchQuery === '' || 
-                            title.includes(searchQuery) || 
-                            desc.includes(searchQuery) ||
-                            techTags.some(tag => tag.includes(searchQuery));
+      const tags = card.getAttribute('data-tags') || '';
+      const text = card.textContent.toLowerCase();
+
+      const matchesFilter = (activeFilter === 'all') || tags.includes(activeFilter);
+      const matchesSearch = searchQuery === '' || text.includes(searchQuery);
 
       if (matchesFilter && matchesSearch) {
-        card.style.display = 'flex';
-        // Re-trigger animate-in since it became visible
-        setTimeout(() => {
-          card.classList.add('animate-in');
-        }, 50);
-        visibleCount++;
+        card.style.display = 'grid';
+        setTimeout(() => card.classList.add('visible'), 50);
       } else {
         card.style.display = 'none';
       }
     });
+  }
 
-    // Handle "No results found" feedback
-    const noResultsId = 'no-projects-feedback';
-    let noResultsEl = document.getElementById(noResultsId);
-    
-    if (visibleCount === 0) {
-      if (!noResultsEl) {
-        noResultsEl = document.createElement('div');
-        noResultsEl.id = noResultsId;
-        noResultsEl.className = 'text-center py-40 glass-card';
-        noResultsEl.innerHTML = `
-          <i data-lucide="folder-open" style="width: 48px; height: 48px; color: var(--text-muted); margin-bottom: 12px;"></i>
-          <h3>No Projects Found</h3>
-          <p style="color: var(--text-secondary); margin-top: 6px;">Try expanding your search query or choosing a different filter badge.</p>
-        `;
-        projectsContainer.appendChild(noResultsEl);
-        if (typeof lucide !== 'undefined') lucide.createIcons();
+  filterBadges.forEach(badge => {
+    badge.addEventListener('click', () => {
+      filterBadges.forEach(b => b.classList.remove('active'));
+      badge.classList.add('active');
+      filterProjects();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterProjects);
+  }
+
+  // 11. Project Details Case Study Modal Handler
+  const detailsModal = document.getElementById('project-details-modal');
+  const viewDetailsBtn = document.getElementById('view-details-btn');
+  const viewSqlBtn = document.getElementById('view-sql-btn');
+  const modalCloseBtn = detailsModal?.querySelector('.details-modal-close');
+
+  function openDetailsModal(scrollToSql = false) {
+    if (detailsModal) {
+      detailsModal.classList.add('active');
+      detailsModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      if (scrollToSql) {
+        setTimeout(() => {
+          const sqlSection = document.getElementById('details-sql-section');
+          sqlSection?.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
       }
-    } else if (noResultsEl) {
-      noResultsEl.remove();
     }
   }
 
-  // 10. Dashboard Lightbox Modal
+  function closeDetailsModal() {
+    if (detailsModal) {
+      detailsModal.classList.remove('active');
+      detailsModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (viewDetailsBtn) viewDetailsBtn.addEventListener('click', () => openDetailsModal(false));
+  if (viewSqlBtn) viewSqlBtn.addEventListener('click', () => openDetailsModal(true));
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeDetailsModal);
+
+  if (detailsModal) {
+    detailsModal.addEventListener('click', (e) => {
+      if (e.target === detailsModal) closeDetailsModal();
+    });
+  }
+
+  // 12. Lightbox Zoom Modal Handler for Showcase Cards
   const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxContainer = document.getElementById('lightbox-media-container');
+  const zoomTriggers = document.querySelectorAll('.zoom-trigger');
+  const mediaContainer = document.getElementById('lightbox-media-container');
   const lightboxTitle = document.getElementById('lightbox-title');
   const lightboxDesc = document.getElementById('lightbox-desc');
-  const lightboxCloseBtn = lightboxModal.querySelector('.lightbox-close');
-  const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+  const lightboxCloseBtn = lightboxModal?.querySelector('.lightbox-close');
 
-  lightboxTriggers.forEach(trigger => {
+  zoomTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
-      const title = trigger.getAttribute('data-title');
-      const desc = trigger.getAttribute('data-desc');
-      
-      // Clone the visual element (the SVG inside the device screen)
-      const screenElement = trigger.querySelector('.device-screen').children[0];
-      const clonedElement = screenElement.cloneNode(true);
-      
-      lightboxContainer.innerHTML = '';
-      lightboxContainer.appendChild(clonedElement);
-      
-      lightboxTitle.textContent = title;
-      lightboxDesc.textContent = desc;
-      
+      if (!lightboxModal || !mediaContainer) return;
+
+      const visualBox = trigger.querySelector('.showcase-visual-box');
+      const caption = trigger.nextElementSibling?.textContent || 'Visual Showcase';
+
+      mediaContainer.innerHTML = visualBox ? visualBox.outerHTML : '';
+      if (lightboxTitle) lightboxTitle.textContent = caption;
+      if (lightboxDesc) lightboxDesc.textContent = 'High-resolution snapshot of analytical visualization script.';
+
       lightboxModal.classList.add('active');
       lightboxModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
@@ -468,268 +333,61 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function closeLightbox() {
-    lightboxModal.classList.remove('active');
-    lightboxModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    if (lightboxModal) {
+      lightboxModal.classList.remove('active');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
   }
 
-  lightboxCloseBtn.addEventListener('click', closeLightbox);
-  lightboxModal.addEventListener('click', (e) => {
-    if (e.target === lightboxModal) {
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+
+  // Close modals on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeDetailsModal();
       closeLightbox();
     }
   });
 
-  // Close on ESC key
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
-      closeLightbox();
-    }
-  });
-
-  // 11. Contact Form Validation and Custom Confetti
+  // 13. Contact Form Validation & Success Overlay
   const contactForm = document.getElementById('contact-form');
   const successOverlay = document.getElementById('success-overlay');
   const successCloseBtn = document.getElementById('success-close');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Reset form validation states
-    const inputs = contactForm.querySelectorAll('input, textarea');
-    let isValid = true;
-    
-    inputs.forEach(input => {
-      const group = input.parentElement;
-      if (input.required && !input.value.trim()) {
-        group.classList.add('invalid');
-        isValid = false;
-      } else if (input.type === 'email' && input.value.trim() && !validateEmail(input.value)) {
-        group.classList.add('invalid');
-        isValid = false;
-      } else {
-        group.classList.remove('invalid');
-      }
-    });
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    if (isValid) {
-      // Simulate form submission success
-      const submitBtn = document.getElementById('submit-btn');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<i data-lucide="loader-2" class="spin"></i> Sending...`;
-      if (typeof lucide !== 'undefined') lucide.createIcons();
+      let isValid = true;
+      const inputs = contactForm.querySelectorAll('input, textarea');
 
-      setTimeout(() => {
-        // Success!
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-        
+      inputs.forEach(input => {
+        const group = input.closest('.form-group');
+        if (!input.value.trim()) {
+          group?.classList.add('error');
+          isValid = false;
+        } else {
+          group?.classList.remove('error');
+        }
+      });
+
+      if (isValid && successOverlay) {
         successOverlay.classList.add('active');
-        triggerConfetti();
         contactForm.reset();
-      }, 1500);
-    }
-  });
-
-  successCloseBtn.addEventListener('click', () => {
-    successOverlay.classList.remove('active');
-  });
-
-  // Helper validation
-  function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
-  }
-
-  // Input listener to clear errors on typing
-  contactForm.querySelectorAll('input, textarea').forEach(input => {
-    input.addEventListener('input', () => {
-      const group = input.parentElement;
-      group.classList.remove('invalid');
-    });
-  });
-
-  // Custom Confetti Trigger
-  function triggerConfetti() {
-    const duration = 3000;
-    const animationEnd = Date.now() + duration;
-    
-    // Create temporary canvas overlaying the viewport
-    const confettiCanvas = document.createElement('canvas');
-    confettiCanvas.style.position = 'fixed';
-    confettiCanvas.style.inset = '0';
-    confettiCanvas.style.pointerEvents = 'none';
-    confettiCanvas.style.zIndex = '9999';
-    document.body.appendChild(confettiCanvas);
-    
-    const confettiCtx = confettiCanvas.getContext('2d');
-    
-    let cWidth = confettiCanvas.width = window.innerWidth;
-    let cHeight = confettiCanvas.height = window.innerHeight;
-    
-    window.addEventListener('resize', () => {
-      cWidth = confettiCanvas.width = window.innerWidth;
-      cHeight = confettiCanvas.height = window.innerHeight;
-    });
-
-    const colors = ['#2563EB', '#3B82F6', '#22C55E', '#F59E0B', '#A855F7', '#EF4444'];
-    const confettiParticles = [];
-
-    class Confetti {
-      constructor() {
-        this.x = Math.random() * cWidth;
-        this.y = Math.random() * -50 - 20;
-        this.size = Math.random() * 8 + 4;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-        this.speedX = Math.random() * 4 - 2;
-        this.speedY = Math.random() * 5 + 3;
-        this.rotation = Math.random() * 360;
-        this.rotationSpeed = Math.random() * 10 - 5;
       }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.rotation += this.rotationSpeed;
-      }
-
-      draw() {
-        confettiCtx.save();
-        confettiCtx.translate(this.x, this.y);
-        confettiCtx.rotate(this.rotation * Math.PI / 180);
-        confettiCtx.fillStyle = this.color;
-        confettiCtx.fillRect(-this.size/2, -this.size/2, this.size, this.size);
-        confettiCtx.restore();
-      }
-    }
-
-    function runConfetti() {
-      confettiCtx.clearRect(0, 0, cWidth, cHeight);
-      
-      if (Date.now() < animationEnd) {
-        if (Math.random() < 0.3) {
-          confettiParticles.push(new Confetti());
-        }
-        requestAnimationFrame(runConfetti);
-      } else if (confettiParticles.length > 0) {
-        requestAnimationFrame(runConfetti);
-      } else {
-        confettiCanvas.remove();
-        return;
-      }
-
-      for (let i = confettiParticles.length - 1; i >= 0; i--) {
-        const p = confettiParticles[i];
-        p.update();
-        p.draw();
-        
-        // Remove particles below screen
-        if (p.y > cHeight) {
-          confettiParticles.splice(i, 1);
-        }
-      }
-    }
-
-    runConfetti();
-  }
-
-  // 12. Magnetic Buttons Effect
-  const magneticButtons = document.querySelectorAll('.magnetic-btn');
-  
-  magneticButtons.forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      // Pull button slightly toward cursor
-      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.02)`;
     });
 
-    btn.addEventListener('mouseleave', () => {
-      // Revert transformation smoothly
-      btn.style.transform = 'translate(0, 0) scale(1)';
-    });
-  });
-
-  // 13. Custom Cursor Glow Follower
-  const cursorGlow = document.getElementById('cursor-glow');
-  
-  if (cursorGlow) {
-    document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.opacity = '1';
-      cursorGlow.style.left = `${e.clientX}px`;
-      cursorGlow.style.top = `${e.clientY}px`;
-    });
-
-    document.addEventListener('mouseleave', () => {
-      cursorGlow.style.opacity = '0';
-    });
-
-    // Make glow expand when hovering over interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project-card, .device-mockup, .skill-category-card, .cert-card, .soft-skill-badge');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursorGlow.classList.add('hovered');
+    if (successCloseBtn && successOverlay) {
+      successCloseBtn.addEventListener('click', () => {
+        successOverlay.classList.remove('active');
       });
-      el.addEventListener('mouseleave', () => {
-        cursorGlow.classList.remove('hovered');
-      });
-    });
-  }
-
-  // 14. Project Details Modal Controllers
-  const detailsModal = document.getElementById('project-details-modal');
-  const viewDetailsBtn = document.getElementById('view-details-btn');
-  const viewSqlBtn = document.getElementById('view-sql-btn');
-  const detailsCloseBtn = detailsModal.querySelector('.details-modal-close');
-
-  if (viewDetailsBtn) {
-    viewDetailsBtn.addEventListener('click', () => {
-      detailsModal.classList.add('active');
-      detailsModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    });
-  }
-
-  if (viewSqlBtn) {
-    viewSqlBtn.addEventListener('click', () => {
-      detailsModal.classList.add('active');
-      detailsModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      // Wait for transitions and scroll to SQL section
-      setTimeout(() => {
-        const sqlSection = document.getElementById('details-sql-section');
-        if (sqlSection) {
-          sqlSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 350);
-    });
-  }
-
-  function closeDetailsModal() {
-    detailsModal.classList.remove('active');
-    detailsModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  if (detailsCloseBtn) {
-    detailsCloseBtn.addEventListener('click', closeDetailsModal);
-  }
-
-  detailsModal.addEventListener('click', (e) => {
-    if (e.target === detailsModal) {
-      closeDetailsModal();
     }
-  });
+  }
 
-  // Close on ESC key
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && detailsModal.classList.contains('active')) {
-      closeDetailsModal();
-    }
-  });
 });
-
