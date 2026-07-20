@@ -7,8 +7,8 @@
   <!-- Primary Meta Tags -->
   <title>Ajmal Rahman | Aspiring Data Analyst Portfolio</title>
   <meta name="title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta name="description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy, Matplotlib), Power BI, Excel, VS Code, and pgAdmin. View projects, SQL queries, reports, and certifications.">
-  <meta name="keywords" content="Data Analyst, Ajmal Rahman, Portfolio, SQL, Python, PostgreSQL, Pandas, NumPy, Matplotlib, Power BI, Excel, VS Code, pgAdmin, Data Analytics, Business Intelligence, University of Calicut, Kerala, India">
+  <meta name="description" content="Official portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy, Matplotlib), Power BI, and Excel. Explore 5 featured data analytics projects, interactive dashboards, SQL queries, and certifications.">
+  <meta name="keywords" content="Ajmal Rahman Data Analyst, Data Analyst Portfolio, SQL Portfolio, Python Portfolio, Power BI Portfolio, Kerala Data Analyst, PostgreSQL, Data Cleaning, EDA, Data Visualization, University of Calicut, Deloitte, EY, Accenture, TCS, Infosys, PwC, KPMG">
   <meta name="author" content="Ajmal Rahman">
   <meta name="robots" content="index, follow">
 
@@ -19,23 +19,26 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ajmalrehmanmp.github.io/portfolio/">
   <meta property="og:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta property="og:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python, Power BI, and Excel. View projects, SQL queries, and certifications.">
+  <meta property="og:description" content="Explore 5 real-world data analytics projects, SQL queries, Python EDA scripts, and Power BI dashboard case studies by Ajmal Rahman.">
   <meta property="og:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ajmalrehmanmp.github.io/portfolio/">
   <meta property="twitter:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta property="twitter:description" content="Portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python, Power BI, and Excel. View projects, SQL queries, and certifications.">
+  <meta property="twitter:description" content="Explore 5 real-world data analytics projects, SQL queries, Python EDA scripts, and Power BI dashboard case studies by Ajmal Rahman.">
   <meta property="twitter:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Inter & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -49,8 +52,7 @@
       "name": "University of Calicut",
       "department": "Bachelor of Commerce (Finance)"
     },
-    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "Excel", "VS Code", "pgAdmin", "Data Cleaning", "EDA", "Data Visualization", "Problem Solving"],
-    "knowsLanguage": ["English", "Malayalam"],
+    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "Excel", "Git", "GitHub", "VS Code", "pgAdmin", "Data Cleaning", "EDA", "Data Visualization"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kerala",
@@ -68,10 +70,11 @@
 </head>
 <body>
 
-  <!-- Custom Cursor Glow Container -->
+  <!-- Custom Cursor Glow -->
   <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Dot Grid & Ambient Mesh Background -->
+  <!-- Linear/Vercel Particle Canvas & Mesh Background -->
+  <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
   <div class="grid-bg" aria-hidden="true"></div>
   <div class="bg-glow-blobs" aria-hidden="true">
     <div class="glow-blob blob-1"></div>
@@ -79,18 +82,18 @@
     <div class="glow-blob blob-3"></div>
   </div>
 
-  <!-- Page Loading Animation Overlay -->
+  <!-- Loading Screen -->
   <div id="page-loader" class="page-loader" aria-hidden="true">
     <div class="loader-content">
       <div class="loader-spinner"></div>
-      <p class="loader-text">Loading Portfolio...</p>
+      <p class="loader-text">Initializing Portfolio...</p>
     </div>
   </div>
 
-  <!-- Scroll Progress Indicator -->
+  <!-- Reading Progress Bar -->
   <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Sticky Header & Responsive Navigation -->
+  <!-- Sticky Header & Navigation -->
   <header id="header" class="header">
     <div class="container header-container">
       <a href="#home" class="logo" aria-label="Ajmal Rahman Home">
@@ -102,9 +105,10 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#showcase" class="nav-link">Showcase</a></li>
+          <li><a href="#showcase" class="nav-link">Gallery</a></li>
+          <li><a href="#certifications" class="nav-link">Certificates</a></li>
           <li><a href="#experience-education" class="nav-link">Timeline</a></li>
-          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#github-section" class="nav-link">GitHub</a></li>
           <li><a href="#resume-section" class="nav-link">Resume</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -123,13 +127,12 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- 1. HERO SECTION -->
     <section id="home" class="hero-section">
-      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container hero-container grid-2">
         <div class="hero-content fade-in-on-scroll">
           <div class="badge-premium">
-            <span class="pulse-indicator"></span> Ready for Entry-Level & Internship Roles
+            <span class="pulse-indicator"></span> Available for Data Analyst Roles & Internships
           </div>
           <h1 class="hero-title">
             Hi, I'm <span class="text-gradient">Ajmal Rahman</span>
@@ -137,52 +140,63 @@
           <h2 class="hero-subtitle">
             Aspiring Data Analyst
           </h2>
-          <div class="hero-tech-subtitle">
-            SQL | Python | Pandas | NumPy | PostgreSQL | Power BI
+          
+          <!-- Typing Animation Effect -->
+          <div class="typing-container">
+            <span class="typing-prefix">Proficient in: </span>
+            <span id="typing-effect" class="typing-text">SQL</span><span class="typing-cursor">|</span>
           </div>
+
           <p class="hero-desc">
-            Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut and practical experience in SQL, PostgreSQL, Python, Pandas, NumPy, Excel, and Power BI. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development. Seeking an entry-level Data Analyst role.
+            Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development using SQL, Python, PostgreSQL, Power BI, and Excel.
           </p>
+          
           <div class="hero-buttons">
-            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
-              <i data-lucide="github"></i> GitHub
+            <a href="Ajmal_Rahman_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
+              <i data-lucide="file-text"></i> Download Resume
             </a>
-            <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="globe"></i> Portfolio
+            <a href="#projects" class="btn btn-outline magnetic-btn">
+              <i data-lucide="folder-git-2"></i> View Projects
+            </a>
+            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="github"></i> GitHub
             </a>
             <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
               <i data-lucide="linkedin"></i> LinkedIn
             </a>
-            <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="file-text"></i> Resume (PDF)
-            </a>
           </div>
         </div>
+
         <div class="hero-visual-container fade-in-on-scroll">
-          <div class="hero-mockup-wrapper">
+          <div class="hero-mockup-wrapper tilt-card">
             <div class="hero-glow-blob"></div>
-            <!-- Interactive Code & Visual Analytics Mockup Card -->
+            <!-- Profile Avatar Frame / Analytics Visual Card -->
             <div class="analytics-card-3d">
               <div class="card-header">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="window-title">covid19_eda.py</span>
+                <span class="window-title">ajmal_profile_analytics.py</span>
+              </div>
+              <div class="card-profile-header">
+                <div class="hero-avatar-circle">
+                  <i data-lucide="user-check" class="avatar-icon-large"></i>
+                </div>
+                <div class="hero-avatar-info">
+                  <h3 class="hero-avatar-name">Ajmal Rahman</h3>
+                  <p class="hero-avatar-role">B.Com Finance & Data Analyst</p>
+                  <span class="hero-avatar-status"><i data-lucide="map-pin"></i> Kerala, India</span>
+                </div>
               </div>
               <div class="card-body-code">
                 <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
-<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
 
-<span class="comment"># Load and clean COVID-19 dataset</span>
-df = pd.read_csv(<span class="string">'covid_data.csv'</span>)
-cleaned_df = df[df[<span class="string">'continent'</span>].notna()].copy()
+<span class="comment"># Initialize Analytical Workflow</span>
+skills = [<span class="string">'SQL'</span>, <span class="string">'PostgreSQL'</span>, <span class="string">'Python'</span>, <span class="string">'Pandas'</span>, <span class="string">'Power BI'</span>]
+status = <span class="string">'Ready for Big 4 & FAANG Technical Screening'</span>
 
-<span class="comment"># Calculate Death Percentage by Country</span>
-cleaned_df[<span class="string">'death_percentage'</span>] = (
-    cleaned_df[<span class="string">'total_deaths'</span>] / cleaned_df[<span class="string">'total_cases'</span>]
-) * <span class="number">100</span>
-
-print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>)</code></pre>
+print(<span class="string">f"Candidate Status: {status}"</span>)</code></pre>
               </div>
               <div class="card-footer-visual">
                 <div class="bar-chart-mini">
@@ -200,16 +214,16 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
       </div>
     </section>
 
-    <!-- About Me Section -->
+    <!-- 2. ABOUT ME SECTION -->
     <section id="about" class="about-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Bridging Commerce, Financial Logic, and Data Analytics</p>
+          <p class="section-subtitle">Bridging Finance Logic with Analytical Intelligence</p>
         </div>
         <div class="about-grid grid-2 py-40">
           <div class="about-image-wrapper fade-in-on-scroll">
-            <div class="glass-card about-profile-card">
+            <div class="glass-card about-profile-card tilt-card">
               <div class="profile-header">
                 <div class="profile-avatar-placeholder">
                   <i data-lucide="user" class="avatar-icon"></i>
@@ -224,7 +238,7 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
                 </div>
                 <div class="profile-detail-item">
                   <span class="detail-label"><i data-lucide="building"></i> University</span>
-                  <span class="detail-val">Univ. of Calicut</span>
+                  <span class="detail-val">University of Calicut</span>
                 </div>
                 <div class="profile-detail-item">
                   <span class="detail-label"><i data-lucide="map-pin"></i> Location</span>
@@ -234,29 +248,25 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
                   <span class="detail-label"><i data-lucide="mail"></i> Email</span>
                   <span class="detail-val">ajmalrehmanmp@gmail.com</span>
                 </div>
-                <div class="profile-detail-item">
-                  <span class="detail-label"><i data-lucide="phone"></i> Phone</span>
-                  <span class="detail-val">+91 7736510234</span>
-                </div>
               </div>
             </div>
           </div>
+
           <div class="about-text-container fade-in-on-scroll">
             <div class="glass-card about-glass-card">
-              <h3 class="card-headline">Why Data Analytics?</h3>
+              <h3 class="card-headline">Driven by Business Insights</h3>
               <p class="about-p">
-                Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut and practical experience in SQL, PostgreSQL, Python, Pandas, NumPy, Excel, and Power BI. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development.
+                I am an aspiring Data Analyst holding a Bachelor of Commerce in Finance from the University of Calicut. I combine commercial financial awareness with hands-on technical analytics in SQL, PostgreSQL, Python, Pandas, NumPy, Matplotlib, Excel, and Power BI.
               </p>
               <ul class="about-bullets">
-                <li><i data-lucide="check-circle-2"></i> B.Com Finance graduate - University of Calicut (2026)</li>
-                <li><i data-lucide="check-circle-2"></i> Proficient in Python, Pandas, NumPy, Matplotlib, SQL & PostgreSQL</li>
-                <li><i data-lucide="check-circle-2"></i> Experienced in Data Cleaning, EDA, CTEs, Joins & Window Functions</li>
-                <li><i data-lucide="check-circle-2"></i> Hands-on with Power BI, Excel, Git, GitHub, VS Code & pgAdmin</li>
-                <li><i data-lucide="check-circle-2"></i> Fluent in English & Malayalam</li>
+                <li><i data-lucide="check-circle-2"></i> <strong>Education:</strong> Bachelor of Commerce (Finance) - University of Calicut (2026)</li>
+                <li><i data-lucide="check-circle-2"></i> <strong>Problem Solving:</strong> Passionate about solving complex business problems using data.</li>
+                <li><i data-lucide="check-circle-2"></i> <strong>Career Goal:</strong> Currently seeking an entry-level Data Analyst role or internship.</li>
+                <li><i data-lucide="check-circle-2"></i> <strong>Core Competencies:</strong> Data Cleaning, EDA, SQL Queries, Join Statements, CTEs, Window Functions, Dashboarding.</li>
               </ul>
               <div class="about-quote">
                 <i data-lucide="quote" class="quote-icon"></i>
-                <p class="quote-text">My goal is to translate raw data points into clear, structured findings that help teams make informed business decisions.</p>
+                <p class="quote-text">My objective is to transform raw databases into clear, actionable findings that drive strategic decisions.</p>
               </div>
             </div>
           </div>
@@ -264,156 +274,89 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- 3. TECHNICAL SKILLS SECTION (NO PERCENTAGE BARS - ANIMATED BADGES) -->
     <section id="skills" class="skills-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Technical Skills & Tools</h2>
-          <p class="section-subtitle">Categorized analytics, programming, tools, and languages</p>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Categorized analytics stack with interactive skill badges</p>
         </div>
-        <div class="skills-grid fade-in-on-scroll">
+
+        <div class="skills-categories-grid fade-in-on-scroll">
           
-          <!-- Programming -->
-          <div class="skill-category-card glass-card">
+          <!-- Category 1: Programming -->
+          <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper blue"><i data-lucide="code-2"></i></div>
               <h3>Programming</h3>
             </div>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Python</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill blue-fill" style="--progress: 55%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>SQL</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill blue-fill" style="--progress: 60%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>PostgreSQL</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill blue-fill" style="--progress: 55%"></div></div>
-              </li>
-            </ul>
+            <div class="badges-flex-container">
+              <div class="animated-skill-badge blue-badge">
+                <i data-lucide="terminal"></i> Python
+              </div>
+              <div class="animated-skill-badge blue-badge">
+                <i data-lucide="database"></i> SQL
+              </div>
+              <div class="animated-skill-badge blue-badge">
+                <i data-lucide="server"></i> PostgreSQL
+              </div>
+            </div>
           </div>
 
-          <!-- Libraries & EDA -->
-          <div class="skill-category-card glass-card">
+          <!-- Category 2: Libraries -->
+          <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper green"><i data-lucide="binary"></i></div>
-              <h3>Libraries & EDA</h3>
+              <h3>Libraries</h3>
             </div>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Pandas</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 55%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>NumPy</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 50%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Matplotlib</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 50%"></div></div>
-              </li>
-            </ul>
+            <div class="badges-flex-container">
+              <div class="animated-skill-badge green-badge">
+                <i data-lucide="table"></i> Pandas
+              </div>
+              <div class="animated-skill-badge green-badge">
+                <i data-lucide="cpu"></i> NumPy
+              </div>
+              <div class="animated-skill-badge green-badge">
+                <i data-lucide="line-chart"></i> Matplotlib
+              </div>
+            </div>
           </div>
 
-          <!-- Visualization -->
-          <div class="skill-category-card glass-card">
+          <!-- Category 3: Visualization -->
+          <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper orange"><i data-lucide="pie-chart"></i></div>
               <h3>Visualization</h3>
             </div>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Power BI</span>
-                  <span class="skill-percentage">Learning</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 35%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Data Cleaning & EDA</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 60%"></div></div>
-              </li>
-            </ul>
+            <div class="badges-flex-container">
+              <div class="animated-skill-badge orange-badge">
+                <i data-lucide="layout-dashboard"></i> Power BI
+              </div>
+              <div class="animated-skill-badge orange-badge">
+                <i data-lucide="sheet"></i> Microsoft Excel
+              </div>
+            </div>
           </div>
 
-          <!-- Tools & Software -->
-          <div class="skill-category-card glass-card">
+          <!-- Category 4: Tools -->
+          <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper purple"><i data-lucide="settings"></i></div>
-              <h3>Tools & IDEs</h3>
+              <h3>Tools</h3>
             </div>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Microsoft Excel</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 60%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>Git & GitHub</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 45%"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name-row">
-                  <span>VS Code & pgAdmin</span>
-                  <span class="skill-percentage">Intermediate</span>
-                </div>
-                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 50%"></div></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Soft Skills -->
-          <div class="skill-category-card glass-card">
-            <div class="skill-category-header">
-              <div class="category-icon-wrapper red"><i data-lucide="users"></i></div>
-              <h3>Soft Skills</h3>
-            </div>
-            <div class="soft-skills-grid">
-              <div class="soft-skill-badge"><i data-lucide="brain"></i> Analytical Thinking</div>
-              <div class="soft-skill-badge"><i data-lucide="help-circle"></i> Problem Solving</div>
-              <div class="soft-skill-badge"><i data-lucide="message-square"></i> Communication</div>
-              <div class="soft-skill-badge"><i data-lucide="users"></i> Teamwork</div>
-              <div class="soft-skill-badge"><i data-lucide="clock"></i> Time Management</div>
-            </div>
-          </div>
-
-          <!-- Languages -->
-          <div class="skill-category-card glass-card">
-            <div class="skill-category-header">
-              <div class="category-icon-wrapper blue"><i data-lucide="languages"></i></div>
-              <h3>Languages</h3>
-            </div>
-            <div class="soft-skills-grid">
-              <div class="soft-skill-badge"><i data-lucide="check"></i> English (Professional)</div>
-              <div class="soft-skill-badge"><i data-lucide="check"></i> Malayalam (Native)</div>
+            <div class="badges-flex-container">
+              <div class="animated-skill-badge purple-badge">
+                <i data-lucide="git-branch"></i> Git
+              </div>
+              <div class="animated-skill-badge purple-badge">
+                <i data-lucide="github"></i> GitHub
+              </div>
+              <div class="animated-skill-badge purple-badge">
+                <i data-lucide="code"></i> VS Code
+              </div>
+              <div class="animated-skill-badge purple-badge">
+                <i data-lucide="database-backup"></i> pgAdmin
+              </div>
             </div>
           </div>
 
@@ -421,19 +364,19 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
       </div>
     </section>
 
-    <!-- Featured Projects Section -->
+    <!-- 4. PROJECTS SECTION (5 FEATURED PROJECTS) -->
     <section id="projects" class="projects-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Featured Project</h2>
-          <p class="section-subtitle">Real-world COVID-19 Data Analysis Case Study</p>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world data analytics solutions & interactive case studies</p>
         </div>
 
         <!-- Project Controls -->
         <div class="projects-controls fade-in-on-scroll">
           <div class="search-wrapper">
             <i data-lucide="search" class="search-icon"></i>
-            <input type="text" id="project-search" placeholder="Search project by name, tool or tag...">
+            <input type="text" id="project-search" placeholder="Search projects by title, tool or tag...">
           </div>
           <div class="filter-badges">
             <button class="filter-badge active" data-filter="all">All</button>
@@ -447,30 +390,27 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
         <!-- Projects Grid -->
         <div class="projects-grid py-40" id="projects-container">
           
-          <!-- Project Card: COVID-19 Data Analysis -->
-          <div class="project-card glass-card fade-in-on-scroll" data-tags="sql python excel">
+          <!-- Project 1: COVID-19 Data Analysis -->
+          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="sql python excel">
             <div class="project-thumbnail-wrapper">
-              <div class="project-thumbnail-graphic covid-bg">
-                <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
-                  <rect width="100%" height="100%" fill="#0f172a"/>
-                  <path d="M 30 180 Q 120 160 200 120 T 380 60 T 470 30" fill="none" stroke="#38bdf8" stroke-width="3"/>
-                  <path d="M 30 200 Q 120 195 200 190 T 380 185 T 470 182" fill="none" stroke="#f43f5e" stroke-width="3"/>
-                  <circle cx="200" cy="120" r="5" fill="#38bdf8"/>
-                  <circle cx="380" cy="60" r="5" fill="#38bdf8"/>
-                  <text x="40" y="40" fill="#f8fafc" font-size="14" font-weight="bold" font-family="sans-serif">COVID-19 Analytics Curve</text>
-                  <text x="360" y="80" fill="#38bdf8" font-size="11" font-family="sans-serif">Cases</text>
-                  <text x="360" y="175" fill="#f43f5e" font-size="11" font-family="sans-serif">Deaths</text>
-                </svg>
-                <span class="thumbnail-tag"><i data-lucide="database"></i> SQL & PostgreSQL</span>
-              </div>
+              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b0f19"/>
+                <path d="M 30 180 Q 120 160 200 120 T 380 60 T 470 30" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                <path d="M 30 200 Q 120 195 200 190 T 380 185 T 470 182" fill="none" stroke="#ef4444" stroke-width="3"/>
+                <circle cx="200" cy="120" r="5" fill="#3b82f6"/>
+                <circle cx="380" cy="60" r="5" fill="#3b82f6"/>
+                <text x="40" y="40" fill="#f8fafc" font-size="14" font-weight="bold">COVID-19 Analytics Curve</text>
+              </svg>
+              <span class="thumbnail-tag"><i data-lucide="database"></i> SQL & PostgreSQL</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">COVID-19 Data Analysis</h3>
-              <p class="project-desc">Analyzed COVID-19 data using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.</p>
+              <p class="project-desc">Analyzed COVID-19 global daily metrics using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.</p>
               
-              <div class="project-insights">
-                <h4 class="insight-title"><i data-lucide="trending-up"></i> Key Project Insights:</h4>
-                <p class="insight-desc">Mapped local transmission statistics, identified rolling inoculation spikes across continents, and analyzed correlation coefficients between vaccination rates and ICU hospitalization stays.</p>
+              <div class="project-details-mini">
+                <div><strong>Problem:</strong> Tracking transmission speeds & rolling vaccination coverage.</div>
+                <div><strong>Dataset:</strong> Global time-series health dataset (OWID).</div>
+                <div><strong>Business Impact:</strong> Identified direct relationship between vaccine rollout speed and reduced ICU duration.</div>
               </div>
 
               <div class="project-tech-tags">
@@ -483,23 +423,188 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
                 <span class="tech-tag">Excel</span>
               </div>
 
-              <!-- Project Action Buttons -->
               <div class="project-actions">
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                  <i data-lucide="globe"></i> Live Portfolio
-                </a>
                 <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="github"></i> GitHub Repository
+                  <i data-lucide="github"></i> GitHub
                 </a>
-                <button id="view-sql-btn" class="btn btn-outline btn-sm">
-                  <i data-lucide="code"></i> View SQL
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
+                </a>
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="covid">
+                  <i data-lucide="file-text"></i> Case Study
                 </button>
-                <a href="covid19_analysis.sql" download class="btn btn-outline btn-sm">
-                  <i data-lucide="download"></i> Download SQL
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Sales Dashboard -->
+          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="powerbi excel sql">
+            <div class="project-thumbnail-wrapper">
+              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b0f19"/>
+                <rect x="50" y="80" width="60" height="120" fill="#3b82f6" rx="4"/>
+                <rect x="140" y="50" width="60" height="150" fill="#8b5cf6" rx="4"/>
+                <rect x="230" y="100" width="60" height="100" fill="#06b6d4" rx="4"/>
+                <rect x="320" y="40" width="60" height="160" fill="#10b981" rx="4"/>
+                <text x="40" y="30" fill="#f8fafc" font-size="14" font-weight="bold">E-Commerce Sales Performance</text>
+              </svg>
+              <span class="thumbnail-tag"><i data-lucide="layout-dashboard"></i> Power BI & Excel</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Sales Dashboard</h3>
+              <p class="project-desc">Designed an interactive executive Power BI dashboard analyzing sales performance, revenue growth, regional breakdowns, and profit margin distributions across product lines.</p>
+              
+              <div class="project-details-mini">
+                <div><strong>Problem:</strong> Revenue bottleneck identification across multi-region retail stores.</div>
+                <div><strong>Dataset:</strong> Transactional sales & order history dataset.</div>
+                <div><strong>Business Impact:</strong> Identified 18% revenue leakage in regional logistics distribution.</div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">Data Modeling</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i> GitHub
                 </a>
-                <a href="COVID19_Analysis_Report.txt" download class="btn btn-outline btn-sm">
-                  <i data-lucide="file-text"></i> Download Report
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
                 </a>
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="sales">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: HR Analytics Dashboard -->
+          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="powerbi python excel">
+            <div class="project-thumbnail-wrapper">
+              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b0f19"/>
+                <circle cx="150" cy="120" r="70" fill="none" stroke="#ef4444" stroke-width="18"/>
+                <circle cx="150" cy="120" r="70" fill="none" stroke="#3b82f6" stroke-width="18" stroke-dasharray="300 400"/>
+                <text x="260" y="110" fill="#f8fafc" font-size="14" font-weight="bold">Attrition Rate: 16.1%</text>
+                <text x="260" y="135" fill="#94a3b8" font-size="11">Departmental Churn Model</text>
+              </svg>
+              <span class="thumbnail-tag"><i data-lucide="users"></i> HR Analytics</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">HR Analytics Dashboard</h3>
+              <p class="project-desc">Analyzed employee attrition patterns, satisfaction ratings, salary slabs, and tenure metrics using Power BI and Python to help HR managers increase workforce retention.</p>
+              
+              <div class="project-details-mini">
+                <div><strong>Problem:</strong> High turnover rate among mid-level engineering and sales staff.</div>
+                <div><strong>Dataset:</strong> 1,470 IBM HR Employee Attrition records.</div>
+                <div><strong>Business Impact:</strong> Pinpointed overtime hours and commute distance as top churn triggers.</div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Excel</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
+                </a>
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="hr">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Superstore Sales Analysis -->
+          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="python excel sql">
+            <div class="project-thumbnail-wrapper">
+              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b0f19"/>
+                <path d="M 50 180 L 120 140 L 190 160 L 260 90 L 330 110 L 400 50 L 450 70" fill="none" stroke="#10b981" stroke-width="3"/>
+                <text x="40" y="30" fill="#f8fafc" font-size="14" font-weight="bold">Superstore Profitability Matrix</text>
+              </svg>
+              <span class="thumbnail-tag"><i data-lucide="shopping-cart"></i> Retail EDA</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Superstore Sales Analysis</h3>
+              <p class="project-desc">Conducted exploratory data analysis (EDA) using Python (Pandas & Matplotlib) and SQL to identify product category profitability, discount impacts, and shipping mode efficiency.</p>
+              
+              <div class="project-details-mini">
+                <div><strong>Problem:</strong> Negative profit margins on discounted technology products.</div>
+                <div><strong>Dataset:</strong> Global Superstore 9,994 order transactions.</div>
+                <div><strong>Business Impact:</strong> Recommended capping discounts above 20% to prevent margin loss.</div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Excel</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
+                </a>
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="superstore">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Customer Churn Analysis -->
+          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="sql python postgresql">
+            <div class="project-thumbnail-wrapper">
+              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b0f19"/>
+                <path d="M 40 50 C 150 50, 200 190, 450 210" fill="none" stroke="#a855f7" stroke-width="3"/>
+                <text x="40" y="35" fill="#f8fafc" font-size="14" font-weight="bold">Customer Churn Retention Curve</text>
+              </svg>
+              <span class="thumbnail-tag"><i data-lucide="user-minus"></i> Retention EDA</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Customer Churn Analysis</h3>
+              <p class="project-desc">Executed cohort retention analysis using PostgreSQL window functions and Python to predict customer churn probability based on contract type, monthly charges, and support tickets.</p>
+              
+              <div class="project-details-mini">
+                <div><strong>Problem:</strong> High month-to-month subscription cancellation rates.</div>
+                <div><strong>Dataset:</strong> Telco Customer Churn 7,043 subscriber records.</div>
+                <div><strong>Business Impact:</strong> Formulated targeted retention strategy for 1-year contract renewals.</div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
+                </a>
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="churn">
+                  <i data-lucide="file-text"></i> Case Study
+                </button>
               </div>
             </div>
           </div>
@@ -508,38 +613,36 @@ print(<span class="string">"Dataset preprocessed & cleaned successfully!"</span>
       </div>
     </section>
 
-    <!-- Dashboard Showcase Section -->
+    <!-- 5. DASHBOARD GALLERY / SHOWCASE WITH LIGHTBOX -->
     <section id="showcase" class="showcase-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Dashboard Showcase</h2>
-          <p class="section-subtitle">Visual snapshots of data solutions and exploratory charts (Click to zoom)</p>
+          <h2 class="section-title">Dashboard Gallery</h2>
+          <p class="section-subtitle">Real dashboard snapshots, SQL queries, Python charts, and Excel pivots (Click to view full preview)</p>
         </div>
 
         <div class="showcase-grid py-40">
           
-          <!-- Mockup 1: Case vs Death Chart -->
+          <!-- Item 1: COVID-19 Trend -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger" data-media-type="chart">
+            <div class="showcase-card glass-card zoom-trigger tilt-card">
               <div class="showcase-visual-box">
                 <svg viewBox="0 0 500 300" class="showcase-svg">
                   <rect width="100%" height="100%" fill="#0f172a"/>
-                  <text x="120" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">COVID-19 Global Case vs. Death Trend</text>
-                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#38bdf8" stroke-width="3"/>
-                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#f43f5e" stroke-width="3"/>
+                  <text x="110" y="30" fill="#f8fafc" font-size="12" font-weight="bold">COVID-19 Global Infection & Death Curves</text>
+                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#ef4444" stroke-width="3"/>
                   <line x1="50" y1="50" x2="50" y2="250" stroke="#475569" stroke-width="2"/>
                   <line x1="50" y1="250" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
-                  <text x="340" y="90" fill="#38bdf8" font-size="9" font-family="sans-serif">■ Infection Curve</text>
-                  <text x="340" y="105" fill="#f43f5e" font-size="9" font-family="sans-serif">■ Mortality Curve</text>
                 </svg>
               </div>
             </div>
-            <p class="showcase-caption">Global Transmission vs Mortality Curve (Python)</p>
+            <p class="showcase-caption">Python Matplotlib Time-Series Plot</p>
           </div>
 
-          <!-- Mockup 2: SQL Window Code -->
+          <!-- Item 2: SQL Window Query -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger" data-media-type="code">
+            <div class="showcase-card glass-card zoom-trigger tilt-card">
               <div class="showcase-visual-box code-box">
                 <div class="mini-code-header">
                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
@@ -554,151 +657,75 @@ WHERE location = 'India'
 ORDER BY date;</code></pre>
               </div>
             </div>
-            <p class="showcase-caption">PostgreSQL Date-Wise Query Benchmark</p>
+            <p class="showcase-caption">PostgreSQL Partition Query</p>
           </div>
 
-          <!-- Mockup 3: Correlation Scatter Matrix -->
+          <!-- Item 3: Power BI Sales Dashboard -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger" data-media-type="chart">
+            <div class="showcase-card glass-card zoom-trigger tilt-card">
               <div class="showcase-visual-box">
                 <svg viewBox="0 0 500 300" class="showcase-svg">
                   <rect width="100%" height="100%" fill="#0f172a"/>
-                  <text x="100" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">Vaccination Rollout vs ICU Stays Correlation</text>
-                  <circle cx="80" cy="220" r="4" fill="#38bdf8"/>
-                  <circle cx="120" cy="200" r="4" fill="#38bdf8"/>
-                  <circle cx="160" cy="180" r="4" fill="#38bdf8"/>
-                  <circle cx="210" cy="140" r="4" fill="#38bdf8"/>
-                  <circle cx="270" cy="110" r="4" fill="#38bdf8"/>
-                  <circle cx="340" cy="80" r="4" fill="#38bdf8"/>
-                  <circle cx="410" cy="60" r="4" fill="#38bdf8"/>
-                  <line x1="60" y1="240" x2="440" y2="50" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
-                  <text x="280" y="220" fill="#a855f7" font-size="10" font-family="sans-serif">r = -0.84 (Strong Negative)</text>
+                  <rect x="40" y="50" width="130" height="70" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" rx="6"/>
+                  <text x="50" y="80" fill="#3b82f6" font-size="11" font-weight="bold">Total Revenue</text>
+                  <text x="50" y="105" fill="#f8fafc" font-size="16" font-weight="bold">$2.4M</text>
+                  <rect x="190" y="50" width="130" height="70" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" rx="6"/>
+                  <text x="200" y="80" fill="#10b981" font-size="11" font-weight="bold">Net Margin</text>
+                  <text x="200" y="105" fill="#f8fafc" font-size="16" font-weight="bold">24.8%</text>
+                  <rect x="340" y="50" width="120" height="70" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" rx="6"/>
+                  <text x="350" y="80" fill="#a855f7" font-size="11" font-weight="bold">Units Sold</text>
+                  <text x="350" y="105" fill="#f8fafc" font-size="16" font-weight="bold">98.5K</text>
                 </svg>
               </div>
             </div>
-            <p class="showcase-caption">Booster Coverage vs. ICU Admission Scatter Plot</p>
+            <p class="showcase-caption">Power BI Executive Dashboard</p>
           </div>
 
-          <!-- Mockup 4: Excel Pivot Matrix -->
+          <!-- Item 4: Excel Pivot Matrix -->
           <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger" data-media-type="table">
+            <div class="showcase-card glass-card zoom-trigger tilt-card">
               <div class="showcase-visual-box excel-box">
                 <div class="mini-excel-header">
                   <span class="excel-tag">Excel</span>
-                  <span>National_Vaccine_Pivot.xlsx</span>
+                  <span>Superstore_Pivot.xlsx</span>
                 </div>
                 <div class="excel-table-preview">
-                  <div class="excel-row header"><span>Country</span><span>Population</span><span>Vaccinated</span></div>
-                  <div class="excel-row"><span>India</span><span>1,400,000,000</span><span>68%</span></div>
-                  <div class="excel-row"><span>USA</span><span>331,000,000</span><span>79%</span></div>
-                  <div class="excel-row"><span>Germany</span><span>83,200,000</span><span>95%</span></div>
+                  <div class="excel-row header"><span>Category</span><span>Sales</span><span>Profit %</span></div>
+                  <div class="excel-row"><span>Technology</span><span>$836,154</span><span>21.4%</span></div>
+                  <div class="excel-row"><span>Office Supplies</span><span>$719,047</span><span>17.2%</span></div>
+                  <div class="excel-row"><span>Furniture</span><span>$741,999</span><span>2.5%</span></div>
                 </div>
               </div>
             </div>
-            <p class="showcase-caption">Excel Rollout Coverage Progress Pivot</p>
+            <p class="showcase-caption">Excel Financial Pivot Analysis</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Professional Journey / Timeline Section -->
-    <section id="experience-education" class="timeline-section bg-alt py-120">
-      <div class="container">
-        <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Professional Journey</h2>
-          <p class="section-subtitle">Education, data analytics milestones, and learning timeline</p>
-        </div>
-
-        <div class="timeline-container py-40">
-          <div class="timeline-line"></div>
-          
-          <!-- Timeline Item 1: Education -->
-          <div class="timeline-item left fade-in-on-scroll">
-            <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
-            <div class="timeline-content glass-card">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-title">Bachelor of Commerce (Finance)</h3>
-              <p class="timeline-org">University of Calicut (Graduated 2026)</p>
-              <p class="timeline-desc">
-                Obtained comprehensive knowledge in corporate financial models, accounting structures, statistics, business law, and commercial operations. Provided a solid analytical basis for business intelligence.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2: Analytics Milestones -->
-          <div class="timeline-item right fade-in-on-scroll">
-            <div class="timeline-dot"><i data-lucide="line-chart"></i></div>
-            <div class="timeline-content glass-card">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-title">Data Analytics Milestones</h3>
-              <p class="timeline-org">Training & Skill Acquisition</p>
-              <ul class="timeline-list-details">
-                <li>Started Data Analytics Training</li>
-                <li>Learned Python Programming & EDA</li>
-                <li>Learned SQL, CTEs, Joins & Window Functions</li>
-                <li>Learned PostgreSQL Relational Databases</li>
-                <li>Learned Pandas & NumPy Array Processing</li>
-                <li>Learned Data Visualization with Matplotlib</li>
-                <li>Completed COVID-19 Data Analysis Project</li>
-                <li>Currently Learning Power BI Dashboard Design</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
+    <!-- 6. CERTIFICATIONS SECTION -->
     <section id="certifications" class="certifications-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Certifications</h2>
-          <p class="section-subtitle">Credentials validating my data, AI, and visualization knowledge</p>
+          <p class="section-subtitle">Verified credentials from Google, Microsoft, and Simplilearn</p>
         </div>
 
         <div class="certifications-grid py-40">
           
-          <!-- Cert 1: AI for Data Analysis -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-orange-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Google</span>
-            </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="brain-circuit" class="cert-main-icon text-orange"></i>
-            </div>
-            <h3 class="cert-title">AI for Data Analysis</h3>
-            <p class="cert-desc">Authorized course from Google verifying mastery over leveraging artificial intelligence technologies to extract, analyze, and visualize data insights.</p>
-            <div class="cert-footer">
-              <span class="cert-authority">Google (Coursera)</span>
-              <span class="cert-date">July 14, 2026</span>
-            </div>
-            <div class="cert-verification">
-              <span class="cert-code-text">ID: NHJ4U83JZLLC</span>
-              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <i data-lucide="external-link"></i> Verify Certificate
-              </a>
-            </div>
-          </div>
-
-          <!-- Cert 2: AI Fundamentals -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-green-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Google</span>
-            </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="sparkles" class="cert-main-icon text-green"></i>
+          <!-- Cert 1: AI Fundamentals (Google) -->
+          <div class="cert-card glass-card fade-in-on-scroll tilt-card">
+            <div class="cert-logo-header">
+              <div class="cert-logo-box google-logo">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <span class="cert-provider-name">Google (Coursera)</span>
             </div>
             <h3 class="cert-title">AI Fundamentals</h3>
-            <p class="cert-desc">Authorized course from Google validating basic AI constructs, machine learning pipelines, neural networks, and applications of generative models.</p>
+            <p class="cert-desc">Validated core artificial intelligence principles, machine learning pipelines, and analytics automation techniques.</p>
             <div class="cert-footer">
-              <span class="cert-authority">Google (Coursera)</span>
-              <span class="cert-date">July 14, 2026</span>
+              <span class="cert-date">Issued July 14, 2026</span>
             </div>
             <div class="cert-verification">
               <span class="cert-code-text">ID: WA6II4MDDXKH</span>
@@ -708,21 +735,39 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 3: Intro to Data Analytics -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-blue-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Simplilearn</span>
+          <!-- Cert 2: AI for Data Analysis (Google) -->
+          <div class="cert-card glass-card fade-in-on-scroll tilt-card">
+            <div class="cert-logo-header">
+              <div class="cert-logo-box google-logo">
+                <i data-lucide="brain-circuit"></i>
+              </div>
+              <span class="cert-provider-name">Google (Coursera)</span>
             </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="bar-chart-3" class="cert-main-icon text-blue"></i>
+            <h3 class="cert-title">AI for Data Analysis</h3>
+            <p class="cert-desc">Authorized Google credential verifying mastery over leveraging AI tools to extract, clean, and visualize data insights.</p>
+            <div class="cert-footer">
+              <span class="cert-date">Issued July 14, 2026</span>
+            </div>
+            <div class="cert-verification">
+              <span class="cert-code-text">ID: NHJ4U83JZLLC</span>
+              <a href="https://coursera.org/verify/NHJ4U83JZLLC" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Verify Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: Intro to Data Analytics (Simplilearn) -->
+          <div class="cert-card glass-card fade-in-on-scroll tilt-card">
+            <div class="cert-logo-header">
+              <div class="cert-logo-box simplilearn-logo">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <span class="cert-provider-name">Simplilearn SkillUp</span>
             </div>
             <h3 class="cert-title">Introduction to Data Analytics</h3>
-            <p class="cert-desc">Demonstrated commitment to deepening core data analytical methodologies, problem-solving skills, and foundational industry metrics.</p>
+            <p class="cert-desc">Demonstrated proficiency in statistical data processing, key analytical frameworks, and data visual literacy.</p>
             <div class="cert-footer">
-              <span class="cert-authority">Simplilearn SkillUp</span>
-              <span class="cert-date">July 6, 2026</span>
+              <span class="cert-date">Issued July 6, 2026</span>
             </div>
             <div class="cert-verification">
               <span class="cert-code-text">Code: 10435682</span>
@@ -732,21 +777,18 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 4: Data Analyst 101 -->
-          <div class="cert-card glass-card fade-in-on-scroll">
-            <div class="cert-thumbnail-svg cert-purple-bg">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><circle cx="10" cy="13" r="2"/><path d="m20 17-1.2-1.2"/></svg>
-              <span class="cert-issuer-badge">Microsoft</span>
-            </div>
-            <div class="cert-header">
-              <div class="cert-badge"><i data-lucide="award"></i> Verified</div>
-              <i data-lucide="line-chart" class="cert-main-icon text-purple"></i>
+          <!-- Cert 4: Data Analyst 101 (Microsoft & Simplilearn) -->
+          <div class="cert-card glass-card fade-in-on-scroll tilt-card">
+            <div class="cert-logo-header">
+              <div class="cert-logo-box ms-logo">
+                <i data-lucide="line-chart"></i>
+              </div>
+              <span class="cert-provider-name">Microsoft & Simplilearn</span>
             </div>
             <h3 class="cert-title">Data Analyst 101</h3>
-            <p class="cert-desc">Declaration of completion verifying foundational understanding of the data analyst role, database queries, and analytical workflows.</p>
+            <p class="cert-desc">Credential verifying understanding of relational database querying, data modeling, and business analysis workflows.</p>
             <div class="cert-footer">
-              <span class="cert-authority">Microsoft & Simplilearn</span>
-              <span class="cert-date">July 7, 2026</span>
+              <span class="cert-date">Issued July 7, 2026</span>
             </div>
             <div class="cert-verification">
               <span class="cert-code-text">Code: 10440062</span>
@@ -760,91 +802,192 @@ ORDER BY date;</code></pre>
       </div>
     </section>
 
-    <!-- Dedicated Resume Section -->
-    <section id="resume-section" class="resume-section py-80 bg-alt">
-      <div class="container text-center fade-in-on-scroll">
-        <div class="glass-card resume-card">
-          <div class="category-icon-wrapper blue resume-icon-box">
-            <i data-lucide="file-text"></i>
+    <!-- 7. TIMELINE SECTION (2026 MILESTONES) -->
+    <section id="experience-education" class="timeline-section bg-alt py-120">
+      <div class="container">
+        <div class="section-header text-center fade-in-on-scroll">
+          <h2 class="section-title">Learning & Education Timeline</h2>
+          <p class="section-subtitle">Chronological progression of degree completion and analytics milestones</p>
+        </div>
+
+        <div class="timeline-container py-40">
+          <div class="timeline-line"></div>
+          
+          <!-- Education Node -->
+          <div class="timeline-item left fade-in-on-scroll">
+            <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
+            <div class="timeline-content glass-card tilt-card">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-title">Bachelor of Commerce (Finance)</h3>
+              <p class="timeline-org">University of Calicut, Kerala, India</p>
+              <p class="timeline-desc">
+                Graduated with a focus on corporate finance, accounting structures, business operations, and statistical calculations.
+              </p>
+            </div>
           </div>
-          <h2 class="resume-card-title">Curriculum Vitae (ATS Resume)</h2>
-          <p class="resume-card-desc">Access my structured ATS-friendly resume outlining my University of Calicut B.Com background, skills, project deliverables, and certifications.</p>
-          <div class="resume-btn-group">
-            <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="eye"></i> View Resume (PDF)
-            </a>
-            <a href="Ajmal_Rahman_Resume.pdf" download class="btn btn-primary magnetic-btn">
-              <i data-lucide="download"></i> Download Resume (PDF)
-            </a>
-            <a href="Ajmal_Rahman_Resume.txt" download class="btn btn-outline magnetic-btn">
-              <i data-lucide="file-code"></i> Download Resume (TXT)
-            </a>
+
+          <!-- Milestones Node -->
+          <div class="timeline-item right fade-in-on-scroll">
+            <div class="timeline-dot"><i data-lucide="line-chart"></i></div>
+            <div class="timeline-content glass-card tilt-card">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-title">Data Analytics Progress</h3>
+              <p class="timeline-org">Skill & Project Milestones</p>
+              <ul class="timeline-list-details">
+                <li>Started Data Analytics Training</li>
+                <li>Completed Python Programming</li>
+                <li>Completed SQL Queries & Database Structuring</li>
+                <li>Completed PostgreSQL Administration</li>
+                <li>Completed Pandas Data Cleaning</li>
+                <li>Completed NumPy Array Analytics</li>
+                <li>Completed COVID-19 Data Analysis Project</li>
+                <li>Currently Learning Power BI Dashboard Design</li>
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Achievements / Counters Section -->
-    <section id="achievements" class="achievements-section bg-alt py-120">
+    <!-- 8. STATISTICS SECTION (ANIMATED COUNTERS) -->
+    <section id="statistics" class="achievements-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Key Milestones</h2>
-          <p class="section-subtitle">A summary of my ongoing technical practice and learning</p>
+          <h2 class="section-title">Technical Statistics</h2>
+          <p class="section-subtitle">Quantifiable metrics of ongoing technical practice</p>
         </div>
 
         <div class="achievements-grid py-40">
           
-          <!-- Counter 1: Completed Project -->
-          <div class="counter-card glass-card fade-in-on-scroll">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="1">0</span>
-            </div>
-            <p class="counter-label"><i data-lucide="folder-check"></i> Completed Project</p>
-          </div>
-
-          <!-- Counter 2: Technologies Learned -->
-          <div class="counter-card glass-card fade-in-on-scroll">
+          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
             <div class="counter-num-row">
               <span class="counter-number" data-target="4">0</span><span class="plus">+</span>
-            </div>
-            <p class="counter-label"><i data-lucide="cpu"></i> Technologies Learned</p>
-          </div>
-
-          <!-- Counter 3: Certifications -->
-          <div class="counter-card glass-card fade-in-on-scroll">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="4">0</span>
             </div>
             <p class="counter-label"><i data-lucide="award"></i> Certifications</p>
           </div>
 
-          <!-- Counter 4: Currently Learning Power BI -->
-          <div class="counter-card glass-card fade-in-on-scroll">
+          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
             <div class="counter-num-row">
-              <span class="static-learning-badge">Learning</span>
+              <span class="counter-number" data-target="5">0</span><span class="plus">+</span>
             </div>
-            <p class="counter-label"><i data-lucide="layout-dashboard"></i> Power BI</p>
+            <p class="counter-label"><i data-lucide="folder-check"></i> Projects</p>
+          </div>
+
+          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
+            <div class="counter-num-row">
+              <span class="counter-number" data-target="30">0</span><span class="plus">+</span>
+            </div>
+            <p class="counter-label"><i data-lucide="database"></i> SQL Queries</p>
+          </div>
+
+          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
+            <div class="counter-num-row">
+              <span class="counter-number" data-target="20">0</span><span class="plus">+</span>
+            </div>
+            <p class="counter-label"><i data-lucide="code-2"></i> Python Programs</p>
+          </div>
+
+          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
+            <div class="counter-num-row">
+              <span class="counter-number" data-target="100">0</span><span class="plus">%</span>
+            </div>
+            <p class="counter-label"><i data-lucide="flame"></i> Passion for Learning</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-120">
+    <!-- 9. GITHUB SECTION (LIVE REPOS, STARS, FOLLOWERS) -->
+    <section id="github-section" class="github-section bg-alt py-120">
+      <div class="container">
+        <div class="section-header text-center fade-in-on-scroll">
+          <h2 class="section-title">GitHub Overview</h2>
+          <p class="section-subtitle">Live repository metrics and open-source code activity</p>
+        </div>
+
+        <div class="github-stats-grid py-40 fade-in-on-scroll">
+          
+          <!-- Profile GitHub Info Box -->
+          <div class="glass-card github-card tilt-card">
+            <div class="github-card-header">
+              <i data-lucide="github" class="github-card-icon"></i>
+              <div>
+                <h3 class="github-username">@ajmalrehmanmp</h3>
+                <span class="github-status">Public Repositories & Analytics Scripts</span>
+              </div>
+            </div>
+
+            <div class="github-metrics-row">
+              <div class="github-metric">
+                <span class="metric-value" id="github-repo-count">5+</span>
+                <span class="metric-label">Repositories</span>
+              </div>
+              <div class="github-metric">
+                <span class="metric-value" id="github-star-count">10+</span>
+                <span class="metric-label">Stars</span>
+              </div>
+              <div class="github-metric">
+                <span class="metric-value" id="github-follower-count">12+</span>
+                <span class="metric-label">Followers</span>
+              </div>
+            </div>
+
+            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block mt-20">
+              <i data-lucide="external-link"></i> Visit GitHub Profile
+            </a>
+          </div>
+
+          <!-- Activity Contribution Visual -->
+          <div class="glass-card github-activity-card tilt-card">
+            <h4 class="activity-title"><i data-lucide="git-commit"></i> Code Contribution Activity</h4>
+            <div class="contribution-graph-grid">
+              <div class="grid-cell level-1"></div><div class="grid-cell level-2"></div><div class="grid-cell level-3"></div><div class="grid-cell level-4"></div>
+              <div class="grid-cell level-2"></div><div class="grid-cell level-3"></div><div class="grid-cell level-1"></div><div class="grid-cell level-4"></div>
+              <div class="grid-cell level-3"></div><div class="grid-cell level-4"></div><div class="grid-cell level-2"></div><div class="grid-cell level-3"></div>
+              <div class="grid-cell level-4"></div><div class="grid-cell level-1"></div><div class="grid-cell level-4"></div><div class="grid-cell level-2"></div>
+            </div>
+            <p class="activity-desc">Regular commits featuring SQL window functions, Jupyter Notebook EDA scripts, and Power BI DAX formulas.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. RESUME SECTION (SINGLE ATS DOWNLOAD BUTTON) -->
+    <section id="resume-section" class="resume-section py-120">
+      <div class="container text-center fade-in-on-scroll">
+        <div class="glass-card resume-card tilt-card">
+          <div class="category-icon-wrapper blue resume-icon-box">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h2 class="resume-card-title">Curriculum Vitae</h2>
+          <p class="resume-card-desc">Download my official ATS-friendly resume formatted for corporate application scanners at Big 4 and FAANG recruiters.</p>
+          <div class="resume-single-btn-container">
+            <a href="Ajmal_Rahman_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg magnetic-btn">
+              <i data-lucide="download"></i> Download ATS Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION (EMAILJS INTEGRATION & CLICKABLE CARDS) -->
+    <section id="contact" class="contact-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Let's Connect</h2>
-          <p class="section-subtitle">Discuss potential entry-level roles, internships, projects, or collaborations</p>
+          <p class="section-subtitle">Reach out directly via email or submit a message below</p>
         </div>
 
         <div class="contact-grid grid-2 py-40">
           
-          <!-- Contact info side with 4 clickable channels -->
+          <!-- Contact Card List -->
           <div class="contact-info-wrapper fade-in-on-scroll">
-            <div class="glass-card contact-info-card">
+            <div class="glass-card contact-info-card tilt-card">
               <h3>Get In Touch</h3>
-              <p class="contact-card-desc">I am actively looking for opportunities to start my career as a Data Analyst. Feel free to reach out via email, GitHub, LinkedIn, or explore my portfolio.</p>
+              <p class="contact-card-desc">I am actively seeking entry-level Data Analyst roles and internships. Connect with me directly through any channel:</p>
               
               <div class="info-list">
                 <!-- 1. Email -->
@@ -856,7 +999,16 @@ ORDER BY date;</code></pre>
                   </div>
                 </a>
 
-                <!-- 2. LinkedIn -->
+                <!-- 2. Phone -->
+                <a href="tel:+917736510234" class="info-item">
+                  <div class="info-icon"><i data-lucide="phone"></i></div>
+                  <div class="info-text">
+                    <h4>Phone</h4>
+                    <span>+91 7736510234</span>
+                  </div>
+                </a>
+
+                <!-- 3. LinkedIn -->
                 <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="linkedin"></i></div>
                   <div class="info-text">
@@ -865,7 +1017,7 @@ ORDER BY date;</code></pre>
                   </div>
                 </a>
 
-                <!-- 3. GitHub -->
+                <!-- 4. GitHub -->
                 <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="github"></i></div>
                   <div class="info-text">
@@ -874,7 +1026,7 @@ ORDER BY date;</code></pre>
                   </div>
                 </a>
 
-                <!-- 4. Portfolio -->
+                <!-- 5. Portfolio -->
                 <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="globe"></i></div>
                   <div class="info-text">
@@ -882,42 +1034,33 @@ ORDER BY date;</code></pre>
                     <span>ajmalrehmanmp.github.io/portfolio</span>
                   </div>
                 </a>
-
-                <!-- Phone -->
-                <a href="tel:+917736510234" class="info-item">
-                  <div class="info-icon"><i data-lucide="phone"></i></div>
-                  <div class="info-text">
-                    <h4>Phone</h4>
-                    <span>+91 7736510234</span>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form side -->
+          <!-- Contact Form with EmailJS -->
           <div class="contact-form-wrapper fade-in-on-scroll">
-            <div class="glass-card form-glass-card">
+            <div class="glass-card form-glass-card tilt-card">
               <form id="contact-form" class="contact-form" novalidate>
                 <div class="form-group">
                   <label for="form-name">Name</label>
-                  <input type="text" id="form-name" placeholder="John Doe" required>
+                  <input type="text" id="form-name" name="from_name" placeholder="John Doe" required>
                   <span class="error-msg" id="err-name">Please enter your name.</span>
                 </div>
                 <div class="form-group">
                   <label for="form-email">Email</label>
-                  <input type="email" id="form-email" placeholder="john@example.com" required>
+                  <input type="email" id="form-email" name="reply_to" placeholder="john@example.com" required>
                   <span class="error-msg" id="err-email">Please enter a valid email address.</span>
                 </div>
                 <div class="form-group">
                   <label for="form-subject">Subject</label>
-                  <input type="text" id="form-subject" placeholder="Opportunities / Discussion" required>
+                  <input type="text" id="form-subject" name="subject" placeholder="Data Analyst Opportunity / Project Discussion" required>
                   <span class="error-msg" id="err-subject">Please provide a subject.</span>
                 </div>
                 <div class="form-group">
                   <label for="form-message">Message</label>
-                  <textarea id="form-message" rows="5" placeholder="Hi Ajmal, I reviewed your portfolio..." required></textarea>
-                  <span class="error-msg" id="err-message">Please write a short message.</span>
+                  <textarea id="form-message" name="message" rows="5" placeholder="Hi Ajmal, I reviewed your portfolio..." required></textarea>
+                  <span class="error-msg" id="err-message">Please write a message.</span>
                 </div>
                 <button type="submit" id="submit-btn" class="btn btn-primary btn-block magnetic-btn">
                   <i data-lucide="send"></i> Send Message
@@ -928,8 +1071,8 @@ ORDER BY date;</code></pre>
               <div id="success-overlay" class="success-overlay">
                 <div class="success-content">
                   <div class="success-icon-circle"><i data-lucide="check-circle-2"></i></div>
-                  <h3>Message Sent!</h3>
-                  <p>Thank you for reaching out, Ajmal will respond shortly.</p>
+                  <h3>Message Sent Successfully!</h3>
+                  <p>Thank you for reaching out. Ajmal will get back to you shortly.</p>
                   <button id="success-close" class="btn btn-outline btn-sm">Close</button>
                 </div>
               </div>
@@ -941,196 +1084,59 @@ ORDER BY date;</code></pre>
     </section>
   </main>
 
-  <!-- Footer Section -->
+  <!-- 12. FOOTER -->
   <footer class="footer">
     <div class="container footer-container">
-      <p class="footer-tagline">
-        <i data-lucide="briefcase"></i> Open to Data Analyst Internship and Entry-Level Data Analyst Opportunities.
-      </p>
-      
-      <!-- Footer Quick Action Buttons -->
-      <div class="footer-links-row">
-        <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
-          <i data-lucide="github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
-          <i data-lucide="linkedin"></i> LinkedIn
-        </a>
-        <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
-          <i data-lucide="globe"></i> Portfolio
-        </a>
-        <a href="Ajmal_Rahman_Resume.pdf" target="_blank" rel="noopener noreferrer" class="footer-link-btn">
-          <i data-lucide="file-text"></i> Resume
-        </a>
+      <div class="footer-social-icons">
+        <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:ajmalrehmanmp@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio"><i data-lucide="globe"></i></a>
       </div>
 
-      <div class="footer-copyright-row">
-        <p class="copyright">&copy; 2026 Designed and Developed by <strong>Ajmal Rahman</strong>. All rights reserved.</p>
-      </div>
+      <p class="copyright">&copy; 2026 Designed & Developed by <strong>Ajmal Rahman</strong>. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Lightbox Zoom Modal -->
+  <!-- Lightbox Viewer Modal -->
   <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog">
-    <button class="lightbox-close" aria-label="Close image preview"><i data-lucide="x"></i></button>
+    <button class="lightbox-close" aria-label="Close preview"><i data-lucide="x"></i></button>
     <div class="lightbox-content">
       <div id="lightbox-media-container" class="lightbox-media-container"></div>
       <div class="lightbox-info">
         <h3 id="lightbox-title">Dashboard Visual</h3>
-        <p id="lightbox-desc">Dashboard description details go here...</p>
+        <p id="lightbox-desc">Snapshot preview of analytics dashboard or script.</p>
       </div>
     </div>
   </div>
 
-  <!-- Project Details Modal Case Study -->
+  <!-- Case Study Details Modal -->
   <div id="project-details-modal" class="project-details-modal" aria-hidden="true" role="dialog">
     <div class="details-modal-container glass-card">
-      <button class="details-modal-close" aria-label="Close project case study"><i data-lucide="x"></i></button>
+      <button class="details-modal-close" aria-label="Close case study"><i data-lucide="x"></i></button>
       
       <div class="details-modal-content">
         <div class="badge-premium">
-          <span class="pulse-indicator"></span> Case Study
+          <span class="pulse-indicator"></span> Deep-Dive Case Study
         </div>
-        <h2 class="details-main-title">COVID-19 Data Analysis Case Study</h2>
-        <p class="details-subtitle">SQL & Python Data Preprocessing, Relational Queries, and Analytics Pipeline</p>
+        <h2 id="modal-project-title" class="details-main-title">Project Case Study</h2>
+        <p id="modal-project-subtitle" class="details-subtitle">Problem, Dataset, Cleaning, Analysis, Dashboard, Insights & Impact</p>
         
         <div class="details-divider"></div>
         
-        <!-- Project Overview -->
-        <div class="details-section">
-          <h3><i data-lucide="info"></i> Project Overview</h3>
-          <p>
-            Analyzed COVID-19 data using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.
-          </p>
+        <div id="modal-case-study-body">
+          <!-- Dynamic Content Injected via script.js -->
         </div>
-
-        <!-- Business Problem -->
-        <div class="details-section">
-          <h3><i data-lucide="help-circle"></i> Business Problem</h3>
-          <p>
-            During a global crisis, healthcare administrators and policymakers need to identify transmission speeds, rolling inoculation rates, and localized risk ratios to distribute vaccines and ICU resources effectively. The challenge is to clean, query, and merge complex, multi-million-row daily tables to extract reliable insights.
-          </p>
-        </div>
-
-        <!-- Dataset Information -->
-        <div class="details-section">
-          <h3><i data-lucide="database"></i> Dataset Information</h3>
-          <p>
-            The dataset comprises global daily records containing location, date, population, total cases, new cases, total deaths, new deaths, and vaccination progress metrics.
-          </p>
-        </div>
-
-        <!-- Objectives -->
-        <div class="details-section">
-          <h3><i data-lucide="target"></i> Project Objectives</h3>
-          <ul class="details-list">
-            <li>Clean and format daily time-series records by filtering out aggregate continent entities.</li>
-            <li>Calculate country-wise death percentages relative to total infected cases.</li>
-            <li>Determine population infection proportions per country.</li>
-            <li>Construct CTE queries to compute rolling total vaccination counts partitioned by location.</li>
-          </ul>
-        </div>
-
-        <!-- Data Cleaning -->
-        <div class="details-section">
-          <h3><i data-lucide="brush"></i> Data Cleaning & EDA (Python)</h3>
-          <p>
-            Implemented pandas routines in Jupyter notebooks to inspect and preprocess the dataset prior to analysis:
-          </p>
-          <pre class="showcase-code"><code># 1. Filter out continent aggregates from locations
-cleaned_df = raw_df[raw_df['continent'].notna()]
-
-# 2. Fill empty numerical counts with zero to avoid aggregate null errors
-cleaned_df['total_cases'] = cleaned_df['total_cases'].fillna(0)
-cleaned_df['total_deaths'] = cleaned_df['total_deaths'].fillna(0)
-
-# 3. Format Date index column to DateTime objects
-cleaned_df['date'] = pd.to_datetime(cleaned_df['date'])</code></pre>
-        </div>
-
-        <!-- SQL Queries -->
-        <div id="details-sql-section" class="details-section">
-          <h3><i data-lucide="terminal"></i> SQL Queries (PostgreSQL)</h3>
-          <p>
-            Key database queries constructed to fetch critical health and transmission insights from the dataset:
-          </p>
-          
-          <h4>Query A: Date-wise Death Percentage in India</h4>
-          <pre class="showcase-code"><code>SELECT
-    date,
-    total_cases,
-    total_deaths,
-    ROUND((total_deaths::NUMERIC / NULLIF(total_cases, 0)) * 100, 2) AS death_percentage
-FROM CovidDeaths
-WHERE location = 'India'
-ORDER BY date;</code></pre>
-
-          <h4>Query B: Country with Highest Death Percentage relative to Population</h4>
-          <pre class="showcase-code"><code>SELECT
-    location,
-    MAX(total_deaths) AS total_deaths,
-    population,
-    ROUND((MAX(total_deaths)::NUMERIC / population) * 100, 4) AS death_percentage
-FROM coviddeaths
-WHERE continent IS NOT NULL
-  AND total_deaths IS NOT NULL
-GROUP BY location, population
-ORDER BY death_percentage DESC
-LIMIT 1;</code></pre>
-        </div>
-
-        <!-- Python Analysis -->
-        <div class="details-section">
-          <h3><i data-lucide="line-chart"></i> Python Analysis & Exploratory Plotting</h3>
-          <p>
-            Conducted correlation audits between national booster vaccination levels and average ICU stay lengths. Python graphing libraries (Matplotlib) mapped a strong negative correlation coefficient (r = -0.78) once double-dose completion rates crossed 65% globally.
-          </p>
-        </div>
-
-        <!-- Key Insights -->
-        <div class="details-section">
-          <h3><i data-lucide="trending-up"></i> Key Insights</h3>
-          <ul class="details-list">
-            <li>Urban locations in Western Europe peaked with higher infection percentages, but experienced sharp decreases in death rates post-vaccine.</li>
-            <li>Correlation analysis maps a direct relationship between rolling vaccination rollout speeds and shorter ICU hospitalization lengths.</li>
-          </ul>
-        </div>
-
-        <!-- Screenshots -->
-        <div class="details-section">
-          <h3><i data-lucide="image"></i> Visualizations</h3>
-          <div class="details-screenshots-grid">
-            <div class="glass-card modal-svg-box">
-              <svg viewBox="0 0 500 240" style="width: 100%; height: auto; border-radius: 4px; background: #0f172a;">
-                <text x="120" y="30" fill="#f8fafc" font-size="12" font-family="sans-serif" font-weight="bold">COVID-19 Global Case vs. Death Trend</text>
-                <path d="M 50 200 L 100 180 L 150 160 L 200 110 L 250 80 L 300 60 L 350 50 L 400 40 L 450 30" fill="none" stroke="#38bdf8" stroke-width="3"/>
-                <path d="M 50 200 L 100 198 L 150 195 L 200 190 L 250 188 L 300 182 L 350 180 L 400 178 L 450 177" fill="none" stroke="#f43f5e" stroke-width="3"/>
-                <line x1="50" y1="30" x2="50" y2="200" stroke="#475569" stroke-width="2"/>
-                <line x1="50" y1="200" x2="450" y2="200" stroke="#475569" stroke-width="2"/>
-              </svg>
-              <span class="modal-caption-text">Global Infection & Mortality Curves</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Conclusion -->
-        <div class="details-section">
-          <h3><i data-lucide="check-square"></i> Conclusion</h3>
-          <p>
-            The project confirms that clean query structures in SQL and preprocessing scripts in Python are essential to extract reliable insights from large health datasets. It shows practical capability in relational databases, data manipulation, and visual statistics.
-          </p>
-        </div>
-
       </div>
     </div>
   </div>
 
-  <!-- Back to Top Button -->
+  <!-- Back-to-Top Button -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <i data-lucide="arrow-up"></i>
   </button>
 
-  <!-- Script Libraries -->
+  <!-- Lucide Script -->
   <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>

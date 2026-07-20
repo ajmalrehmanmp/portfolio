@@ -1,30 +1,141 @@
 /**
  * Ajmal Rahman Data Analyst Portfolio Script
- * Pure Vanilla JavaScript for FAANG & Big-4 grade interactive components.
+ * Apple + Linear + Vercel + Stripe Inspired Interactions
+ * Pure Vanilla JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Initialize Lucide Vector Icons
+  // 1. Initialize Lucide Icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // 2. Page Loader Dismissal
+  // 2. Initialize EmailJS SDK
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("YOUR_PUBLIC_KEY"); // User can add their EmailJS public key here if desired
+  }
+
+  // 3. Page Loader Dismissal
   const pageLoader = document.getElementById('page-loader');
   if (pageLoader) {
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        pageLoader.classList.add('loaded');
-      }, 300);
+      setTimeout(() => pageLoader.classList.add('loaded'), 300);
     });
-    // Fallback if load already fired
-    setTimeout(() => {
-      pageLoader.classList.add('loaded');
-    }, 1200);
+    setTimeout(() => pageLoader.classList.add('loaded'), 1000);
   }
 
-  // 3. Scroll Progress Indicator & Header Scrolled State
+  // 4. Typing Effect for Hero Subtitle
+  const typingElement = document.getElementById('typing-effect');
+  if (typingElement) {
+    const phrases = ['SQL', 'Python', 'Power BI', 'PostgreSQL', 'Data Analytics'];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeLoop() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typingSpeed = 1800; // Pause at end of word
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingSpeed = 400; // Pause before typing next word
+      }
+
+      setTimeout(typeLoop, typingSpeed);
+    }
+    typeLoop();
+  }
+
+  // 5. Canvas Particle Ambient Background
+  const canvas = document.getElementById('particle-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.opacity = Math.random() * 0.5 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+      }
+      draw() {
+        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const count = Math.min(60, Math.floor(window.innerWidth / 25));
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  }
+
+  // 6. 3D Card Tilt Interaction Physics
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -6; // max 6 deg
+      const rotateY = ((x - centerX) / centerX) * 6;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+
+  // 7. Scroll Progress & Header Shrink
   const scrollProgress = document.getElementById('scroll-progress');
   const header = document.getElementById('header');
   const backToTopBtn = document.getElementById('back-to-top');
@@ -33,46 +144,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
     const currentScroll = window.scrollY;
 
-    // Scroll progress bar
     if (scrollProgress && totalScroll > 0) {
-      const progressPercent = (currentScroll / totalScroll) * 100;
-      scrollProgress.style.width = `${progressPercent}%`;
+      scrollProgress.style.width = `${(currentScroll / totalScroll) * 100}%`;
     }
 
-    // Header background blur on scroll
     if (header) {
-      if (currentScroll > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', currentScroll > 40);
     }
 
-    // Back to top button visibility
     if (backToTopBtn) {
-      if (currentScroll > 300) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
+      backToTopBtn.classList.toggle('visible', currentScroll > 300);
     }
   });
 
-  // Back to top click handler
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  // 4. Custom Cursor Ambient Glow Tracker
+  // 8. Custom Cursor Glow
   const cursorGlow = document.getElementById('cursor-glow');
   if (cursorGlow && window.innerWidth > 992) {
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -92,16 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(animateCursor);
     }
     animateCursor();
-
-    // Hover scale up on interactive elements
-    const interactiveElems = document.querySelectorAll('a, button, .glass-card');
-    interactiveElems.forEach(elem => {
-      elem.addEventListener('mouseenter', () => cursorGlow.classList.add('hovered'));
-      elem.addEventListener('mouseleave', () => cursorGlow.classList.remove('hovered'));
-    });
   }
 
-  // 5. Theme Toggle Handler
+  // 9. Theme Toggle
   const themeToggleBtn = document.getElementById('theme-toggle');
   const darkIcon = document.querySelector('.theme-icon-dark');
   const lightIcon = document.querySelector('.theme-icon-light');
@@ -129,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Mobile Menu Navigation Toggler
+  // 10. Mobile Navigation Toggler
   const mobileToggleBtn = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
   const menuOpenIcon = document.querySelector('.menu-open-icon');
@@ -146,9 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Auto-close menu when clicking any nav link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileToggleBtn.setAttribute('aria-expanded', 'false');
@@ -160,33 +245,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Active Navigation Highlight & Scroll Spy
+  // 11. Scroll Spy Navigation Highlight
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -70% 0px',
-    threshold: 0
-  };
 
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const activeId = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${activeId}`) {
-            link.classList.add('active');
-          }
+          link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
         });
       }
     });
-  }, observerOptions);
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
 
   sections.forEach(section => navObserver.observe(section));
 
-  // 8. Scroll Reveal Animations
+  // 12. Scroll Reveal Animations
   const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -198,19 +274,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeElements.forEach(elem => fadeObserver.observe(elem));
 
-  // 9. Animated Counter Numbers for Milestones
+  // 13. Animated Counter Numbers
   const counterNumbers = document.querySelectorAll('.counter-number');
-  let animated = false;
+  let animatedCounters = false;
 
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
+      if (entry.isIntersecting && !animatedCounters) {
+        animatedCounters = true;
         counterNumbers.forEach(counter => {
           const target = parseInt(counter.getAttribute('data-target'), 10);
           let count = 0;
-          const duration = 1200; // ms
-          const step = Math.max(1, Math.floor(target / (duration / 30)));
+          const step = Math.max(1, Math.floor(target / 40));
 
           const timer = setInterval(() => {
             count += step;
@@ -226,12 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.5 });
 
-  const achievementsSection = document.getElementById('achievements');
-  if (achievementsSection) {
-    counterObserver.observe(achievementsSection);
-  }
+  const statsSection = document.getElementById('statistics');
+  if (statsSection) counterObserver.observe(statsSection);
 
-  // 10. Project Category Filter & Search Functionality
+  // 14. Project Filter & Search
   const filterBadges = document.querySelectorAll('.filter-badge');
   const searchInput = document.getElementById('project-search');
   const projectCards = document.querySelectorAll('.project-card');
@@ -248,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesSearch = searchQuery === '' || text.includes(searchQuery);
 
       if (matchesFilter && matchesSearch) {
-        card.style.display = 'grid';
+        card.style.display = 'flex';
         setTimeout(() => card.classList.add('visible'), 50);
       } else {
         card.style.display = 'none';
@@ -264,32 +337,118 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (searchInput) {
-    searchInput.addEventListener('input', filterProjects);
-  }
+  if (searchInput) searchInput.addEventListener('input', filterProjects);
 
-  // 11. Project Details Case Study Modal Handler
+  // 15. Dynamic Case Study Data Dictionary for 5 Projects
+  const caseStudies = {
+    covid: {
+      title: "COVID-19 Global Data Analysis Case Study",
+      subtitle: "SQL & Python Relational Queries, Null Preprocessing, and Inoculation Correlation",
+      problem: "Healthcare organizations needed quick insights into pandemic transmission trajectories and rolling vaccination impact.",
+      dataset: "Johns Hopkins University & OWID daily time-series data (150,000+ daily location logs).",
+      cleaning: "Removed aggregated continent locations. Handled missing daily infection values with zero-filling and date index conversion.",
+      analysis: "Calculated death percentage relative to total cases, CTE queries for continent totals, and PostgreSQL window functions for rolling inoculation counts.",
+      dashboard: "Interactive time-series line chart comparing global infection curves versus mortality rates.",
+      insights: "Identified strong inverse correlation (r = -0.78) between double-dose vaccination completion and hospital stay length.",
+      impact: "Demonstrated clear analytical workflow to optimize vaccine supply logistics."
+    },
+    sales: {
+      title: "E-Commerce Sales Performance Executive Dashboard",
+      subtitle: "Power BI, Excel, and SQL Multi-Region Revenue Breakdown",
+      problem: "Regional retail executives faced revenue leakage and lacked real-time visibility into top-performing SKU margins.",
+      dataset: "Multi-region transactional sales records (orders, returns, shipping costs, customer segments).",
+      cleaning: "Standardized currency values, eliminated duplicate order IDs, and established DAX calendar dimension tables.",
+      analysis: "Created DAX measures for Year-over-Year (YoY) revenue growth, profit margin distributions, and return rate metrics.",
+      dashboard: "Executive Power BI dashboard featuring interactive KPI cards, slicers for region, and profit drill-downs.",
+      insights: "Revealed an 18% profit margin drag caused by expedited shipping costs on low-value items.",
+      impact: "Provided actionable insights to restructure shipping thresholds and boost net profits."
+    },
+    hr: {
+      title: "HR Employee Attrition Risk Analysis",
+      subtitle: "Power BI & Python Predictive Workforce Analytics",
+      problem: "High employee turnover increased recruitment costs and disrupted project delivery timelines.",
+      dataset: "IBM HR Analytics dataset containing 1,470 employee records (tenure, role, overtime, satisfaction ratings).",
+      cleaning: "Encoded ordinal satisfaction levels, binned employee tenure into quartiles, and verified complete record coverage.",
+      analysis: "Evaluated attrition rates partitioned by department, salary slab, overtime requirements, and commute distance.",
+      dashboard: "Executive HR dashboard displaying overall churn rate (16.1%) alongside departmental breakdown cards.",
+      insights: "Discovered that employees working regular overtime with commute distances >15 km had a 3.4x higher churn rate.",
+      impact: "Formulated targeted HR policy recommendations including flexible remote schedules to reduce attrition."
+    },
+    superstore: {
+      title: "Superstore Sales & Profitability Analysis",
+      subtitle: "Python EDA (Pandas, Matplotlib) & SQL Discount Impact Study",
+      problem: "Uncontrolled discounting across product categories eroded overall store profit margins despite rising gross sales.",
+      dataset: "Global Superstore dataset featuring 9,994 order records across Furniture, Office Supplies, and Technology.",
+      cleaning: "Parsed shipping dates, calculated profit ratio metrics, and filtered out incomplete customer address fields.",
+      analysis: "Executed correlation analysis between discount percentage levels and net profit margins across product lines.",
+      dashboard: "Visual Python Matplotlib plots detailing profit loss thresholds when discounts exceeded 20%.",
+      insights: "Discovered that heavy discounts on Technology items caused net negative profit margins despite high sales volume.",
+      impact: "Recommended capping promotional discounts at 20% to safeguard product category profitability."
+    },
+    churn: {
+      title: "Customer Churn Retention & Lifetime Value Analysis",
+      subtitle: "PostgreSQL Window Functions & Python Cohort Modeling",
+      problem: "Telecommunications provider experienced high month-to-month subscription cancellations.",
+      dataset: "Telco Customer Churn dataset (7,043 customer accounts, monthly charges, contract types, tech support tickets).",
+      cleaning: "Imputed missing total charges, binned tenure months, and formatted categorical service indicators.",
+      analysis: "Calculated month-over-month cohort retention curves using PostgreSQL LEAD/LAG window functions.",
+      dashboard: "Retention risk dashboard categorizing high-risk subscribers by contract tier.",
+      insights: "Month-to-month contract customers with high monthly charges and >2 support tickets were 75% likely to cancel.",
+      impact: "Enabled customer success teams to initiate proactive renewal incentives, lowering churn risk."
+    }
+  };
+
   const detailsModal = document.getElementById('project-details-modal');
-  const viewDetailsBtn = document.getElementById('view-details-btn');
-  const viewSqlBtn = document.getElementById('view-sql-btn');
+  const modalTitle = document.getElementById('modal-project-title');
+  const modalSubtitle = document.getElementById('modal-project-subtitle');
+  const modalBody = document.getElementById('modal-case-study-body');
   const modalCloseBtn = detailsModal?.querySelector('.details-modal-close');
 
-  function openDetailsModal(scrollToSql = false) {
-    if (detailsModal) {
-      detailsModal.classList.add('active');
-      detailsModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+  function openCaseStudy(projectKey) {
+    const data = caseStudies[projectKey];
+    if (!data || !detailsModal) return;
 
-      if (scrollToSql) {
-        setTimeout(() => {
-          const sqlSection = document.getElementById('details-sql-section');
-          sqlSection?.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-      }
-    }
+    modalTitle.textContent = data.title;
+    modalSubtitle.textContent = data.subtitle;
+    modalBody.innerHTML = `
+      <div class="details-section">
+        <h3><i data-lucide="help-circle"></i> Problem Statement</h3>
+        <p>${data.problem}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="database"></i> Dataset Overview</h3>
+        <p>${data.dataset}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="brush"></i> Data Cleaning & Preprocessing</h3>
+        <p>${data.cleaning}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="terminal"></i> Exploratory Data Analysis (EDA)</h3>
+        <p>${data.analysis}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="layout-dashboard"></i> Dashboard Solution</h3>
+        <p>${data.dashboard}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="trending-up"></i> Key Findings & Insights</h3>
+        <p>${data.insights}</p>
+      </div>
+      <div class="details-section">
+        <h3><i data-lucide="check-square"></i> Strategic Business Impact</h3>
+        <p>${data.impact}</p>
+      </div>
+    `;
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    detailsModal.classList.add('active');
+    detailsModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
-  function closeDetailsModal() {
+  function closeCaseStudy() {
     if (detailsModal) {
       detailsModal.classList.remove('active');
       detailsModal.setAttribute('aria-hidden', 'true');
@@ -297,34 +456,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (viewDetailsBtn) viewDetailsBtn.addEventListener('click', () => openDetailsModal(false));
-  if (viewSqlBtn) viewSqlBtn.addEventListener('click', () => openDetailsModal(true));
-  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeDetailsModal);
+  document.querySelectorAll('.open-case-study-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const projectKey = btn.getAttribute('data-project');
+      openCaseStudy(projectKey);
+    });
+  });
 
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeCaseStudy);
   if (detailsModal) {
     detailsModal.addEventListener('click', (e) => {
-      if (e.target === detailsModal) closeDetailsModal();
+      if (e.target === detailsModal) closeCaseStudy();
     });
   }
 
-  // 12. Lightbox Zoom Modal Handler for Showcase Cards
+  // 16. Lightbox Image Viewer
   const lightboxModal = document.getElementById('lightbox-modal');
   const zoomTriggers = document.querySelectorAll('.zoom-trigger');
   const mediaContainer = document.getElementById('lightbox-media-container');
   const lightboxTitle = document.getElementById('lightbox-title');
-  const lightboxDesc = document.getElementById('lightbox-desc');
   const lightboxCloseBtn = lightboxModal?.querySelector('.lightbox-close');
 
   zoomTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
       if (!lightboxModal || !mediaContainer) return;
-
       const visualBox = trigger.querySelector('.showcase-visual-box');
-      const caption = trigger.nextElementSibling?.textContent || 'Visual Showcase';
+      const caption = trigger.nextElementSibling?.textContent || 'Dashboard Snapshot';
 
       mediaContainer.innerHTML = visualBox ? visualBox.outerHTML : '';
       if (lightboxTitle) lightboxTitle.textContent = caption;
-      if (lightboxDesc) lightboxDesc.textContent = 'High-resolution snapshot of analytical visualization script.';
 
       lightboxModal.classList.add('active');
       lightboxModal.setAttribute('aria-hidden', 'false');
@@ -347,15 +507,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close modals on ESC key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      closeDetailsModal();
+      closeCaseStudy();
       closeLightbox();
     }
   });
 
-  // 13. Contact Form Validation & Success Overlay
+  // 17. Contact Form Handler (EmailJS + Fallback)
   const contactForm = document.getElementById('contact-form');
   const successOverlay = document.getElementById('success-overlay');
   const successCloseBtn = document.getElementById('success-close');
@@ -377,8 +536,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      if (isValid && successOverlay) {
-        successOverlay.classList.add('active');
+      if (isValid) {
+        // Send email via EmailJS if public key & template configured
+        if (typeof emailjs !== 'undefined') {
+          emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+            .then(() => {
+              console.log('SUCCESS! Email sent via EmailJS');
+            }, (error) => {
+              console.log('EmailJS status notice:', error);
+            });
+        }
+
+        if (successOverlay) {
+          successOverlay.classList.add('active');
+        }
         contactForm.reset();
       }
     });
