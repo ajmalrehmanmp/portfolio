@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en" class="light-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
-  <title>Ajmal Rahman | Aspiring Data Analyst Portfolio</title>
-  <meta name="title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta name="description" content="Official portfolio of Ajmal Rahman, an aspiring Data Analyst proficient in SQL, PostgreSQL, Python (Pandas, NumPy, Matplotlib), Power BI, and Excel. Explore 5 featured data analytics projects, interactive dashboards, SQL queries, and certifications.">
-  <meta name="keywords" content="Ajmal Rahman Data Analyst, Data Analyst Portfolio, SQL Portfolio, Python Portfolio, Power BI Portfolio, Kerala Data Analyst, PostgreSQL, Data Cleaning, EDA, Data Visualization, University of Calicut, Deloitte, EY, Accenture, TCS, Infosys, PwC, KPMG">
+  <title>Ajmal Rahman | Data Analyst Portfolio</title>
+  <meta name="title" content="Ajmal Rahman | Data Analyst Portfolio">
+  <meta name="description" content="Portfolio of Ajmal Rahman, a Data Analyst Aspirant skilled in Python, SQL, Excel, Power BI, Pandas, NumPy, and Data Visualization. Turning Data into Meaningful Insights.">
+  <meta name="keywords" content="Ajmal Rahman, Data Analyst Portfolio, Python, SQL, Excel, Power BI, Pandas, NumPy, Matplotlib, COVID-19 Data Analysis, University of Calicut, Kerala Data Analyst">
   <meta name="author" content="Ajmal Rahman">
   <meta name="robots" content="index, follow">
 
@@ -18,21 +18,21 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ajmalrehmanmp.github.io/portfolio/">
-  <meta property="og:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta property="og:description" content="Explore 5 real-world data analytics projects, SQL queries, Python EDA scripts, and Power BI dashboard case studies by Ajmal Rahman.">
+  <meta property="og:title" content="Ajmal Rahman | Data Analyst Portfolio">
+  <meta property="og:description" content="Turning Data into Meaningful Insights. Explore Ajmal Rahman's COVID-19 Data Analysis project, skills, and certifications.">
   <meta property="og:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://ajmalrehmanmp.github.io/portfolio/">
-  <meta property="twitter:title" content="Ajmal Rahman | Aspiring Data Analyst Portfolio">
-  <meta property="twitter:description" content="Explore 5 real-world data analytics projects, SQL queries, Python EDA scripts, and Power BI dashboard case studies by Ajmal Rahman.">
+  <meta property="twitter:title" content="Ajmal Rahman | Data Analyst Portfolio">
+  <meta property="twitter:description" content="Turning Data into Meaningful Insights. Explore Ajmal Rahman's COVID-19 Data Analysis project, skills, and certifications.">
   <meta property="twitter:image" content="https://ajmalrehmanmp.github.io/portfolio/portfolio-preview.jpg">
 
-  <!-- Google Fonts (Inter & JetBrains Mono) -->
+  <!-- Google Fonts (Inter & Poppins) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -46,13 +46,13 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ajmal Rahman",
-    "jobTitle": "Aspiring Data Analyst",
+    "jobTitle": "Data Analyst Aspirant",
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "University of Calicut",
       "department": "Bachelor of Commerce (Finance)"
     },
-    "knowsAbout": ["SQL", "PostgreSQL", "Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "Excel", "Git", "GitHub", "VS Code", "pgAdmin", "Data Cleaning", "EDA", "Data Visualization"],
+    "knowsAbout": ["Python", "SQL", "Excel", "Power BI", "Pandas", "NumPy", "Matplotlib", "PostgreSQL", "Git", "GitHub", "VS Code", "Data Cleaning", "Data Visualization"],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kerala",
@@ -73,30 +73,21 @@
   <!-- Custom Cursor Glow -->
   <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Linear/Vercel Particle Canvas & Mesh Background -->
-  <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
-  <div class="grid-bg" aria-hidden="true"></div>
-  <div class="bg-glow-blobs" aria-hidden="true">
-    <div class="glow-blob blob-1"></div>
-    <div class="glow-blob blob-2"></div>
-    <div class="glow-blob blob-3"></div>
-  </div>
-
   <!-- Loading Screen -->
   <div id="page-loader" class="page-loader" aria-hidden="true">
     <div class="loader-content">
       <div class="loader-spinner"></div>
-      <p class="loader-text">Initializing Portfolio...</p>
+      <p class="loader-text">Loading Portfolio...</p>
     </div>
   </div>
 
-  <!-- Reading Progress Bar -->
+  <!-- Scroll Progress Bar -->
   <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Sticky Header & Navigation -->
+  <!-- Sticky Navigation Header -->
   <header id="header" class="header">
     <div class="container header-container">
-      <a href="#home" class="logo" aria-label="Ajmal Rahman Home">
+      <a href="#home" class="logo" aria-label="Ajmal Rahman Portfolio Home">
         <span class="logo-dot"></span> Ajmal Rahman
       </a>
       <nav id="nav-menu" class="nav-menu" aria-label="Main Navigation">
@@ -105,18 +96,14 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#showcase" class="nav-link">Gallery</a></li>
-          <li><a href="#certifications" class="nav-link">Certificates</a></li>
-          <li><a href="#experience-education" class="nav-link">Timeline</a></li>
-          <li><a href="#github-section" class="nav-link">GitHub</a></li>
-          <li><a href="#resume-section" class="nav-link">Resume</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
-          <i data-lucide="moon" class="theme-icon-dark"></i>
-          <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+          <i data-lucide="moon" class="theme-icon-dark" style="display: none;"></i>
         </button>
         <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <i data-lucide="menu" class="menu-open-icon"></i>
@@ -127,109 +114,176 @@
   </header>
 
   <main>
-    <!-- 1. HERO SECTION -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
       <div class="container hero-container grid-2">
+        
+        <!-- Left Side Hero Content -->
         <div class="hero-content fade-in-on-scroll">
           <div class="badge-premium">
-            <span class="pulse-indicator"></span> Available for Data Analyst Roles & Internships
+            <span class="pulse-indicator"></span> Data Analyst Aspirant
           </div>
           <h1 class="hero-title">
-            Hi, I'm <span class="text-gradient">Ajmal Rahman</span>
+            Turning Data into <span class="text-gradient">Meaningful Insights.</span>
           </h1>
-          <h2 class="hero-subtitle">
-            Aspiring Data Analyst
-          </h2>
           
-          <!-- Typing Animation Effect -->
+          <!-- Typing Animation Container -->
           <div class="typing-container">
-            <span class="typing-prefix">Proficient in: </span>
-            <span id="typing-effect" class="typing-text">SQL</span><span class="typing-cursor">|</span>
+            <span class="typing-prefix">Specialized in: </span>
+            <span id="typing-effect" class="typing-text">Python</span><span class="typing-cursor">|</span>
           </div>
 
           <p class="hero-desc">
-            Aspiring Data Analyst with a Bachelor of Commerce (Finance) from the University of Calicut. Skilled in data cleaning, exploratory data analysis (EDA), SQL query writing, and dashboard development using SQL, Python, PostgreSQL, Power BI, and Excel.
+            Data Analyst Aspirant skilled in Python, SQL, Excel, Power BI, Pandas, NumPy, and Data Visualization. Passionate about transforming raw data into actionable business insights.
           </p>
           
           <div class="hero-buttons">
-            <a href="Ajmal_Rahman_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn">
-              <i data-lucide="file-text"></i> Download Resume
-            </a>
-            <a href="#projects" class="btn btn-outline magnetic-btn">
+            <a href="#projects" class="btn btn-primary magnetic-btn">
               <i data-lucide="folder-git-2"></i> View Projects
             </a>
-            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="github"></i> GitHub
+            <a href="Ajmal_Rahman_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
+              <i data-lucide="file-text"></i> Download Resume
             </a>
-            <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic-btn">
-              <i data-lucide="linkedin"></i> LinkedIn
+            <a href="#contact" class="btn btn-outline magnetic-btn">
+              <i data-lucide="mail"></i> Contact Me
             </a>
           </div>
         </div>
 
+        <!-- Right Side Hero Illustration: Google-Inspired Animated Dashboard Graphic -->
         <div class="hero-visual-container fade-in-on-scroll">
-          <div class="hero-mockup-wrapper tilt-card">
-            <div class="hero-glow-blob"></div>
-            <!-- Profile Avatar Frame / Analytics Visual Card -->
-            <div class="analytics-card-3d">
-              <div class="card-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="window-title">ajmal_profile_analytics.py</span>
-              </div>
-              <div class="card-profile-header">
-                <div class="hero-avatar-circle">
-                  <i data-lucide="user-check" class="avatar-icon-large"></i>
-                </div>
-                <div class="hero-avatar-info">
-                  <h3 class="hero-avatar-name">Ajmal Rahman</h3>
-                  <p class="hero-avatar-role">B.Com Finance & Data Analyst</p>
-                  <span class="hero-avatar-status"><i data-lucide="map-pin"></i> Kerala, India</span>
-                </div>
-              </div>
-              <div class="card-body-code">
-                <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
-<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+          <div class="hero-illustration-card tilt-card">
+            <div class="illustration-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="illustration-title">analytics_dashboard_v2.py</span>
+            </div>
 
-<span class="comment"># Initialize Analytical Workflow</span>
-skills = [<span class="string">'SQL'</span>, <span class="string">'PostgreSQL'</span>, <span class="string">'Python'</span>, <span class="string">'Pandas'</span>, <span class="string">'Power BI'</span>]
-status = <span class="string">'Ready for Big 4 & FAANG Technical Screening'</span>
-
-print(<span class="string">f"Candidate Status: {status}"</span>)</code></pre>
-              </div>
-              <div class="card-footer-visual">
-                <div class="bar-chart-mini">
-                  <div class="bar" style="--height: 40%"></div>
-                  <div class="bar" style="--height: 65%"></div>
-                  <div class="bar" style="--height: 55%"></div>
-                  <div class="bar" style="--height: 85%"></div>
-                  <div class="bar" style="--height: 70%"></div>
-                  <div class="bar" style="--height: 95%"></div>
+            <!-- Visual Dashboard Graphic Elements -->
+            <div class="illustration-body">
+              <div class="visual-kpi-row">
+                <div class="visual-kpi-card blue-kpi">
+                  <span class="kpi-label">Conversion Rate</span>
+                  <span class="kpi-num">28.4%</span>
+                  <span class="kpi-trend">↑ +4.2%</span>
                 </div>
+                <div class="visual-kpi-card purple-kpi">
+                  <span class="kpi-label">Total Volume</span>
+                  <span class="kpi-num">142,500</span>
+                  <span class="kpi-trend">↑ +12.8%</span>
+                </div>
+              </div>
+
+              <!-- Animated Chart SVG Graphic -->
+              <div class="visual-chart-box">
+                <svg viewBox="0 0 450 200" class="hero-chart-svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M 30 150 Q 100 120 170 80 T 310 110 T 420 40 L 420 180 L 30 180 Z" fill="url(#chartGrad)"/>
+                  <path d="M 30 150 Q 100 120 170 80 T 310 110 T 420 40" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+                  <path d="M 30 165 Q 110 145 190 125 T 330 95 T 420 70" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="4"/>
+                  <circle cx="170" cy="80" r="5" fill="#2563eb"/>
+                  <circle cx="420" cy="40" r="5" fill="#7c3aed"/>
+                </svg>
+              </div>
+
+              <div class="visual-sql-badge">
+                <i data-lucide="database"></i> PostgreSQL Connected • Query Execution Time: 0.04s
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- 2. ABOUT ME SECTION -->
-    <section id="about" class="about-section bg-alt py-120">
+    <!-- STATISTICS CARDS SECTION -->
+    <section id="statistics" class="statistics-section py-80 bg-alt">
+      <div class="container">
+        <div class="stats-grid">
+          
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper blue"><i data-lucide="folder-check"></i></div>
+            <div class="stat-info">
+              <span class="counter-number" data-target="1">0</span>
+              <span class="stat-name">Completed Project</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper purple"><i data-lucide="terminal"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">Python</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper blue"><i data-lucide="database"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">SQL</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper orange"><i data-lucide="layout-dashboard"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">Power BI</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper green"><i data-lucide="sheet"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">Excel</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper blue"><i data-lucide="table"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">Pandas</span>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card fade-in-on-scroll tilt-card">
+            <div class="stat-icon-wrapper purple"><i data-lucide="cpu"></i></div>
+            <div class="stat-info">
+              <span class="stat-val-text">Active</span>
+              <span class="stat-name">NumPy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Bridging Finance Logic with Analytical Intelligence</p>
+          <p class="section-subtitle">Bridging Commercial Financial Logic & Practical Data Analytics</p>
         </div>
+        
         <div class="about-grid grid-2 py-40">
-          <div class="about-image-wrapper fade-in-on-scroll">
+          <div class="about-card-wrapper fade-in-on-scroll">
             <div class="glass-card about-profile-card tilt-card">
               <div class="profile-header">
                 <div class="profile-avatar-placeholder">
                   <i data-lucide="user" class="avatar-icon"></i>
                 </div>
                 <h3 class="profile-name">Ajmal Rahman</h3>
-                <p class="profile-title">Finance Graduate & Aspiring Data Analyst</p>
+                <p class="profile-title">Data Analyst Aspirant</p>
               </div>
               <div class="profile-details-list">
                 <div class="profile-detail-item">
@@ -254,19 +308,16 @@ print(<span class="string">f"Candidate Status: {status}"</span>)</code></pre>
 
           <div class="about-text-container fade-in-on-scroll">
             <div class="glass-card about-glass-card">
-              <h3 class="card-headline">Driven by Business Insights</h3>
+              <h3 class="card-headline">Recruiter-Friendly Summary</h3>
               <p class="about-p">
-                I am an aspiring Data Analyst holding a Bachelor of Commerce in Finance from the University of Calicut. I combine commercial financial awareness with hands-on technical analytics in SQL, PostgreSQL, Python, Pandas, NumPy, Matplotlib, Excel, and Power BI.
+                I am a dedicated Data Analyst Aspirant with a Bachelor of Commerce (Finance) from the University of Calicut. Having recently completed comprehensive technical training, I possess hands-on skills in Python, SQL, PostgreSQL, Pandas, NumPy, Matplotlib, Excel, and Power BI.
               </p>
-              <ul class="about-bullets">
-                <li><i data-lucide="check-circle-2"></i> <strong>Education:</strong> Bachelor of Commerce (Finance) - University of Calicut (2026)</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Problem Solving:</strong> Passionate about solving complex business problems using data.</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Career Goal:</strong> Currently seeking an entry-level Data Analyst role or internship.</li>
-                <li><i data-lucide="check-circle-2"></i> <strong>Core Competencies:</strong> Data Cleaning, EDA, SQL Queries, Join Statements, CTEs, Window Functions, Dashboarding.</li>
-              </ul>
+              <p class="about-p">
+                My educational background provides strong commercial logic, financial accounting, and business statistics awareness. I thrive on performing data cleaning, exploratory data analysis (EDA), writing complex SQL queries, and creating clear visual dashboards to solve real-world business problems.
+              </p>
               <div class="about-quote">
                 <i data-lucide="quote" class="quote-icon"></i>
-                <p class="quote-text">My objective is to transform raw databases into clear, actionable findings that drive strategic decisions.</p>
+                <p class="quote-text">My goal is to translate raw data points into actionable insights that help teams make strategic decisions.</p>
               </div>
             </div>
           </div>
@@ -274,338 +325,219 @@ print(<span class="string">f"Candidate Status: {status}"</span>)</code></pre>
       </div>
     </section>
 
-    <!-- 3. TECHNICAL SKILLS SECTION (NO PERCENTAGE BARS - ANIMATED BADGES) -->
-    <section id="skills" class="skills-section py-120">
+    <!-- SKILLS SECTION WITH PROGRESS INDICATORS -->
+    <section id="skills" class="skills-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
           <h2 class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">Categorized analytics stack with interactive skill badges</p>
+          <p class="section-subtitle">Categorized analytics toolkit with visual progress indicators</p>
         </div>
 
         <div class="skills-categories-grid fade-in-on-scroll">
           
-          <!-- Category 1: Programming -->
+          <!-- Programming -->
           <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper blue"><i data-lucide="code-2"></i></div>
               <h3>Programming</h3>
             </div>
-            <div class="badges-flex-container">
-              <div class="animated-skill-badge blue-badge">
-                <i data-lucide="terminal"></i> Python
-              </div>
-              <div class="animated-skill-badge blue-badge">
-                <i data-lucide="database"></i> SQL
-              </div>
-              <div class="animated-skill-badge blue-badge">
-                <i data-lucide="server"></i> PostgreSQL
-              </div>
-            </div>
+            <ul class="skill-progress-list">
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Python</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill blue-fill" style="--progress: 60%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>SQL</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill blue-fill" style="--progress: 65%"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Category 2: Libraries -->
+          <!-- Data Analysis -->
           <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper green"><i data-lucide="binary"></i></div>
-              <h3>Libraries</h3>
+              <h3>Data Analysis</h3>
             </div>
-            <div class="badges-flex-container">
-              <div class="animated-skill-badge green-badge">
-                <i data-lucide="table"></i> Pandas
-              </div>
-              <div class="animated-skill-badge green-badge">
-                <i data-lucide="cpu"></i> NumPy
-              </div>
-              <div class="animated-skill-badge green-badge">
-                <i data-lucide="line-chart"></i> Matplotlib
-              </div>
-            </div>
+            <ul class="skill-progress-list">
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Pandas</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 60%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>NumPy</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 55%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Excel</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill green-fill" style="--progress: 65%"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Category 3: Visualization -->
+          <!-- Visualization -->
           <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper orange"><i data-lucide="pie-chart"></i></div>
               <h3>Visualization</h3>
             </div>
-            <div class="badges-flex-container">
-              <div class="animated-skill-badge orange-badge">
-                <i data-lucide="layout-dashboard"></i> Power BI
-              </div>
-              <div class="animated-skill-badge orange-badge">
-                <i data-lucide="sheet"></i> Microsoft Excel
-              </div>
-            </div>
+            <ul class="skill-progress-list">
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Power BI</span>
+                  <span class="skill-percentage">Learning</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 40%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Matplotlib</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill orange-fill" style="--progress: 55%"></div></div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Category 4: Tools -->
+          <!-- Tools -->
           <div class="skill-category-card glass-card tilt-card">
             <div class="skill-category-header">
               <div class="category-icon-wrapper purple"><i data-lucide="settings"></i></div>
               <h3>Tools</h3>
             </div>
-            <div class="badges-flex-container">
-              <div class="animated-skill-badge purple-badge">
-                <i data-lucide="git-branch"></i> Git
-              </div>
-              <div class="animated-skill-badge purple-badge">
-                <i data-lucide="github"></i> GitHub
-              </div>
-              <div class="animated-skill-badge purple-badge">
-                <i data-lucide="code"></i> VS Code
-              </div>
-              <div class="animated-skill-badge purple-badge">
-                <i data-lucide="database-backup"></i> pgAdmin
-              </div>
-            </div>
+            <ul class="skill-progress-list">
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>PostgreSQL</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 60%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>Git & GitHub</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 50%"></div></div>
+              </li>
+              <li class="skill-progress-item">
+                <div class="skill-name-row">
+                  <span>VS Code</span>
+                  <span class="skill-percentage">Intermediate</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill purple-fill" style="--progress: 55%"></div></div>
+              </li>
+            </ul>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 4. PROJECTS SECTION (5 FEATURED PROJECTS) -->
-    <section id="projects" class="projects-section bg-alt py-120">
+    <!-- PROJECTS PREVIEW SECTION -->
+    <section id="projects" class="projects-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Real-world data analytics solutions & interactive case studies</p>
+          <h2 class="section-title">Projects Preview</h2>
+          <p class="section-subtitle">Real-world data analytics projects & upcoming case studies</p>
         </div>
 
-        <!-- Project Controls -->
-        <div class="projects-controls fade-in-on-scroll">
-          <div class="search-wrapper">
-            <i data-lucide="search" class="search-icon"></i>
-            <input type="text" id="project-search" placeholder="Search projects by title, tool or tag...">
-          </div>
-          <div class="filter-badges">
-            <button class="filter-badge active" data-filter="all">All</button>
-            <button class="filter-badge" data-filter="sql">SQL</button>
-            <button class="filter-badge" data-filter="python">Python</button>
-            <button class="filter-badge" data-filter="powerbi">Power BI</button>
-            <button class="filter-badge" data-filter="excel">Excel</button>
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-grid py-40" id="projects-container">
+        <div class="projects-preview-grid py-40 fade-in-on-scroll">
           
           <!-- Project 1: COVID-19 Data Analysis -->
-          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="sql python excel">
+          <div class="project-card glass-card tilt-card">
             <div class="project-thumbnail-wrapper">
               <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
                 <rect width="100%" height="100%" fill="#0b0f19"/>
-                <path d="M 30 180 Q 120 160 200 120 T 380 60 T 470 30" fill="none" stroke="#3b82f6" stroke-width="3"/>
+                <path d="M 30 180 Q 120 160 200 120 T 380 60 T 470 30" fill="none" stroke="#2563eb" stroke-width="3"/>
                 <path d="M 30 200 Q 120 195 200 190 T 380 185 T 470 182" fill="none" stroke="#ef4444" stroke-width="3"/>
-                <circle cx="200" cy="120" r="5" fill="#3b82f6"/>
-                <circle cx="380" cy="60" r="5" fill="#3b82f6"/>
+                <circle cx="200" cy="120" r="5" fill="#2563eb"/>
+                <circle cx="380" cy="60" r="5" fill="#2563eb"/>
                 <text x="40" y="40" fill="#f8fafc" font-size="14" font-weight="bold">COVID-19 Analytics Curve</text>
               </svg>
-              <span class="thumbnail-tag"><i data-lucide="database"></i> SQL & PostgreSQL</span>
+              <span class="thumbnail-tag"><i data-lucide="database"></i> SQL & Python</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">COVID-19 Data Analysis</h3>
-              <p class="project-desc">Analyzed COVID-19 global daily metrics using SQL, PostgreSQL, Python, Pandas, NumPy and Excel. Performed data cleaning, EDA, joins, CTEs, window functions and trend analysis.</p>
+              <p class="project-desc">
+                Analyzed COVID-19 datasets using Python, Pandas, NumPy, SQL, and Power BI to identify trends, case growth, recovery rates, and create interactive dashboards.
+              </p>
               
-              <div class="project-details-mini">
-                <div><strong>Problem:</strong> Tracking transmission speeds & rolling vaccination coverage.</div>
-                <div><strong>Dataset:</strong> Global time-series health dataset (OWID).</div>
-                <div><strong>Business Impact:</strong> Identified direct relationship between vaccine rollout speed and reduced ICU duration.</div>
-              </div>
-
               <div class="project-tech-tags">
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">PostgreSQL</span>
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pandas</span>
                 <span class="tech-tag">NumPy</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Power BI</span>
               </div>
 
               <div class="project-actions">
+                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="globe"></i> Live Demo
+                </a>
                 <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                   <i data-lucide="github"></i> GitHub
                 </a>
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="globe"></i> Live Demo
-                </a>
-                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="covid">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: Sales Dashboard -->
-          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="powerbi excel sql">
-            <div class="project-thumbnail-wrapper">
-              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
-                <rect width="100%" height="100%" fill="#0b0f19"/>
-                <rect x="50" y="80" width="60" height="120" fill="#3b82f6" rx="4"/>
-                <rect x="140" y="50" width="60" height="150" fill="#8b5cf6" rx="4"/>
-                <rect x="230" y="100" width="60" height="100" fill="#06b6d4" rx="4"/>
-                <rect x="320" y="40" width="60" height="160" fill="#10b981" rx="4"/>
-                <text x="40" y="30" fill="#f8fafc" font-size="14" font-weight="bold">E-Commerce Sales Performance</text>
-              </svg>
-              <span class="thumbnail-tag"><i data-lucide="layout-dashboard"></i> Power BI & Excel</span>
+          <!-- Placeholder 1: Coming Soon -->
+          <div class="project-card glass-card placeholder-card tilt-card">
+            <div class="placeholder-thumbnail">
+              <i data-lucide="lock" class="placeholder-icon"></i>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
             <div class="project-body">
-              <h3 class="project-title">Sales Dashboard</h3>
-              <p class="project-desc">Designed an interactive executive Power BI dashboard analyzing sales performance, revenue growth, regional breakdowns, and profit margin distributions across product lines.</p>
-              
-              <div class="project-details-mini">
-                <div><strong>Problem:</strong> Revenue bottleneck identification across multi-region retail stores.</div>
-                <div><strong>Dataset:</strong> Transactional sales & order history dataset.</div>
-                <div><strong>Business Impact:</strong> Identified 18% revenue leakage in regional logistics distribution.</div>
-              </div>
-
+              <h3 class="project-title">E-Commerce Sales Dashboard</h3>
+              <p class="project-desc">
+                Upcoming project focusing on sales volume trends, regional revenue distributions, and customer purchasing patterns.
+              </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">Power BI</span>
                 <span class="tech-tag">Excel</span>
-                <span class="tech-tag">SQL</span>
                 <span class="tech-tag">DAX</span>
-                <span class="tech-tag">Data Modeling</span>
               </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="github"></i> GitHub
-                </a>
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="globe"></i> Live Demo
-                </a>
-                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="sales">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
+              <button class="btn btn-outline btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;">
+                <i data-lucide="clock"></i> Project in Development
+              </button>
             </div>
           </div>
 
-          <!-- Project 3: HR Analytics Dashboard -->
-          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="powerbi python excel">
-            <div class="project-thumbnail-wrapper">
-              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
-                <rect width="100%" height="100%" fill="#0b0f19"/>
-                <circle cx="150" cy="120" r="70" fill="none" stroke="#ef4444" stroke-width="18"/>
-                <circle cx="150" cy="120" r="70" fill="none" stroke="#3b82f6" stroke-width="18" stroke-dasharray="300 400"/>
-                <text x="260" y="110" fill="#f8fafc" font-size="14" font-weight="bold">Attrition Rate: 16.1%</text>
-                <text x="260" y="135" fill="#94a3b8" font-size="11">Departmental Churn Model</text>
-              </svg>
-              <span class="thumbnail-tag"><i data-lucide="users"></i> HR Analytics</span>
+          <!-- Placeholder 2: Coming Soon -->
+          <div class="project-card glass-card placeholder-card tilt-card">
+            <div class="placeholder-thumbnail">
+              <i data-lucide="lock" class="placeholder-icon"></i>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
             <div class="project-body">
-              <h3 class="project-title">HR Analytics Dashboard</h3>
-              <p class="project-desc">Analyzed employee attrition patterns, satisfaction ratings, salary slabs, and tenure metrics using Power BI and Python to help HR managers increase workforce retention.</p>
-              
-              <div class="project-details-mini">
-                <div><strong>Problem:</strong> High turnover rate among mid-level engineering and sales staff.</div>
-                <div><strong>Dataset:</strong> 1,470 IBM HR Employee Attrition records.</div>
-                <div><strong>Business Impact:</strong> Pinpointed overtime hours and commute distance as top churn triggers.</div>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Excel</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="github"></i> GitHub
-                </a>
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="globe"></i> Live Demo
-                </a>
-                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="hr">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4: Superstore Sales Analysis -->
-          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="python excel sql">
-            <div class="project-thumbnail-wrapper">
-              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
-                <rect width="100%" height="100%" fill="#0b0f19"/>
-                <path d="M 50 180 L 120 140 L 190 160 L 260 90 L 330 110 L 400 50 L 450 70" fill="none" stroke="#10b981" stroke-width="3"/>
-                <text x="40" y="30" fill="#f8fafc" font-size="14" font-weight="bold">Superstore Profitability Matrix</text>
-              </svg>
-              <span class="thumbnail-tag"><i data-lucide="shopping-cart"></i> Retail EDA</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Superstore Sales Analysis</h3>
-              <p class="project-desc">Conducted exploratory data analysis (EDA) using Python (Pandas & Matplotlib) and SQL to identify product category profitability, discount impacts, and shipping mode efficiency.</p>
-              
-              <div class="project-details-mini">
-                <div><strong>Problem:</strong> Negative profit margins on discounted technology products.</div>
-                <div><strong>Dataset:</strong> Global Superstore 9,994 order transactions.</div>
-                <div><strong>Business Impact:</strong> Recommended capping discounts above 20% to prevent margin loss.</div>
-              </div>
-
+              <h3 class="project-title">Customer Churn Predictive Analysis</h3>
+              <p class="project-desc">
+                Upcoming EDA project analyzing telecom customer subscription churn probability using Python & SQL window functions.
+              </p>
               <div class="project-tech-tags">
                 <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">Excel</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="github"></i> GitHub
-                </a>
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="globe"></i> Live Demo
-                </a>
-                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="superstore">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5: Customer Churn Analysis -->
-          <div class="project-card glass-card fade-in-on-scroll tilt-card" data-tags="sql python postgresql">
-            <div class="project-thumbnail-wrapper">
-              <svg viewBox="0 0 500 240" class="project-svg-graphic" aria-hidden="true">
-                <rect width="100%" height="100%" fill="#0b0f19"/>
-                <path d="M 40 50 C 150 50, 200 190, 450 210" fill="none" stroke="#a855f7" stroke-width="3"/>
-                <text x="40" y="35" fill="#f8fafc" font-size="14" font-weight="bold">Customer Churn Retention Curve</text>
-              </svg>
-              <span class="thumbnail-tag"><i data-lucide="user-minus"></i> Retention EDA</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Customer Churn Analysis</h3>
-              <p class="project-desc">Executed cohort retention analysis using PostgreSQL window functions and Python to predict customer churn probability based on contract type, monthly charges, and support tickets.</p>
-              
-              <div class="project-details-mini">
-                <div><strong>Problem:</strong> High month-to-month subscription cancellation rates.</div>
-                <div><strong>Dataset:</strong> Telco Customer Churn 7,043 subscriber records.</div>
-                <div><strong>Business Impact:</strong> Formulated targeted retention strategy for 1-year contract renewals.</div>
-              </div>
-
-              <div class="project-tech-tags">
                 <span class="tech-tag">SQL</span>
                 <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">NumPy</span>
               </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="github"></i> GitHub
-                </a>
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                  <i data-lucide="globe"></i> Live Demo
-                </a>
-                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="churn">
-                  <i data-lucide="file-text"></i> Case Study
-                </button>
-              </div>
+              <button class="btn btn-outline btn-sm" disabled style="opacity: 0.5; cursor: not-allowed;">
+                <i data-lucide="clock"></i> Project in Development
+              </button>
             </div>
           </div>
 
@@ -613,108 +545,52 @@ print(<span class="string">f"Candidate Status: {status}"</span>)</code></pre>
       </div>
     </section>
 
-    <!-- 5. DASHBOARD GALLERY / SHOWCASE WITH LIGHTBOX -->
-    <section id="showcase" class="showcase-section py-120">
+    <!-- EXPERIENCE TIMELINE SECTION -->
+    <section id="experience" class="timeline-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Dashboard Gallery</h2>
-          <p class="section-subtitle">Real dashboard snapshots, SQL queries, Python charts, and Excel pivots (Click to view full preview)</p>
+          <h2 class="section-title">Experience & Timeline</h2>
+          <p class="section-subtitle">Practical training progression and learning milestones</p>
         </div>
 
-        <div class="showcase-grid py-40">
+        <div class="timeline-container py-40">
+          <div class="timeline-line"></div>
           
-          <!-- Item 1: COVID-19 Trend -->
-          <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger tilt-card">
-              <div class="showcase-visual-box">
-                <svg viewBox="0 0 500 300" class="showcase-svg">
-                  <rect width="100%" height="100%" fill="#0f172a"/>
-                  <text x="110" y="30" fill="#f8fafc" font-size="12" font-weight="bold">COVID-19 Global Infection & Death Curves</text>
-                  <path d="M 50 250 L 100 230 L 150 210 L 200 150 L 250 120 L 300 80 L 350 70 L 400 60 L 450 50" fill="none" stroke="#3b82f6" stroke-width="3"/>
-                  <path d="M 50 250 L 100 248 L 150 245 L 200 240 L 250 238 L 300 232 L 350 230 L 400 228 L 450 227" fill="none" stroke="#ef4444" stroke-width="3"/>
-                  <line x1="50" y1="50" x2="50" y2="250" stroke="#475569" stroke-width="2"/>
-                  <line x1="50" y1="250" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
-                </svg>
-              </div>
+          <div class="timeline-item left fade-in-on-scroll">
+            <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
+            <div class="timeline-content glass-card tilt-card">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-title">Bachelor of Commerce (Finance)</h3>
+              <p class="timeline-org">University of Calicut, Kerala, India</p>
             </div>
-            <p class="showcase-caption">Python Matplotlib Time-Series Plot</p>
           </div>
 
-          <!-- Item 2: SQL Window Query -->
-          <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger tilt-card">
-              <div class="showcase-visual-box code-box">
-                <div class="mini-code-header">
-                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                  <span class="title">query_india_death_rate.sql</span>
-                </div>
-                <pre class="showcase-code"><code>SELECT date, total_cases, total_deaths,
-    ROUND((total_deaths::NUMERIC / 
-    NULLIF(total_cases, 0)) * 100, 2) 
-    AS death_percentage
-FROM CovidDeaths
-WHERE location = 'India'
-ORDER BY date;</code></pre>
-              </div>
+          <div class="timeline-item right fade-in-on-scroll">
+            <div class="timeline-dot"><i data-lucide="laptop"></i></div>
+            <div class="timeline-content glass-card tilt-card">
+              <span class="timeline-date">Current</span>
+              <h3 class="timeline-title">Data Analyst Trainee</h3>
+              <p class="timeline-org">Practical Training & Hands-On Learning</p>
+              <p class="timeline-desc" style="margin-top: 8px; font-size: 0.875rem;">
+                Learning Python, SQL, Excel, Power BI, Pandas, NumPy, Data Cleaning, Data Visualization, and Dashboard Development.
+              </p>
             </div>
-            <p class="showcase-caption">PostgreSQL Partition Query</p>
-          </div>
-
-          <!-- Item 3: Power BI Sales Dashboard -->
-          <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger tilt-card">
-              <div class="showcase-visual-box">
-                <svg viewBox="0 0 500 300" class="showcase-svg">
-                  <rect width="100%" height="100%" fill="#0f172a"/>
-                  <rect x="40" y="50" width="130" height="70" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" rx="6"/>
-                  <text x="50" y="80" fill="#3b82f6" font-size="11" font-weight="bold">Total Revenue</text>
-                  <text x="50" y="105" fill="#f8fafc" font-size="16" font-weight="bold">$2.4M</text>
-                  <rect x="190" y="50" width="130" height="70" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" rx="6"/>
-                  <text x="200" y="80" fill="#10b981" font-size="11" font-weight="bold">Net Margin</text>
-                  <text x="200" y="105" fill="#f8fafc" font-size="16" font-weight="bold">24.8%</text>
-                  <rect x="340" y="50" width="120" height="70" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" rx="6"/>
-                  <text x="350" y="80" fill="#a855f7" font-size="11" font-weight="bold">Units Sold</text>
-                  <text x="350" y="105" fill="#f8fafc" font-size="16" font-weight="bold">98.5K</text>
-                </svg>
-              </div>
-            </div>
-            <p class="showcase-caption">Power BI Executive Dashboard</p>
-          </div>
-
-          <!-- Item 4: Excel Pivot Matrix -->
-          <div class="showcase-item-wrapper fade-in-on-scroll">
-            <div class="showcase-card glass-card zoom-trigger tilt-card">
-              <div class="showcase-visual-box excel-box">
-                <div class="mini-excel-header">
-                  <span class="excel-tag">Excel</span>
-                  <span>Superstore_Pivot.xlsx</span>
-                </div>
-                <div class="excel-table-preview">
-                  <div class="excel-row header"><span>Category</span><span>Sales</span><span>Profit %</span></div>
-                  <div class="excel-row"><span>Technology</span><span>$836,154</span><span>21.4%</span></div>
-                  <div class="excel-row"><span>Office Supplies</span><span>$719,047</span><span>17.2%</span></div>
-                  <div class="excel-row"><span>Furniture</span><span>$741,999</span><span>2.5%</span></div>
-                </div>
-              </div>
-            </div>
-            <p class="showcase-caption">Excel Financial Pivot Analysis</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 6. CERTIFICATIONS SECTION -->
-    <section id="certifications" class="certifications-section py-120">
+    <!-- CERTIFICATION SECTION -->
+    <section id="certificates" class="certifications-section py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Certifications</h2>
+          <h2 class="section-title">Certificates</h2>
           <p class="section-subtitle">Verified credentials from Google, Microsoft, and Simplilearn</p>
         </div>
 
         <div class="certifications-grid py-40">
           
-          <!-- Cert 1: AI Fundamentals (Google) -->
           <div class="cert-card glass-card fade-in-on-scroll tilt-card">
             <div class="cert-logo-header">
               <div class="cert-logo-box google-logo">
@@ -723,7 +599,7 @@ ORDER BY date;</code></pre>
               <span class="cert-provider-name">Google (Coursera)</span>
             </div>
             <h3 class="cert-title">AI Fundamentals</h3>
-            <p class="cert-desc">Validated core artificial intelligence principles, machine learning pipelines, and analytics automation techniques.</p>
+            <p class="cert-desc">Validated core artificial intelligence principles, machine learning pipelines, and analytics automation.</p>
             <div class="cert-footer">
               <span class="cert-date">Issued July 14, 2026</span>
             </div>
@@ -735,7 +611,6 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 2: AI for Data Analysis (Google) -->
           <div class="cert-card glass-card fade-in-on-scroll tilt-card">
             <div class="cert-logo-header">
               <div class="cert-logo-box google-logo">
@@ -756,7 +631,6 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 3: Intro to Data Analytics (Simplilearn) -->
           <div class="cert-card glass-card fade-in-on-scroll tilt-card">
             <div class="cert-logo-header">
               <div class="cert-logo-box simplilearn-logo">
@@ -777,7 +651,6 @@ ORDER BY date;</code></pre>
             </div>
           </div>
 
-          <!-- Cert 4: Data Analyst 101 (Microsoft & Simplilearn) -->
           <div class="cert-card glass-card fade-in-on-scroll tilt-card">
             <div class="cert-logo-header">
               <div class="cert-logo-box ms-logo">
@@ -802,195 +675,22 @@ ORDER BY date;</code></pre>
       </div>
     </section>
 
-    <!-- 7. TIMELINE SECTION (2026 MILESTONES) -->
-    <section id="experience-education" class="timeline-section bg-alt py-120">
-      <div class="container">
-        <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Learning & Education Timeline</h2>
-          <p class="section-subtitle">Chronological progression of degree completion and analytics milestones</p>
-        </div>
-
-        <div class="timeline-container py-40">
-          <div class="timeline-line"></div>
-          
-          <!-- Education Node -->
-          <div class="timeline-item left fade-in-on-scroll">
-            <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
-            <div class="timeline-content glass-card tilt-card">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-title">Bachelor of Commerce (Finance)</h3>
-              <p class="timeline-org">University of Calicut, Kerala, India</p>
-              <p class="timeline-desc">
-                Graduated with a focus on corporate finance, accounting structures, business operations, and statistical calculations.
-              </p>
-            </div>
-          </div>
-
-          <!-- Milestones Node -->
-          <div class="timeline-item right fade-in-on-scroll">
-            <div class="timeline-dot"><i data-lucide="line-chart"></i></div>
-            <div class="timeline-content glass-card tilt-card">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-title">Data Analytics Progress</h3>
-              <p class="timeline-org">Skill & Project Milestones</p>
-              <ul class="timeline-list-details">
-                <li>Started Data Analytics Training</li>
-                <li>Completed Python Programming</li>
-                <li>Completed SQL Queries & Database Structuring</li>
-                <li>Completed PostgreSQL Administration</li>
-                <li>Completed Pandas Data Cleaning</li>
-                <li>Completed NumPy Array Analytics</li>
-                <li>Completed COVID-19 Data Analysis Project</li>
-                <li>Currently Learning Power BI Dashboard Design</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. STATISTICS SECTION (ANIMATED COUNTERS) -->
-    <section id="statistics" class="achievements-section py-120">
-      <div class="container">
-        <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Technical Statistics</h2>
-          <p class="section-subtitle">Quantifiable metrics of ongoing technical practice</p>
-        </div>
-
-        <div class="achievements-grid py-40">
-          
-          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="4">0</span><span class="plus">+</span>
-            </div>
-            <p class="counter-label"><i data-lucide="award"></i> Certifications</p>
-          </div>
-
-          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="5">0</span><span class="plus">+</span>
-            </div>
-            <p class="counter-label"><i data-lucide="folder-check"></i> Projects</p>
-          </div>
-
-          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="30">0</span><span class="plus">+</span>
-            </div>
-            <p class="counter-label"><i data-lucide="database"></i> SQL Queries</p>
-          </div>
-
-          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="20">0</span><span class="plus">+</span>
-            </div>
-            <p class="counter-label"><i data-lucide="code-2"></i> Python Programs</p>
-          </div>
-
-          <div class="counter-card glass-card fade-in-on-scroll tilt-card">
-            <div class="counter-num-row">
-              <span class="counter-number" data-target="100">0</span><span class="plus">%</span>
-            </div>
-            <p class="counter-label"><i data-lucide="flame"></i> Passion for Learning</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. GITHUB SECTION (LIVE REPOS, STARS, FOLLOWERS) -->
-    <section id="github-section" class="github-section bg-alt py-120">
-      <div class="container">
-        <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">GitHub Overview</h2>
-          <p class="section-subtitle">Live repository metrics and open-source code activity</p>
-        </div>
-
-        <div class="github-stats-grid py-40 fade-in-on-scroll">
-          
-          <!-- Profile GitHub Info Box -->
-          <div class="glass-card github-card tilt-card">
-            <div class="github-card-header">
-              <i data-lucide="github" class="github-card-icon"></i>
-              <div>
-                <h3 class="github-username">@ajmalrehmanmp</h3>
-                <span class="github-status">Public Repositories & Analytics Scripts</span>
-              </div>
-            </div>
-
-            <div class="github-metrics-row">
-              <div class="github-metric">
-                <span class="metric-value" id="github-repo-count">5+</span>
-                <span class="metric-label">Repositories</span>
-              </div>
-              <div class="github-metric">
-                <span class="metric-value" id="github-star-count">10+</span>
-                <span class="metric-label">Stars</span>
-              </div>
-              <div class="github-metric">
-                <span class="metric-value" id="github-follower-count">12+</span>
-                <span class="metric-label">Followers</span>
-              </div>
-            </div>
-
-            <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block mt-20">
-              <i data-lucide="external-link"></i> Visit GitHub Profile
-            </a>
-          </div>
-
-          <!-- Activity Contribution Visual -->
-          <div class="glass-card github-activity-card tilt-card">
-            <h4 class="activity-title"><i data-lucide="git-commit"></i> Code Contribution Activity</h4>
-            <div class="contribution-graph-grid">
-              <div class="grid-cell level-1"></div><div class="grid-cell level-2"></div><div class="grid-cell level-3"></div><div class="grid-cell level-4"></div>
-              <div class="grid-cell level-2"></div><div class="grid-cell level-3"></div><div class="grid-cell level-1"></div><div class="grid-cell level-4"></div>
-              <div class="grid-cell level-3"></div><div class="grid-cell level-4"></div><div class="grid-cell level-2"></div><div class="grid-cell level-3"></div>
-              <div class="grid-cell level-4"></div><div class="grid-cell level-1"></div><div class="grid-cell level-4"></div><div class="grid-cell level-2"></div>
-            </div>
-            <p class="activity-desc">Regular commits featuring SQL window functions, Jupyter Notebook EDA scripts, and Power BI DAX formulas.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. RESUME SECTION (SINGLE ATS DOWNLOAD BUTTON) -->
-    <section id="resume-section" class="resume-section py-120">
-      <div class="container text-center fade-in-on-scroll">
-        <div class="glass-card resume-card tilt-card">
-          <div class="category-icon-wrapper blue resume-icon-box">
-            <i data-lucide="file-text"></i>
-          </div>
-          <h2 class="resume-card-title">Curriculum Vitae</h2>
-          <p class="resume-card-desc">Download my official ATS-friendly resume formatted for corporate application scanners at Big 4 and FAANG recruiters.</p>
-          <div class="resume-single-btn-container">
-            <a href="Ajmal_Rahman_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg magnetic-btn">
-              <i data-lucide="download"></i> Download ATS Resume
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 11. CONTACT SECTION (EMAILJS INTEGRATION & CLICKABLE CARDS) -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section bg-alt py-120">
       <div class="container">
         <div class="section-header text-center fade-in-on-scroll">
-          <h2 class="section-title">Let's Connect</h2>
-          <p class="section-subtitle">Reach out directly via email or submit a message below</p>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Send a message directly or connect through social channels</p>
         </div>
 
         <div class="contact-grid grid-2 py-40">
           
-          <!-- Contact Card List -->
           <div class="contact-info-wrapper fade-in-on-scroll">
             <div class="glass-card contact-info-card tilt-card">
               <h3>Get In Touch</h3>
-              <p class="contact-card-desc">I am actively seeking entry-level Data Analyst roles and internships. Connect with me directly through any channel:</p>
+              <p class="contact-card-desc">I am actively seeking Data Analyst opportunities. Reach out directly:</p>
               
               <div class="info-list">
-                <!-- 1. Email -->
                 <a href="mailto:ajmalrehmanmp@gmail.com" class="info-item">
                   <div class="info-icon"><i data-lucide="mail"></i></div>
                   <div class="info-text">
@@ -999,25 +699,6 @@ ORDER BY date;</code></pre>
                   </div>
                 </a>
 
-                <!-- 2. Phone -->
-                <a href="tel:+917736510234" class="info-item">
-                  <div class="info-icon"><i data-lucide="phone"></i></div>
-                  <div class="info-text">
-                    <h4>Phone</h4>
-                    <span>+91 7736510234</span>
-                  </div>
-                </a>
-
-                <!-- 3. LinkedIn -->
-                <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="info-item">
-                  <div class="info-icon"><i data-lucide="linkedin"></i></div>
-                  <div class="info-text">
-                    <h4>LinkedIn</h4>
-                    <span>linkedin.com/in/ajmal--rahman</span>
-                  </div>
-                </a>
-
-                <!-- 4. GitHub -->
                 <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" class="info-item">
                   <div class="info-icon"><i data-lucide="github"></i></div>
                   <div class="info-text">
@@ -1026,19 +707,17 @@ ORDER BY date;</code></pre>
                   </div>
                 </a>
 
-                <!-- 5. Portfolio -->
-                <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="info-item">
-                  <div class="info-icon"><i data-lucide="globe"></i></div>
+                <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" class="info-item">
+                  <div class="info-icon"><i data-lucide="linkedin"></i></div>
                   <div class="info-text">
-                    <h4>Portfolio</h4>
-                    <span>ajmalrehmanmp.github.io/portfolio</span>
+                    <h4>LinkedIn</h4>
+                    <span>linkedin.com/in/ajmal--rahman</span>
                   </div>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form with EmailJS -->
           <div class="contact-form-wrapper fade-in-on-scroll">
             <div class="glass-card form-glass-card tilt-card">
               <form id="contact-form" class="contact-form" novalidate>
@@ -1053,11 +732,6 @@ ORDER BY date;</code></pre>
                   <span class="error-msg" id="err-email">Please enter a valid email address.</span>
                 </div>
                 <div class="form-group">
-                  <label for="form-subject">Subject</label>
-                  <input type="text" id="form-subject" name="subject" placeholder="Data Analyst Opportunity / Project Discussion" required>
-                  <span class="error-msg" id="err-subject">Please provide a subject.</span>
-                </div>
-                <div class="form-group">
                   <label for="form-message">Message</label>
                   <textarea id="form-message" name="message" rows="5" placeholder="Hi Ajmal, I reviewed your portfolio..." required></textarea>
                   <span class="error-msg" id="err-message">Please write a message.</span>
@@ -1067,12 +741,11 @@ ORDER BY date;</code></pre>
                 </button>
               </form>
 
-              <!-- Success Overlay -->
               <div id="success-overlay" class="success-overlay">
                 <div class="success-content">
                   <div class="success-icon-circle"><i data-lucide="check-circle-2"></i></div>
-                  <h3>Message Sent Successfully!</h3>
-                  <p>Thank you for reaching out. Ajmal will get back to you shortly.</p>
+                  <h3>Message Sent!</h3>
+                  <p>Thank you for reaching out. Ajmal will respond shortly.</p>
                   <button id="success-close" class="btn btn-outline btn-sm">Close</button>
                 </div>
               </div>
@@ -1084,52 +757,12 @@ ORDER BY date;</code></pre>
     </section>
   </main>
 
-  <!-- 12. FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-social-icons">
-        <a href="https://github.com/ajmalrehmanmp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
-        <a href="https://www.linkedin.com/in/ajmal--rahman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="mailto:ajmalrehmanmp@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
-        <a href="https://ajmalrehmanmp.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio"><i data-lucide="globe"></i></a>
-      </div>
-
-      <p class="copyright">&copy; 2026 Designed & Developed by <strong>Ajmal Rahman</strong>. All rights reserved.</p>
+      <p class="copyright">Designed & Built by <strong>Ajmal Rahman</strong></p>
     </div>
   </footer>
-
-  <!-- Lightbox Viewer Modal -->
-  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog">
-    <button class="lightbox-close" aria-label="Close preview"><i data-lucide="x"></i></button>
-    <div class="lightbox-content">
-      <div id="lightbox-media-container" class="lightbox-media-container"></div>
-      <div class="lightbox-info">
-        <h3 id="lightbox-title">Dashboard Visual</h3>
-        <p id="lightbox-desc">Snapshot preview of analytics dashboard or script.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Case Study Details Modal -->
-  <div id="project-details-modal" class="project-details-modal" aria-hidden="true" role="dialog">
-    <div class="details-modal-container glass-card">
-      <button class="details-modal-close" aria-label="Close case study"><i data-lucide="x"></i></button>
-      
-      <div class="details-modal-content">
-        <div class="badge-premium">
-          <span class="pulse-indicator"></span> Deep-Dive Case Study
-        </div>
-        <h2 id="modal-project-title" class="details-main-title">Project Case Study</h2>
-        <p id="modal-project-subtitle" class="details-subtitle">Problem, Dataset, Cleaning, Analysis, Dashboard, Insights & Impact</p>
-        
-        <div class="details-divider"></div>
-        
-        <div id="modal-case-study-body">
-          <!-- Dynamic Content Injected via script.js -->
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Back-to-Top Button -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
